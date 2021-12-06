@@ -1,0 +1,13 @@
+---
+title: "03 - Haplotype-based analysis of population structure and selection"
+output: html_notebook
+---
+
+- Phasing / concordance output
+
+- fineSTRUCTURE / fine PCA output
+ - for neutral loci - 3L
+ - for selection on X - X
+ 
+- Hapstats (EHH, Garud's stats)
+- IBD tract analyses

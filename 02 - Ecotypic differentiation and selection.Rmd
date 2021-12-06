@@ -1,0 +1,10 @@
+---
+title: "02 - Assessment of ecotypic differentiation and selection"
+output: html_notebook
+---
+
+By ecotype and ?form
+Fsts - summary (in table)
+Fsts - genomewide (two figs)
+Selection scans
+Tables of outlier loci (test for this?)

@@ -1,0 +1,38 @@
+---
+title: "01 - Assessment of population structure"
+output: html_notebook
+---
+
+```{r setup, include =  FALSE}
+#run this in the same directory 
+#list pkgs
+pkg = c('tidyverse', 'geosphere', 'data.table' ,'cowplot', 'parallel', 'Rcpp', 'RColorBrewer', 'ggdist')
+#import my own metadata prep script
+source('~/Projects/MOVE/td_je_angam_2022/bin/generate_metadata.R')
+#install.packages(pkg) #install packages if you need them and load
+new.packages <- pkg[!(pkg %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+lapply(pkg, require, character.only = TRUE)#
+#remotes::install_github("khabbazian/sparseAHC")
+#set num cores
+numcores = 10
+#setwd
+#get project metadata
+metadata = prepare_metadata()
+```
+
+
+I fed filtered genotype-likelihoods (GLs) into pcANGSD [Meisner and Albrechtsen, 2018](https://www.genetics.org/content/210/2/719), which implements the fastPCA approach specified in [Galinksy et al, 2016](https://www.cell.com/ajhg/fulltext/S0002-9297(16)00003-3). 
+
+
+
+
+
+
+
+I also called mitochondrial SNPs in Freebayes [ref](), and used them to generate a phylogenetic tree.
+
+GLs were used as input for ngsLD [Viera et al,20XX](). LD decay is plotted below:
+
+
+

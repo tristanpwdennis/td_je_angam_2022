@@ -1,0 +1,18 @@
+---
+title: "00 - Sampling and Sequencing"
+output: html_notebook
+---
+
+This is a notebook describing the sampling and sequencing efforts described in Dennis and Essandoh, 2022.
+
+XX samples were collected (describe in more detail here)
+
+Sampling figure here.
+
+384 samples were sequenced (sequencing details)
+
+After sequencing, 314 were retained based on XX. GLs were called in ANGSD with xx filters.
+
+SNPstats and QC
+
+
