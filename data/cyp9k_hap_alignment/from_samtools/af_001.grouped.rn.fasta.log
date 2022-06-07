@@ -1,0 +1,1516 @@
+IQ-TREE multicore version 2.0.7 for Mac OS X 64-bit built Jun 17 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    tristanpwdennis.local (AVX2, FMA3, 64 GB RAM)
+Command: iqtree2 -m TEST -s af_001.grouped.rn.fasta --ufboot 1000
+Seed:    475476 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue May  3 16:56:58 2022
+Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file af_001.grouped.rn.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 628 sequences with 2293 columns, 45 distinct patterns
+41 parsimony-informative, 0 singleton sites, 2252 constant sites
+                   Gap/Ambiguity  Composition  p-value
+   1  100-DW-OBP1-4_h1     0.00%    passed     99.98%
+   2  100-DW-OBP1-4_h2     0.00%    passed     99.94%
+   3  101-DW-OBP1-5_h1     0.00%    passed     99.98%
+   4  101-DW-OBP1-5_h2     0.00%    passed     99.98%
+   5  102-DW-OBP1-6_h1     0.00%    passed     99.98%
+   6  102-DW-OBP1-6_h2     0.00%    passed     99.98%
+   7  105-DW-OBP1-9_h1     0.00%    passed     99.98%
+   8  105-DW-OBP1-9_h2     0.00%    passed    100.00%
+   9  106-DW-OBP1-10_h1    0.00%    passed     99.98%
+  10  106-DW-OBP1-10_h2    0.00%    passed     99.98%
+  11  107-DW-OBP1-12_h1    0.00%    passed     99.98%
+  12  107-DW-OBP1-12_h2    0.00%    passed     99.95%
+  13  108-DW-OBP1-13_h1    0.00%    passed     99.98%
+  14  108-DW-OBP1-13_h2    0.00%    passed     99.95%
+  15  109-DW-OBP1-14_h1    0.00%    passed     99.98%
+  16  109-DW-OBP1-14_h2    0.00%    passed     99.98%
+  17  10-DW-Tar5_h1        0.00%    passed    100.00%
+  18  10-DW-Tar5_h2        0.00%    passed     99.98%
+  19  110-DW-OBP1-16_h1    0.00%    passed     99.98%
+  20  110-DW-OBP1-16_h2    0.00%    passed     99.98%
+  21  112-DW-OBP1-18_h1    0.00%    passed     99.98%
+  22  112-DW-OBP1-18_h2    0.00%    passed     99.98%
+  23  113-DW-OBP1-19_h1    0.00%    passed     99.98%
+  24  113-DW-OBP1-19_h2    0.00%    passed     99.98%
+  25  114-DW-OBP1-20_h1    0.00%    passed     99.98%
+  26  114-DW-OBP1-20_h2    0.00%    passed     99.98%
+  27  116-DW-AnB-1_h1      0.00%    passed     99.98%
+  28  116-DW-AnB-1_h2      0.00%    passed     99.87%
+  29  119-DW-AnB-4_h1      0.00%    passed     99.98%
+  30  119-DW-AnB-4_h2      0.00%    passed     99.93%
+  31  11-DW-Tar6_h1        0.00%    passed     99.98%
+  32  11-DW-Tar6_h2        0.00%    passed     99.94%
+  33  120-DW-AnB-5_h1      0.00%    passed     99.98%
+  34  120-DW-AnB-5_h2      0.00%    passed     99.98%
+  35  122-DW-AnB-7_h1      0.00%    passed     99.99%
+  36  122-DW-AnB-7_h2      0.00%    passed    100.00%
+  37  123-DW-AnB-8_h1      0.00%    passed     99.98%
+  38  123-DW-AnB-8_h2      0.00%    passed     99.98%
+  39  125-DW-AnB-10_h1     0.00%    passed     99.98%
+  40  125-DW-AnB-10_h2     0.00%    passed     99.98%
+  41  127-DW-AnB-12_h1     0.00%    passed     99.98%
+  42  127-DW-AnB-12_h2     0.00%    passed     99.88%
+  43  12-DW-Tar7_h1        0.00%    passed     99.98%
+  44  12-DW-Tar7_h2        0.00%    passed     99.97%
+  45  131-DW-AnB-16_h1     0.00%    passed     99.98%
+  46  131-DW-AnB-16_h2     0.00%    passed     99.98%
+  47  134-DW-NeA-66_h1     0.00%    passed    100.00%
+  48  134-DW-NeA-66_h2     0.00%    passed    100.00%
+  49  135-DW-NeA-79_h1     0.00%    passed    100.00%
+  50  135-DW-NeA-79_h2     0.00%    passed     99.98%
+  51  138-DW-NeA-84_h1     0.00%    passed     99.98%
+  52  138-DW-NeA-84_h2     0.00%    passed    100.00%
+  53  139-DW-NeA-87_h1     0.00%    passed     99.92%
+  54  139-DW-NeA-87_h2     0.00%    passed     99.98%
+  55  13-DW-Tar8_h1        0.00%    passed     99.98%
+  56  13-DW-Tar8_h2        0.00%    passed     99.98%
+  57  140-DW-NeA-49_h1     0.00%    passed     99.98%
+  58  140-DW-NeA-49_h2     0.00%    passed     99.98%
+  59  141-DW-NeA-50_h1     0.00%    passed     99.98%
+  60  141-DW-NeA-50_h2     0.00%    passed     99.98%
+  61  142-DW-NeA-51_h1     0.00%    passed     99.91%
+  62  142-DW-NeA-51_h2     0.00%    passed     99.98%
+  63  143-DW-NeA-52_h1     0.00%    passed     99.98%
+  64  143-DW-NeA-52_h2     0.00%    passed     99.95%
+  65  145-DW-NeA-54_h1     0.00%    passed     99.88%
+  66  145-DW-NeA-54_h2     0.00%    passed     99.95%
+  67  146-DW-NeA-55_h1     0.00%    passed     99.98%
+  68  146-DW-NeA-55_h2     0.00%    passed     99.99%
+  69  147-DW-NeA-57_h1     0.00%    passed     99.98%
+  70  147-DW-NeA-57_h2     0.00%    passed     99.98%
+  71  148-DW-AnB-49_h1     0.00%    passed     99.98%
+  72  148-DW-AnB-49_h2     0.00%    passed     99.98%
+  73  149-DW-AnB-50_h1     0.00%    passed     99.98%
+  74  149-DW-AnB-50_h2     0.00%    passed     99.98%
+  75  14-DW-Tar10_h1       0.00%    passed     99.99%
+  76  14-DW-Tar10_h2       0.00%    passed     99.94%
+  77  150-DW-AnB-51_h1     0.00%    passed     99.98%
+  78  150-DW-AnB-51_h2     0.00%    passed     99.74%
+  79  151-DW-AnB-53_h1     0.00%    passed     99.98%
+  80  151-DW-AnB-53_h2     0.00%    passed     99.98%
+  81  157-DW-DoM-2_h1      0.00%    passed     99.98%
+  82  157-DW-DoM-2_h2      0.00%    passed     99.98%
+  83  158-DW-DoM-3_h1      0.00%    passed     99.98%
+  84  158-DW-DoM-3_h2      0.00%    passed     99.98%
+  85  159-DW-DoM-4_h1      0.00%    passed     99.98%
+  86  159-DW-DoM-4_h2      0.00%    passed     99.98%
+  87  15-DW-Tar11_h1       0.00%    passed     99.94%
+  88  15-DW-Tar11_h2       0.00%    passed     99.98%
+  89  160-DW-DoM-5_h1      0.00%    passed     99.97%
+  90  160-DW-DoM-5_h2      0.00%    passed     99.98%
+  91  163-DW-DoM-9_h1      0.00%    passed     99.98%
+  92  163-DW-DoM-9_h2      0.00%    passed     99.98%
+  93  164-DW-DoM-49_h1     0.00%    passed     99.94%
+  94  164-DW-DoM-49_h2     0.00%    passed     99.98%
+  95  165-DW-DoM-50_h1     0.00%    passed     99.98%
+  96  165-DW-DoM-50_h2     0.00%    passed     99.97%
+  97  166-DW-DoM-51_h1     0.00%    passed     99.98%
+  98  166-DW-DoM-51_h2     0.00%    passed     99.98%
+  99  167-DW-DoM-52_h1     0.00%    passed     99.98%
+ 100  167-DW-DoM-52_h2     0.00%    passed     99.98%
+ 101  169-DW-DoM-54_h1     0.00%    passed     99.98%
+ 102  169-DW-DoM-54_h2     0.00%    passed     99.98%
+ 103  170-DW-DoM-55_h1     0.00%    passed     99.98%
+ 104  170-DW-DoM-55_h2     0.00%    passed     99.98%
+ 105  171-DW-DoM-56_h1     0.00%    passed     99.98%
+ 106  171-DW-DoM-56_h2     0.00%    passed     99.98%
+ 107  173-DW-NeA-11_h1     0.00%    passed     99.98%
+ 108  173-DW-NeA-11_h2     0.00%    passed    100.00%
+ 109  174-DW-NeA-12_h1     0.00%    passed     99.98%
+ 110  174-DW-NeA-12_h2     0.00%    passed    100.00%
+ 111  175-DW-NeA-16_h1     0.00%    passed     99.98%
+ 112  175-DW-NeA-16_h2     0.00%    passed     99.98%
+ 113  176-DW-NeA-17_h1     0.00%    passed     99.98%
+ 114  176-DW-NeA-17_h2     0.00%    passed     99.91%
+ 115  177-DW-NeA-20_h1     0.00%    passed     99.94%
+ 116  177-DW-NeA-20_h2     0.00%    passed     99.98%
+ 117  178-DW-NeA-23_h1     0.00%    passed     99.94%
+ 118  178-DW-NeA-23_h2     0.00%    passed     99.98%
+ 119  17-DW-Tak1_h1        0.00%    passed     99.98%
+ 120  17-DW-Tak1_h2        0.00%    passed     99.88%
+ 121  180-DW-NeA-4_h1      0.00%    passed     99.95%
+ 122  180-DW-NeA-4_h2      0.00%    passed     99.98%
+ 123  181-DW-NeA-5_h1      0.00%    passed     99.98%
+ 124  181-DW-NeA-5_h2      0.00%    passed     99.99%
+ 125  182-DW-NeA-6_h1      0.00%    passed     99.98%
+ 126  182-DW-NeA-6_h2      0.00%    passed     99.97%
+ 127  183-DW-NeA-9_h1      0.00%    passed     99.98%
+ 128  183-DW-NeA-9_h2      0.00%    passed     99.99%
+ 129  185-DW-NeA-14_h1     0.00%    passed     99.91%
+ 130  185-DW-NeA-14_h2     0.00%    passed     99.88%
+ 131  186-DW-NeA-15_h1     0.00%    passed     99.99%
+ 132  186-DW-NeA-15_h2     0.00%    passed     99.96%
+ 133  187-DW-NeA-18_h1     0.00%    passed     99.97%
+ 134  187-DW-NeA-18_h2     0.00%    passed     99.96%
+ 135  188-DW-NeA-19_h1     0.00%    passed     99.98%
+ 136  188-DW-NeA-19_h2     0.00%    passed     99.98%
+ 137  18-DW-Tak2_h1        0.00%    passed     99.97%
+ 138  18-DW-Tak2_h2        0.00%    passed     99.98%
+ 139  190-DW-Sha16_h1      0.00%    passed     99.98%
+ 140  190-DW-Sha16_h2      0.00%    passed     99.92%
+ 141  191-DW-Kom6_h1       0.00%    passed     99.98%
+ 142  191-DW-Kom6_h2       0.00%    passed     99.99%
+ 143  192-DW-Kom7_h1       0.00%    passed     99.98%
+ 144  192-DW-Kom7_h2       0.00%    passed     99.98%
+ 145  19-DW-Tak3_h1        0.00%    passed     99.94%
+ 146  19-DW-Tak3_h2        0.00%    passed     99.92%
+ 147  1-DW-Suh2_h1         0.00%    passed    100.00%
+ 148  1-DW-Suh2_h2         0.00%    passed     99.99%
+ 149  20-DW-Tak4_h1        0.00%    passed     99.98%
+ 150  20-DW-Tak4_h2        0.00%    passed     99.98%
+ 151  21-DW-Tak5_h1        0.00%    passed     99.98%
+ 152  21-DW-Tak5_h2        0.00%    passed     99.98%
+ 153  22-DW-Tak6_h1        0.00%    passed    100.00%
+ 154  22-DW-Tak6_h2        0.00%    passed     99.87%
+ 155  23-DW-Tak7_h1        0.00%    passed     99.97%
+ 156  23-DW-Tak7_h2        0.00%    passed     99.98%
+ 157  24-DW-Tak8_h1        0.00%    passed     99.92%
+ 158  24-DW-Tak8_h2        0.00%    passed     99.98%
+ 159  25-DW-Tub1_h1        0.00%    passed     99.98%
+ 160  25-DW-Tub1_h2        0.00%    passed     99.98%
+ 161  26-DW-Tub2_h1        0.00%    passed     99.83%
+ 162  26-DW-Tub2_h2        0.00%    passed     99.93%
+ 163  27-DW-Tub3_h1        0.00%    passed     99.74%
+ 164  27-DW-Tub3_h2        0.00%    passed     99.98%
+ 165  29-DW-Tub5_h1        0.00%    passed     99.98%
+ 166  29-DW-Tub5_h2        0.00%    passed     99.98%
+ 167  2-DW-Suh5_h1         0.00%    passed     99.98%
+ 168  2-DW-Suh5_h2         0.00%    passed     99.98%
+ 169  30-DW-Tub6_h1        0.00%    passed     99.98%
+ 170  30-DW-Tub6_h2        0.00%    passed     99.96%
+ 171  31-DW-Tub7_h1        0.00%    passed    100.00%
+ 172  31-DW-Tub7_h2        0.00%    passed     99.98%
+ 173  32-DW-Tub8_h1        0.00%    passed     99.97%
+ 174  32-DW-Tub8_h2        0.00%    passed     99.92%
+ 175  35-DW-Tub11_h1       0.00%    passed     99.97%
+ 176  35-DW-Tub11_h2       0.00%    passed     99.98%
+ 177  36-DW-Tub12_h1       0.00%    passed     99.98%
+ 178  36-DW-Tub12_h2       0.00%    passed     99.96%
+ 179  37-DW-Tub14_h1       0.00%    passed     99.98%
+ 180  37-DW-Tub14_h2       0.00%    passed    100.00%
+ 181  38-DW-Tub15_h1       0.00%    passed     99.98%
+ 182  38-DW-Tub15_h2       0.00%    passed     99.94%
+ 183  3-DW-Suh7_h1         0.00%    passed     99.98%
+ 184  3-DW-Suh7_h2         0.00%    passed     99.98%
+ 185  40-DW-Tub17_h1       0.00%    passed    100.00%
+ 186  40-DW-Tub17_h2       0.00%    passed     99.98%
+ 187  41-DW-TP4_h1         0.00%    passed     99.97%
+ 188  41-DW-TP4_h2         0.00%    passed     99.98%
+ 189  42-DW-TP5_h1         0.00%    passed     99.92%
+ 190  42-DW-TP5_h2         0.00%    passed     99.98%
+ 191  43-DW-TP6_h1         0.00%    passed     99.98%
+ 192  43-DW-TP6_h2         0.00%    passed     99.99%
+ 193  44-DW-TP7_h1         0.00%    passed    100.00%
+ 194  44-DW-TP7_h2         0.00%    passed     99.98%
+ 195  45-DW-TP9_h1         0.00%    passed     99.92%
+ 196  45-DW-TP9_h2         0.00%    passed     99.98%
+ 197  46-DW-TP10_h1        0.00%    passed     99.98%
+ 198  46-DW-TP10_h2        0.00%    passed     99.98%
+ 199  47-DW-TP11_h1        0.00%    passed     99.98%
+ 200  47-DW-TP11_h2        0.00%    passed     99.97%
+ 201  48-DW-TP15_h1        0.00%    passed     99.98%
+ 202  48-DW-TP15_h2        0.00%    passed     99.97%
+ 203  49-DW-WE1_h1         0.00%    passed    100.00%
+ 204  49-DW-WE1_h2         0.00%    passed     99.98%
+ 205  4-DW-Suh11_h1        0.00%    passed     99.98%
+ 206  4-DW-Suh11_h2        0.00%    passed     99.96%
+ 207  53-DW-WE6_h1         0.00%    passed     99.99%
+ 208  53-DW-WE6_h2         0.00%    passed     99.97%
+ 209  54-DW-WE7_h1         0.00%    passed     99.99%
+ 210  54-DW-WE7_h2         0.00%    passed     99.99%
+ 211  55-DW-WE8_h1         0.00%    passed     99.98%
+ 212  55-DW-WE8_h2         0.00%    passed     99.98%
+ 213  56-DW-WE9_h1         0.00%    passed    100.00%
+ 214  56-DW-WE9_h2         0.00%    passed     99.98%
+ 215  57-DW-WE11_h1        0.00%    passed     99.98%
+ 216  57-DW-WE11_h2        0.00%    passed     99.98%
+ 217  59-DW-WE19_h1        0.00%    passed     99.98%
+ 218  59-DW-WE19_h2        0.00%    passed     99.98%
+ 219  5-DW-Suh12_h1        0.00%    passed     99.99%
+ 220  5-DW-Suh12_h2        0.00%    passed     99.98%
+ 221  61-DW-WE27_h1        0.00%    passed     99.98%
+ 222  61-DW-WE27_h2        0.00%    passed     99.94%
+ 223  62-DW-WE28_h1        0.00%    passed     99.98%
+ 224  62-DW-WE28_h2        0.00%    passed     99.98%
+ 225  65-DW-Mad49_h1       0.00%    passed     99.99%
+ 226  65-DW-Mad49_h2       0.00%    passed    100.00%
+ 227  66-DW-Mad50_h1       0.00%    passed    100.00%
+ 228  66-DW-Mad50_h2       0.00%    passed    100.00%
+ 229  68-DW-Mad53_h1       0.00%    passed     99.94%
+ 230  68-DW-Mad53_h2       0.00%    passed     99.98%
+ 231  69-DW-Mad54_h1       0.00%    passed     99.98%
+ 232  69-DW-Mad54_h2       0.00%    passed     99.94%
+ 233  6-DW-Suh18_h1        0.00%    passed     99.98%
+ 234  6-DW-Suh18_h2        0.00%    passed     99.98%
+ 235  70-DW-Mad55_h1       0.00%    passed     99.98%
+ 236  70-DW-Mad55_h2       0.00%    passed     99.98%
+ 237  71-DW-Mad56_h1       0.00%    passed     99.98%
+ 238  71-DW-Mad56_h2       0.00%    passed     99.99%
+ 239  72-DW-Mad57_h1       0.00%    passed     99.90%
+ 240  72-DW-Mad57_h2       0.00%    passed     99.88%
+ 241  73-DW-Mad58_h1       0.00%    passed     99.98%
+ 242  73-DW-Mad58_h2       0.00%    passed     99.95%
+ 243  74-DW-Mad59_h1       0.00%    passed    100.00%
+ 244  74-DW-Mad59_h2       0.00%    passed     99.98%
+ 245  75-DW-Mad60_h1       0.00%    passed     99.97%
+ 246  75-DW-Mad60_h2       0.00%    passed     99.87%
+ 247  76-DW-Mad61_h1       0.00%    passed     99.94%
+ 248  76-DW-Mad61_h2       0.00%    passed     99.98%
+ 249  77-DW-Mad62_h1       0.00%    passed     99.98%
+ 250  77-DW-Mad62_h2       0.00%    passed     99.97%
+ 251  78-DW-Mad63_h1       0.00%    passed     99.98%
+ 252  78-DW-Mad63_h2       0.00%    passed     99.98%
+ 253  79-DW-Mad64_h1       0.00%    passed     99.88%
+ 254  79-DW-Mad64_h2       0.00%    passed     99.95%
+ 255  7-DW-Suh19_h1        0.00%    passed    100.00%
+ 256  7-DW-Suh19_h2        0.00%    passed     99.91%
+ 257  80-DW-Mad65_h1       0.00%    passed     99.88%
+ 258  80-DW-Mad65_h2       0.00%    passed     99.74%
+ 259  81-DW-Mad66_h1       0.00%    passed     99.98%
+ 260  81-DW-Mad66_h2       0.00%    passed     99.99%
+ 261  82-DW-Mad67_h1       0.00%    passed     99.97%
+ 262  82-DW-Mad67_h2       0.00%    passed     99.87%
+ 263  83-DW-Mad68_h1       0.00%    passed     99.87%
+ 264  83-DW-Mad68_h2       0.00%    passed     99.90%
+ 265  84-DW-Mad69_h1       0.00%    passed     99.97%
+ 266  84-DW-Mad69_h2       0.00%    passed     99.88%
+ 267  85-DW-Sha2_h1        0.00%    passed     99.94%
+ 268  85-DW-Sha2_h2        0.00%    passed     99.98%
+ 269  86-DW-Sha3_h1        0.00%    passed     99.97%
+ 270  86-DW-Sha3_h2        0.00%    passed     99.98%
+ 271  87-DW-Sha4_h1        0.00%    passed     99.98%
+ 272  87-DW-Sha4_h2        0.00%    passed     99.97%
+ 273  88-DW-Sha6_h1        0.00%    passed     99.98%
+ 274  88-DW-Sha6_h2        0.00%    passed     99.98%
+ 275  90-DW-Sha14_h1       0.00%    passed     99.98%
+ 276  90-DW-Sha14_h2       0.00%    passed     99.97%
+ 277  91-DW-Kom2_h1        0.00%    passed     99.98%
+ 278  91-DW-Kom2_h2        0.00%    passed     99.98%
+ 279  92-DW-Kom3_h1        0.00%    passed    100.00%
+ 280  92-DW-Kom3_h2        0.00%    passed     99.98%
+ 281  93-DW-Kom4_h1        0.00%    passed     99.94%
+ 282  93-DW-Kom4_h2        0.00%    passed     99.98%
+ 283  94-DW-Kom12_h1       0.00%    passed     99.98%
+ 284  94-DW-Kom12_h2       0.00%    passed     99.98%
+ 285  95-DW-Kom13_h1       0.00%    passed     99.98%
+ 286  95-DW-Kom13_h2       0.00%    passed     99.98%
+ 287  96-DW-Kom14_h1       0.00%    passed     99.98%
+ 288  96-DW-Kom14_h2       0.00%    passed     99.98%
+ 289  97-DW-OBP1-1_h1      0.00%    passed     99.95%
+ 290  97-DW-OBP1-1_h2      0.00%    passed     99.98%
+ 291  98-DW-OBP1-2_h1      0.00%    passed     99.96%
+ 292  98-DW-OBP1-2_h2      0.00%    passed     99.98%
+ 293  99-DW-OBP1-3_h1      0.00%    passed     99.98%
+ 294  99-DW-OBP1-3_h2      0.00%    passed     99.98%
+ 295  9-DW-Tar2_h1         0.00%    passed     99.91%
+ 296  9-DW-Tar2_h2         0.00%    passed     99.93%
+ 297  DW-AdF10_h1          0.00%    passed     99.83%
+ 298  DW-AdF10_h2          0.00%    passed     99.99%
+ 299  DW-AdF11_h1          0.00%    passed     99.83%
+ 300  DW-AdF11_h2          0.00%    passed     99.96%
+ 301  DW-AdF17_h1          0.00%    passed     99.83%
+ 302  DW-AdF17_h2          0.00%    passed     99.99%
+ 303  DW-AdF18_h1          0.00%    passed     99.79%
+ 304  DW-AdF18_h2          0.00%    passed     99.94%
+ 305  DW-AdF19_h1          0.00%    passed     99.99%
+ 306  DW-AdF19_h2          0.00%    passed     99.83%
+ 307  DW-AdF1_h1           0.00%    passed     99.83%
+ 308  DW-AdF1_h2           0.00%    passed     99.75%
+ 309  DW-AdF3_h1           0.00%    passed     99.83%
+ 310  DW-AdF3_h2           0.00%    passed     99.83%
+ 311  DW-AdF7_h1           0.00%    passed     99.98%
+ 312  DW-AdF7_h2           0.00%    passed     99.95%
+ 313  DW-AF11_h1           0.00%    passed     99.99%
+ 314  DW-AF11_h2           0.00%    passed     99.98%
+ 315  DW-AF17_h1           0.00%    passed     99.91%
+ 316  DW-AF17_h2           0.00%    passed     99.88%
+ 317  DW-AF19_h1           0.00%    passed     99.98%
+ 318  DW-AF19_h2           0.00%    passed     99.98%
+ 319  DW-AF22_h1           0.00%    passed     99.97%
+ 320  DW-AF22_h2           0.00%    passed     99.94%
+ 321  DW-AF23_h1           0.00%    passed     99.95%
+ 322  DW-AF23_h2           0.00%    passed     99.98%
+ 323  DW-AF24_h1           0.00%    passed     99.99%
+ 324  DW-AF24_h2           0.00%    passed     99.95%
+ 325  DW-AF26_h1           0.00%    passed     99.94%
+ 326  DW-AF26_h2           0.00%    passed     99.98%
+ 327  DW-AF2_h1            0.00%    passed     99.98%
+ 328  DW-AF2_h2            0.00%    passed     99.98%
+ 329  DW-AF3_h1            0.00%    passed     99.99%
+ 330  DW-AF3_h2            0.00%    passed     99.98%
+ 331  DW-AF4_h1            0.00%    passed     99.98%
+ 332  DW-AF4_h2            0.00%    passed     99.98%
+ 333  DW-AF5_h1            0.00%    passed     99.99%
+ 334  DW-AF5_h2            0.00%    passed    100.00%
+ 335  DW-AF6_h1            0.00%    passed     99.98%
+ 336  DW-AF6_h2            0.00%    passed     99.98%
+ 337  DW-AF7_h1            0.00%    passed     99.98%
+ 338  DW-AF7_h2            0.00%    passed     99.98%
+ 339  DW-AF8_h1            0.00%    passed     99.98%
+ 340  DW-AF8_h2            0.00%    passed     99.98%
+ 341  DW-AF9_h1            0.00%    passed     99.98%
+ 342  DW-AF9_h2            0.00%    passed     99.97%
+ 343  DW-AgD34_h1          0.00%    passed     99.98%
+ 344  DW-AgD34_h2          0.00%    passed     99.98%
+ 345  DW-AgD37_h1          0.00%    passed     99.98%
+ 346  DW-AgD37_h2          0.00%    passed     99.98%
+ 347  DW-AgD4_h1           0.00%    passed     99.95%
+ 348  DW-AgD4_h2           0.00%    passed     99.98%
+ 349  DW-AgD5_h1           0.00%    passed     99.88%
+ 350  DW-AgD5_h2           0.00%    passed     99.98%
+ 351  DW-Aka10_h1          0.00%    passed     99.99%
+ 352  DW-Aka10_h2          0.00%    passed     99.95%
+ 353  DW-Aka15_h1          0.00%    passed     99.98%
+ 354  DW-Aka15_h2          0.00%    passed     99.88%
+ 355  DW-Aka20_h1          0.00%    passed     99.78%
+ 356  DW-Aka20_h2          0.00%    passed     99.98%
+ 357  DW-Aka22_h1          0.00%    passed     99.98%
+ 358  DW-Aka22_h2          0.00%    passed    100.00%
+ 359  DW-Aka23_h1          0.00%    passed     99.95%
+ 360  DW-Aka23_h2          0.00%    passed     99.88%
+ 361  DW-Anl11_h1          0.00%    passed     99.88%
+ 362  DW-Anl11_h2          0.00%    passed     99.86%
+ 363  DW-Anl17_h1          0.00%    passed     99.83%
+ 364  DW-Anl17_h2          0.00%    passed     99.93%
+ 365  DW-Asa11_h1          0.00%    passed     99.98%
+ 366  DW-Asa11_h2          0.00%    passed    100.00%
+ 367  DW-Asa12_h1          0.00%    passed     99.98%
+ 368  DW-Asa12_h2          0.00%    passed     99.98%
+ 369  DW-Asa14_h1          0.00%    passed     99.97%
+ 370  DW-Asa14_h2          0.00%    passed     99.98%
+ 371  DW-Asa5_h1           0.00%    passed     99.98%
+ 372  DW-Asa5_h2           0.00%    passed     99.99%
+ 373  DW-Asa9_h1           0.00%    passed     99.98%
+ 374  DW-Asa9_h2           0.00%    passed    100.00%
+ 375  DW-Ash12_h1          0.00%    passed     99.99%
+ 376  DW-Ash12_h2          0.00%    passed     99.98%
+ 377  DW-Ash13_h1          0.00%    passed     99.99%
+ 378  DW-Ash13_h2          0.00%    passed     99.94%
+ 379  DW-Ash26_h1          0.00%    passed     99.83%
+ 380  DW-Ash26_h2          0.00%    passed     99.85%
+ 381  DW-Ash6_h1           0.00%    passed     99.83%
+ 382  DW-Ash6_h2           0.00%    passed     99.83%
+ 383  DW-Ash8_h1           0.00%    passed     99.95%
+ 384  DW-Ash8_h2           0.00%    passed     99.83%
+ 385  DW-Ash9_h1           0.00%    passed     99.83%
+ 386  DW-Ash9_h2           0.00%    passed     99.83%
+ 387  DW-Asi11_h1          0.00%    passed     99.98%
+ 388  DW-Asi11_h2          0.00%    passed     99.98%
+ 389  DW-Asi13_h1          0.00%    passed     99.98%
+ 390  DW-Asi13_h2          0.00%    passed     99.98%
+ 391  DW-Asi2_h1           0.00%    passed     99.99%
+ 392  DW-Asi2_h2           0.00%    passed     99.99%
+ 393  DW-Asi3_h1           0.00%    passed     99.96%
+ 394  DW-Asi3_h2           0.00%    passed     99.96%
+ 395  DW-Asi4_h1           0.00%    passed     99.99%
+ 396  DW-Asi4_h2           0.00%    passed     99.99%
+ 397  DW-Asi5_h1           0.00%    passed     99.98%
+ 398  DW-Asi5_h2           0.00%    passed     99.98%
+ 399  DW-Asi9_h1           0.00%    passed     99.99%
+ 400  DW-Asi9_h2           0.00%    passed     99.98%
+ 401  DW-Axi13_h1          0.00%    passed     99.98%
+ 402  DW-Axi13_h2          0.00%    passed     99.97%
+ 403  DW-Axi14_h1          0.00%    passed     99.98%
+ 404  DW-Axi14_h2          0.00%    passed     99.98%
+ 405  DW-Axi15_h1          0.00%    passed     99.98%
+ 406  DW-Axi15_h2          0.00%    passed     99.98%
+ 407  DW-Axi16_h1          0.00%    passed     99.98%
+ 408  DW-Axi16_h2          0.00%    passed     99.98%
+ 409  DW-Axi1_h1           0.00%    passed     99.99%
+ 410  DW-Axi1_h2           0.00%    passed     99.94%
+ 411  DW-Axi2_h1           0.00%    passed     99.98%
+ 412  DW-Axi2_h2           0.00%    passed     99.98%
+ 413  DW-Axi3_h1           0.00%    passed     99.97%
+ 414  DW-Axi3_h2           0.00%    passed     99.98%
+ 415  DW-Axi4_h1           0.00%    passed     99.98%
+ 416  DW-Axi4_h2           0.00%    passed     99.97%
+ 417  DW-Bog10_h1          0.00%    passed     99.97%
+ 418  DW-Bog10_h2          0.00%    passed     99.98%
+ 419  DW-Bog11_h1          0.00%    passed     99.98%
+ 420  DW-Bog11_h2          0.00%    passed     99.98%
+ 421  DW-Bog12_h1          0.00%    passed     99.88%
+ 422  DW-Bog12_h2          0.00%    passed     99.90%
+ 423  DW-Bog13_h1          0.00%    passed     99.98%
+ 424  DW-Bog13_h2          0.00%    passed     99.99%
+ 425  DW-Bog14_h1          0.00%    passed     99.94%
+ 426  DW-Bog14_h2          0.00%    passed     99.88%
+ 427  DW-Bog15_h1          0.00%    passed     99.98%
+ 428  DW-Bog15_h2          0.00%    passed     99.98%
+ 429  DW-Bog16_h1          0.00%    passed     99.98%
+ 430  DW-Bog16_h2          0.00%    passed     99.98%
+ 431  DW-Bog18_h1          0.00%    passed     99.94%
+ 432  DW-Bog18_h2          0.00%    passed     99.97%
+ 433  DW-Bog1_h1           0.00%    passed     99.98%
+ 434  DW-Bog1_h2           0.00%    passed     99.98%
+ 435  DW-Bog23_h1          0.00%    passed     99.98%
+ 436  DW-Bog23_h2          0.00%    passed     99.98%
+ 437  DW-Bog25_h1          0.00%    passed     99.98%
+ 438  DW-Bog25_h2          0.00%    passed     99.98%
+ 439  DW-Bog2_h1           0.00%    passed     99.93%
+ 440  DW-Bog2_h2           0.00%    passed     99.98%
+ 441  DW-Bog5_h1           0.00%    passed     99.94%
+ 442  DW-Bog5_h2           0.00%    passed     99.98%
+ 443  DW-Bog6_h1           0.00%    passed     99.98%
+ 444  DW-Bog6_h2           0.00%    passed     99.99%
+ 445  DW-Bog8_h1           0.00%    passed    100.00%
+ 446  DW-Bog8_h2           0.00%    passed     99.98%
+ 447  DW-Bog9_h1           0.00%    passed     99.98%
+ 448  DW-Bog9_h2           0.00%    passed     99.98%
+ 449  DW-Dod11_h1          0.00%    passed     99.98%
+ 450  DW-Dod11_h2          0.00%    passed     99.94%
+ 451  DW-Dod15_h1          0.00%    passed     99.97%
+ 452  DW-Dod15_h2          0.00%    passed     99.61%
+ 453  DW-Dod16_h1          0.00%    passed     99.98%
+ 454  DW-Dod16_h2          0.00%    passed     99.98%
+ 455  DW-Dod18_h1          0.00%    passed     99.98%
+ 456  DW-Dod18_h2          0.00%    passed     99.99%
+ 457  DW-Dod2_h1           0.00%    passed     99.98%
+ 458  DW-Dod2_h2           0.00%    passed     99.88%
+ 459  DW-Dod7_h1           0.00%    passed     99.95%
+ 460  DW-Dod7_h2           0.00%    passed     99.88%
+ 461  DW-Dod8_h1           0.00%    passed     99.98%
+ 462  DW-Dod8_h2           0.00%    passed     99.88%
+ 463  DW-Dod9_h1           0.00%    passed    100.00%
+ 464  DW-Dod9_h2           0.00%    passed     99.98%
+ 465  DW-Dzo10_h1          0.00%    passed     99.91%
+ 466  DW-Dzo10_h2          0.00%    passed     99.98%
+ 467  DW-Dzo11_h1          0.00%    passed     99.98%
+ 468  DW-Dzo11_h2          0.00%    passed     99.98%
+ 469  DW-Dzo12_h1          0.00%    passed     99.98%
+ 470  DW-Dzo12_h2          0.00%    passed     99.98%
+ 471  DW-Dzo13_h1          0.00%    passed     99.98%
+ 472  DW-Dzo13_h2          0.00%    passed     99.99%
+ 473  DW-Dzo14_h1          0.00%    passed     99.99%
+ 474  DW-Dzo14_h2          0.00%    passed     99.98%
+ 475  DW-Dzo15_h1          0.00%    passed     99.99%
+ 476  DW-Dzo15_h2          0.00%    passed     99.98%
+ 477  DW-Dzo16_h1          0.00%    passed     99.98%
+ 478  DW-Dzo16_h2          0.00%    passed     99.98%
+ 479  DW-Dzo1_h1           0.00%    passed     99.88%
+ 480  DW-Dzo1_h2           0.00%    passed     99.99%
+ 481  DW-Dzo2_h1           0.00%    passed     99.94%
+ 482  DW-Dzo2_h2           0.00%    passed     99.99%
+ 483  DW-Dzo3_h1           0.00%    passed     99.83%
+ 484  DW-Dzo3_h2           0.00%    passed     99.98%
+ 485  DW-Dzo4_h1           0.00%    passed     99.94%
+ 486  DW-Dzo4_h2           0.00%    passed     99.94%
+ 487  DW-Dzo6_h1           0.00%    passed     99.89%
+ 488  DW-Dzo6_h2           0.00%    passed     99.98%
+ 489  DW-Dzo7_h1           0.00%    passed     99.98%
+ 490  DW-Dzo7_h2           0.00%    passed     99.98%
+ 491  DW-Dzo8_h1           0.00%    passed     99.93%
+ 492  DW-Dzo8_h2           0.00%    passed     99.83%
+ 493  DW-Dzo9_h1           0.00%    passed     99.98%
+ 494  DW-Dzo9_h2           0.00%    passed     99.98%
+ 495  DW-Enc10_h1          0.00%    passed     99.98%
+ 496  DW-Enc10_h2          0.00%    passed     99.98%
+ 497  DW-Enc12_h1          0.00%    passed     99.98%
+ 498  DW-Enc12_h2          0.00%    passed     99.98%
+ 499  DW-Enc14_h1          0.00%    passed     99.98%
+ 500  DW-Enc14_h2          0.00%    passed     99.98%
+ 501  DW-Enc16_h1          0.00%    passed     99.98%
+ 502  DW-Enc16_h2          0.00%    passed     99.95%
+ 503  DW-Enc17_h1          0.00%    passed     99.98%
+ 504  DW-Enc17_h2          0.00%    passed    100.00%
+ 505  DW-Enc18_h1          0.00%    passed     99.98%
+ 506  DW-Enc18_h2          0.00%    passed     99.96%
+ 507  DW-Enc19_h1          0.00%    passed     99.94%
+ 508  DW-Enc19_h2          0.00%    passed     99.94%
+ 509  DW-Enc20_h1          0.00%    passed     99.98%
+ 510  DW-Enc20_h2          0.00%    passed     99.98%
+ 511  DW-Enc21_h1          0.00%    passed     99.94%
+ 512  DW-Enc21_h2          0.00%    passed     99.98%
+ 513  DW-Enc22_h1          0.00%    passed     99.98%
+ 514  DW-Enc22_h2          0.00%    passed     99.98%
+ 515  DW-Enc2_h1           0.00%    passed     99.98%
+ 516  DW-Enc2_h2           0.00%    passed     99.95%
+ 517  DW-Enc3_h1           0.00%    passed     99.98%
+ 518  DW-Enc3_h2           0.00%    passed     99.97%
+ 519  DW-Enc4_h1           0.00%    passed     99.98%
+ 520  DW-Enc4_h2           0.00%    passed     99.98%
+ 521  DW-Enc7_h1           0.00%    passed     99.98%
+ 522  DW-Enc7_h2           0.00%    passed     99.98%
+ 523  DW-Enc9_h1           0.00%    passed     99.98%
+ 524  DW-Enc9_h2           0.00%    passed     99.98%
+ 525  DW-HA2_h1            0.00%    passed     99.87%
+ 526  DW-HA2_h2            0.00%    passed     99.87%
+ 527  DW-HA4_h1            0.00%    passed     99.87%
+ 528  DW-HA4_h2            0.00%    passed     99.98%
+ 529  DW-HA5_h1            0.00%    passed     99.98%
+ 530  DW-HA5_h2            0.00%    passed     99.99%
+ 531  DW-HA6_h1            0.00%    passed     99.98%
+ 532  DW-HA6_h2            0.00%    passed    100.00%
+ 533  DW-HA7_h1            0.00%    passed     99.99%
+ 534  DW-HA7_h2            0.00%    passed     99.99%
+ 535  DW-HA9_h1            0.00%    passed    100.00%
+ 536  DW-HA9_h2            0.00%    passed    100.00%
+ 537  DW-Kof10_h1          0.00%    passed     99.98%
+ 538  DW-Kof10_h2          0.00%    passed     99.99%
+ 539  DW-Kof12_h1          0.00%    passed     99.99%
+ 540  DW-Kof12_h2          0.00%    passed     99.98%
+ 541  DW-Kof16_h1          0.00%    passed     99.98%
+ 542  DW-Kof16_h2          0.00%    passed     99.87%
+ 543  DW-Kof18_h1          0.00%    passed     99.98%
+ 544  DW-Kof18_h2          0.00%    passed     99.98%
+ 545  DW-Kof19_h1          0.00%    passed     99.98%
+ 546  DW-Kof19_h2          0.00%    passed     99.99%
+ 547  DW-Kof20_h1          0.00%    passed     99.98%
+ 548  DW-Kof20_h2          0.00%    passed     99.98%
+ 549  DW-Kof21_h1          0.00%    passed     99.98%
+ 550  DW-Kof21_h2          0.00%    passed     99.98%
+ 551  DW-Kof23_h1          0.00%    passed     99.99%
+ 552  DW-Kof23_h2          0.00%    passed     99.94%
+ 553  DW-Mam10_h1          0.00%    passed     99.94%
+ 554  DW-Mam10_h2          0.00%    passed     99.83%
+ 555  DW-Mam15_h1          0.00%    passed     99.98%
+ 556  DW-Mam15_h2          0.00%    passed     99.98%
+ 557  DW-Mam16_h1          0.00%    passed     99.85%
+ 558  DW-Mam16_h2          0.00%    passed     99.99%
+ 559  DW-Mam2_h1           0.00%    passed     99.98%
+ 560  DW-Mam2_h2           0.00%    passed     99.99%
+ 561  DW-Mam4_h1           0.00%    passed     99.83%
+ 562  DW-Mam4_h2           0.00%    passed     99.75%
+ 563  DW-Mam6_h1           0.00%    passed     99.83%
+ 564  DW-Mam6_h2           0.00%    passed     99.98%
+ 565  DW-Mam9_h1           0.00%    passed     99.98%
+ 566  DW-Mam9_h2           0.00%    passed    100.00%
+ 567  DW-Man10_h1          0.00%    passed     99.98%
+ 568  DW-Man10_h2          0.00%    passed     99.98%
+ 569  DW-Man12_h1          0.00%    passed     99.98%
+ 570  DW-Man12_h2          0.00%    passed     99.98%
+ 571  DW-Man4_h1           0.00%    passed     99.97%
+ 572  DW-Man4_h2           0.00%    passed     99.98%
+ 573  DW-Man5_h1           0.00%    passed     99.98%
+ 574  DW-Man5_h2           0.00%    passed     99.98%
+ 575  DW-Man6_h1           0.00%    passed     99.88%
+ 576  DW-Man6_h2           0.00%    passed    100.00%
+ 577  DW-Man7_h1           0.00%    passed     99.98%
+ 578  DW-Man7_h2           0.00%    passed     99.98%
+ 579  DW-Man9_h1           0.00%    passed     99.98%
+ 580  DW-Man9_h2           0.00%    passed     99.98%
+ 581  DW-Nkw1_h1           0.00%    passed     99.98%
+ 582  DW-Nkw1_h2           0.00%    passed     99.98%
+ 583  DW-Nkw2_h1           0.00%    passed     99.98%
+ 584  DW-Nkw2_h2           0.00%    passed     99.98%
+ 585  DW-Nkw3_h1           0.00%    passed     99.98%
+ 586  DW-Nkw3_h2           0.00%    passed     99.95%
+ 587  DW-Nkw4_h1           0.00%    passed     99.98%
+ 588  DW-Nkw4_h2           0.00%    passed    100.00%
+ 589  DW-Nkw5_h1           0.00%    passed     99.98%
+ 590  DW-Nkw5_h2           0.00%    passed     99.98%
+ 591  DW-Nkw6_h1           0.00%    passed     99.98%
+ 592  DW-Nkw6_h2           0.00%    passed     99.98%
+ 593  DW-Nkw7_h1           0.00%    passed     99.98%
+ 594  DW-Nkw7_h2           0.00%    passed     99.98%
+ 595  DW-Nkw8_h1           0.00%    passed     99.99%
+ 596  DW-Nkw8_h2           0.00%    passed     99.98%
+ 597  DW-Nsa10_h1          0.00%    passed     99.98%
+ 598  DW-Nsa10_h2          0.00%    passed     99.96%
+ 599  DW-Nsa11_h1          0.00%    passed     99.87%
+ 600  DW-Nsa11_h2          0.00%    passed     99.98%
+ 601  DW-Nsa12_h1          0.00%    passed     99.98%
+ 602  DW-Nsa12_h2          0.00%    passed     99.99%
+ 603  DW-Nsa13_h1          0.00%    passed     99.98%
+ 604  DW-Nsa13_h2          0.00%    passed     99.98%
+ 605  DW-Nsa15_h1          0.00%    passed     99.98%
+ 606  DW-Nsa15_h2          0.00%    passed     99.98%
+ 607  DW-Nsa16_h1          0.00%    passed     99.97%
+ 608  DW-Nsa16_h2          0.00%    passed     99.98%
+ 609  DW-Nsa17_h1          0.00%    passed     99.98%
+ 610  DW-Nsa17_h2          0.00%    passed     99.98%
+ 611  DW-Nsa18_h1          0.00%    passed     99.98%
+ 612  DW-Nsa18_h2          0.00%    passed     99.98%
+ 613  DW-Nsa1_h1           0.00%    passed     99.98%
+ 614  DW-Nsa1_h2           0.00%    passed     99.97%
+ 615  DW-Nsa2_h1           0.00%    passed     99.98%
+ 616  DW-Nsa2_h2           0.00%    passed     99.98%
+ 617  DW-Nsa3_h1           0.00%    passed     99.98%
+ 618  DW-Nsa3_h2           0.00%    passed     99.98%
+ 619  DW-Nsa4_h1           0.00%    passed     99.98%
+ 620  DW-Nsa4_h2           0.00%    passed     99.86%
+ 621  DW-Nsa5_h1           0.00%    passed     99.99%
+ 622  DW-Nsa5_h2           0.00%    passed     99.98%
+ 623  DW-Nsa6_h1           0.00%    passed     99.98%
+ 624  DW-Nsa6_h2           0.00%    passed     99.98%
+ 625  DW-Nsa8_h1           0.00%    passed     99.98%
+ 626  DW-Nsa8_h2           0.00%    passed     99.98%
+ 627  DW-Nsa9_h1           0.00%    passed     99.98%
+ 628  DW-Nsa9_h2           0.00%    passed     99.98%
+****  TOTAL                0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: 101-DW-OBP1-5_h1 is identical to 100-DW-OBP1-4_h1 but kept for subsequent analysis
+NOTE: DW-Bog8_h1 is identical to 105-DW-OBP1-9_h2 but kept for subsequent analysis
+NOTE: 108-DW-OBP1-13_h2 is identical to 107-DW-OBP1-12_h2 but kept for subsequent analysis
+NOTE: 112-DW-OBP1-18_h1 is identical to 109-DW-OBP1-14_h1 but kept for subsequent analysis
+NOTE: DW-HA4_h2 is identical to 109-DW-OBP1-14_h2 but kept for subsequent analysis
+NOTE: 135-DW-NeA-79_h1 is identical to 10-DW-Tar5_h1 but kept for subsequent analysis
+NOTE: 11-DW-Tar6_h1 is identical to 10-DW-Tar5_h2 but kept for subsequent analysis
+NOTE: 164-DW-DoM-49_h1 is identical to 11-DW-Tar6_h2 but kept for subsequent analysis
+NOTE: 181-DW-NeA-5_h2 is identical to 122-DW-AnB-7_h1 but kept for subsequent analysis
+NOTE: 169-DW-DoM-54_h1 is identical to 123-DW-AnB-8_h1 but kept for subsequent analysis
+NOTE: 185-DW-NeA-14_h2 is identical to 127-DW-AnB-12_h2 but kept for subsequent analysis
+NOTE: 160-DW-DoM-5_h1 is identical to 12-DW-Tar7_h2 but kept for subsequent analysis
+NOTE: 134-DW-NeA-66_h2 is identical to 134-DW-NeA-66_h1 but kept for subsequent analysis
+NOTE: DW-Asa11_h2 is identical to 138-DW-NeA-84_h2 but kept for subsequent analysis
+NOTE: 190-DW-Sha16_h2 is identical to 139-DW-NeA-87_h1 but kept for subsequent analysis
+NOTE: DW-Aka15_h2 is identical to 145-DW-NeA-54_h1 but kept for subsequent analysis
+NOTE: 53-DW-WE6_h1 is identical to 146-DW-NeA-55_h2 but kept for subsequent analysis
+NOTE: 43-DW-TP6_h2 is identical to 14-DW-Tar10_h1 but kept for subsequent analysis
+NOTE: 15-DW-Tar11_h1 is identical to 14-DW-Tar10_h2 but kept for subsequent analysis
+NOTE: 44-DW-TP7_h2 is identical to 157-DW-DoM-2_h1 but kept for subsequent analysis
+NOTE: 9-DW-Tar2_h1 is identical to 176-DW-NeA-17_h2 but kept for subsequent analysis
+NOTE: DW-Bog14_h2 is identical to 17-DW-Tak1_h2 but kept for subsequent analysis
+NOTE: 187-DW-NeA-18_h1 is identical to 182-DW-NeA-6_h2 but kept for subsequent analysis
+NOTE: DW-AF24_h1 is identical to 183-DW-NeA-9_h2 but kept for subsequent analysis
+NOTE: DW-Asi3_h1 is identical to 187-DW-NeA-18_h2 but kept for subsequent analysis
+NOTE: 54-DW-WE7_h2 is identical to 191-DW-Kom6_h2 but kept for subsequent analysis
+NOTE: DW-Asa9_h2 is identical to 1-DW-Suh2_h1 but kept for subsequent analysis
+NOTE: 31-DW-Tub7_h1 is identical to 22-DW-Tak6_h1 but kept for subsequent analysis
+NOTE: DW-Ash6_h1 is identical to 26-DW-Tub2_h1 but kept for subsequent analysis
+NOTE: DW-Anl17_h2 is identical to 26-DW-Tub2_h2 but kept for subsequent analysis
+NOTE: 36-DW-Tub12_h2 is identical to 30-DW-Tub6_h2 but kept for subsequent analysis
+NOTE: DW-Asi2_h1 is identical to 65-DW-Mad49_h1 but kept for subsequent analysis
+NOTE: 7-DW-Suh19_h1 is identical to 66-DW-Mad50_h1 but kept for subsequent analysis
+NOTE: 76-DW-Mad61_h1 is identical to 69-DW-Mad54_h2 but kept for subsequent analysis
+NOTE: DW-Asi9_h1 is identical to 71-DW-Mad56_h2 but kept for subsequent analysis
+NOTE: 83-DW-Mad68_h2 is identical to 72-DW-Mad57_h1 but kept for subsequent analysis
+NOTE: 84-DW-Mad69_h1 is identical to 75-DW-Mad60_h1 but kept for subsequent analysis
+NOTE: 82-DW-Mad67_h2 is identical to 75-DW-Mad60_h2 but kept for subsequent analysis
+NOTE: DW-AF17_h1 is identical to 7-DW-Suh19_h2 but kept for subsequent analysis
+NOTE: DW-AdF11_h1 is identical to DW-AdF10_h1 but kept for subsequent analysis
+NOTE: DW-AdF19_h1 is identical to DW-AdF10_h2 but kept for subsequent analysis
+NOTE: DW-HA5_h1 is identical to DW-Aka22_h1 but kept for subsequent analysis
+NOTE: DW-Mam16_h1 is identical to DW-Ash26_h2 but kept for subsequent analysis
+NOTE: DW-Enc19_h1 is identical to DW-Axi1_h2 but kept for subsequent analysis
+NOTE: DW-Kof23_h1 is identical to DW-Bog6_h2 but kept for subsequent analysis
+NOTE: DW-Mam6_h2 is identical to DW-Dzo3_h2 but kept for subsequent analysis
+NOTE: 454 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: 101-DW-OBP1-5_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 102-DW-OBP1-6_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 102-DW-OBP1-6_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 105-DW-OBP1-9_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 106-DW-OBP1-10_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 106-DW-OBP1-10_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 107-DW-OBP1-12_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 108-DW-OBP1-13_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 110-DW-OBP1-16_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 110-DW-OBP1-16_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 112-DW-OBP1-18_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 113-DW-OBP1-19_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 113-DW-OBP1-19_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 114-DW-OBP1-20_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 114-DW-OBP1-20_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 116-DW-AnB-1_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 119-DW-AnB-4_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 127-DW-AnB-12_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 131-DW-AnB-16_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 141-DW-NeA-50_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 142-DW-NeA-51_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 182-DW-NeA-6_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 183-DW-NeA-9_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 2-DW-Suh5_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 35-DW-Tub11_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 36-DW-Tub12_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 3-DW-Suh7_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 40-DW-Tub17_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 49-DW-WE1_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 4-DW-Suh11_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 55-DW-WE8_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 68-DW-Mad53_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 69-DW-Mad54_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 6-DW-Suh18_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 70-DW-Mad55_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 70-DW-Mad55_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 71-DW-Mad56_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 74-DW-Mad59_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 76-DW-Mad61_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 78-DW-Mad63_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 78-DW-Mad63_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 97-DW-OBP1-1_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 98-DW-OBP1-2_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 99-DW-OBP1-3_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 99-DW-OBP1-3_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-AF23_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-AF2_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-AF3_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-AF4_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-AgD37_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Aka15_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Asi9_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Bog15_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Dod11_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Dod16_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Dod16_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Dod18_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Dod8_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Dzo15_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Dzo9_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Enc10_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Enc14_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Enc4_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Nkw5_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Nkw6_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Nkw8_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Nsa2_h2 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Nsa4_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Nsa6_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: DW-Nsa9_h1 (identical to 100-DW-OBP1-4_h1) is ignored but added at the end
+NOTE: 145-DW-NeA-54_h2 (identical to 107-DW-OBP1-12_h2) is ignored but added at the end
+NOTE: 180-DW-NeA-4_h1 (identical to 107-DW-OBP1-12_h2) is ignored but added at the end
+NOTE: 73-DW-Mad58_h2 (identical to 107-DW-OBP1-12_h2) is ignored but added at the end
+NOTE: 79-DW-Mad64_h2 (identical to 107-DW-OBP1-12_h2) is ignored but added at the end
+NOTE: 97-DW-OBP1-1_h1 (identical to 107-DW-OBP1-12_h2) is ignored but added at the end
+NOTE: DW-Aka23_h1 (identical to 107-DW-OBP1-12_h2) is ignored but added at the end
+NOTE: DW-Enc16_h2 (identical to 107-DW-OBP1-12_h2) is ignored but added at the end
+NOTE: DW-Enc2_h2 (identical to 107-DW-OBP1-12_h2) is ignored but added at the end
+NOTE: DW-Nkw3_h2 (identical to 107-DW-OBP1-12_h2) is ignored but added at the end
+NOTE: 131-DW-AnB-16_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 140-DW-NeA-49_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 141-DW-NeA-50_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 143-DW-NeA-52_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 146-DW-NeA-55_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 147-DW-NeA-57_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 147-DW-NeA-57_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 180-DW-NeA-4_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 181-DW-NeA-5_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 188-DW-NeA-19_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 188-DW-NeA-19_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 30-DW-Tub6_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 3-DW-Suh7_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 55-DW-WE8_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 56-DW-WE9_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 5-DW-Suh12_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 6-DW-Suh18_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 81-DW-Mad66_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 92-DW-Kom3_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 94-DW-Kom12_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-AF2_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-AF4_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-AF7_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-AF7_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-AgD34_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-AgD34_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-AgD37_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-AgD4_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-AgD5_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Aka20_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Asi11_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Asi11_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Asi5_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Asi5_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Bog13_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Bog15_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Bog25_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Bog25_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Bog2_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Bog5_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Bog6_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Bog8_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Dod2_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Dod9_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Dzo11_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Dzo11_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Dzo12_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Dzo12_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Dzo6_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Dzo9_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Enc14_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Enc16_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Enc18_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Enc2_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Enc4_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-HA6_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof10_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof12_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof16_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof18_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof18_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof19_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof20_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof20_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof21_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Kof21_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw1_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw1_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw2_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw2_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw3_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw4_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw5_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw6_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw7_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nkw7_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nsa10_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nsa11_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nsa12_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nsa2_h1 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nsa5_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nsa6_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: DW-Nsa9_h2 (identical to 109-DW-OBP1-14_h1) is ignored but added at the end
+NOTE: 174-DW-NeA-12_h2 (identical to 10-DW-Tar5_h1) is ignored but added at the end
+NOTE: 37-DW-Tub14_h2 (identical to 10-DW-Tar5_h1) is ignored but added at the end
+NOTE: 92-DW-Kom3_h1 (identical to 10-DW-Tar5_h1) is ignored but added at the end
+NOTE: DW-Mam9_h2 (identical to 10-DW-Tar5_h1) is ignored but added at the end
+NOTE: 120-DW-AnB-5_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 120-DW-AnB-5_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 123-DW-AnB-8_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 125-DW-AnB-10_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 125-DW-AnB-10_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 12-DW-Tar7_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 135-DW-NeA-79_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 138-DW-NeA-84_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 139-DW-NeA-87_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 13-DW-Tar8_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 13-DW-Tar8_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 148-DW-AnB-49_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 149-DW-AnB-50_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 149-DW-AnB-50_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 151-DW-AnB-53_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 157-DW-DoM-2_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 158-DW-DoM-3_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 158-DW-DoM-3_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 159-DW-DoM-4_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 159-DW-DoM-4_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 15-DW-Tar11_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 160-DW-DoM-5_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 163-DW-DoM-9_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 163-DW-DoM-9_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 164-DW-DoM-49_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 165-DW-DoM-50_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 166-DW-DoM-51_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 166-DW-DoM-51_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 167-DW-DoM-52_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 167-DW-DoM-52_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 169-DW-DoM-54_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 170-DW-DoM-55_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 170-DW-DoM-55_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 171-DW-DoM-56_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 171-DW-DoM-56_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 173-DW-NeA-11_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 174-DW-NeA-12_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 175-DW-NeA-16_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 175-DW-NeA-16_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 176-DW-NeA-17_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 177-DW-NeA-20_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 178-DW-NeA-23_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 18-DW-Tak2_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 190-DW-Sha16_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 191-DW-Kom6_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 192-DW-Kom7_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 192-DW-Kom7_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 20-DW-Tak4_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 20-DW-Tak4_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 21-DW-Tak5_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 21-DW-Tak5_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 23-DW-Tak7_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 24-DW-Tak8_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 25-DW-Tub1_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 25-DW-Tub1_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 27-DW-Tub3_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 29-DW-Tub5_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 29-DW-Tub5_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 37-DW-Tub14_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 38-DW-Tub15_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 41-DW-TP4_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 42-DW-TP5_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 43-DW-TP6_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 45-DW-TP9_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 46-DW-TP10_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 46-DW-TP10_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 47-DW-TP11_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 48-DW-TP15_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 57-DW-WE11_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 57-DW-WE11_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 59-DW-WE19_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 59-DW-WE19_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 61-DW-WE27_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 62-DW-WE28_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 62-DW-WE28_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 85-DW-Sha2_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 86-DW-Sha3_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 87-DW-Sha4_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 88-DW-Sha6_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 88-DW-Sha6_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 90-DW-Sha14_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 91-DW-Kom2_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 91-DW-Kom2_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 93-DW-Kom4_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 94-DW-Kom12_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 95-DW-Kom13_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 95-DW-Kom13_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 96-DW-Kom14_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 96-DW-Kom14_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-AF11_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-AF19_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-AF19_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-AF26_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-AF6_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-AF6_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-AF8_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-AF8_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-AF9_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Asa11_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Asa12_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Asa12_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Asa14_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Asa5_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Asa9_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Ash12_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Asi13_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Asi13_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi13_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi14_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi14_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi15_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi15_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi16_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi16_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi2_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi2_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi3_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Axi4_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog10_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog11_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog11_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog16_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog16_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog1_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog1_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog23_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog23_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog9_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Bog9_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Dzo10_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Dzo14_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Dzo16_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Dzo16_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Dzo7_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Dzo7_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc12_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc12_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc17_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc20_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc20_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc21_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc22_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc22_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc3_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc7_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc7_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc9_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Enc9_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Mam15_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Mam15_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Mam2_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Mam9_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man10_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man10_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man12_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man4_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man5_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man5_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man7_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man7_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man9_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Man9_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa13_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa15_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa15_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa16_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa17_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa17_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa18_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa18_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa1_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa3_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa3_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa8_h1 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: DW-Nsa8_h2 (identical to 10-DW-Tar5_h2) is ignored but added at the end
+NOTE: 178-DW-NeA-23_h1 (identical to 11-DW-Tar6_h2) is ignored but added at the end
+NOTE: 81-DW-Mad66_h2 (identical to 122-DW-AnB-7_h1) is ignored but added at the end
+NOTE: DW-AF3_h1 (identical to 122-DW-AnB-7_h1) is ignored but added at the end
+NOTE: 17-DW-Tak1_h1 (identical to 123-DW-AnB-8_h1) is ignored but added at the end
+NOTE: 72-DW-Mad57_h2 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: 79-DW-Mad64_h1 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: 84-DW-Mad69_h2 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: DW-AF17_h2 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: DW-AgD5_h1 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: DW-Aka23_h2 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: DW-Bog12_h1 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: DW-Dod2_h2 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: DW-Dod7_h2 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: DW-Dod8_h2 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: DW-Dzo1_h1 (identical to 127-DW-AnB-12_h2) is ignored but added at the end
+NOTE: 165-DW-DoM-50_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 23-DW-Tak7_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 32-DW-Tub8_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 41-DW-TP4_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 47-DW-TP11_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 48-DW-TP15_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 53-DW-WE6_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 86-DW-Sha3_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 87-DW-Sha4_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 90-DW-Sha14_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-AF22_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-AF9_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Asa14_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Axi13_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Axi3_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Axi4_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Bog10_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Bog18_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Enc3_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Man4_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Nsa16_h1 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: DW-Nsa1_h2 (identical to 12-DW-Tar7_h2) is ignored but added at the end
+NOTE: 173-DW-NeA-11_h2 (identical to 134-DW-NeA-66_h1) is ignored but added at the end
+NOTE: 44-DW-TP7_h1 (identical to 134-DW-NeA-66_h1) is ignored but added at the end
+NOTE: 66-DW-Mad50_h2 (identical to 134-DW-NeA-66_h1) is ignored but added at the end
+NOTE: 74-DW-Mad59_h1 (identical to 134-DW-NeA-66_h1) is ignored but added at the end
+NOTE: DW-Aka22_h2 (identical to 134-DW-NeA-66_h1) is ignored but added at the end
+NOTE: DW-Dod9_h1 (identical to 134-DW-NeA-66_h1) is ignored but added at the end
+NOTE: DW-Enc17_h2 (identical to 134-DW-NeA-66_h1) is ignored but added at the end
+NOTE: DW-HA6_h2 (identical to 134-DW-NeA-66_h1) is ignored but added at the end
+NOTE: DW-HA9_h1 (identical to 134-DW-NeA-66_h1) is ignored but added at the end
+NOTE: 19-DW-Tak3_h2 (identical to 139-DW-NeA-87_h1) is ignored but added at the end
+NOTE: 24-DW-Tak8_h1 (identical to 139-DW-NeA-87_h1) is ignored but added at the end
+NOTE: 32-DW-Tub8_h2 (identical to 139-DW-NeA-87_h1) is ignored but added at the end
+NOTE: 42-DW-TP5_h1 (identical to 139-DW-NeA-87_h1) is ignored but added at the end
+NOTE: 45-DW-TP9_h1 (identical to 139-DW-NeA-87_h1) is ignored but added at the end
+NOTE: 54-DW-WE7_h1 (identical to 146-DW-NeA-55_h2) is ignored but added at the end
+NOTE: DW-AF5_h1 (identical to 146-DW-NeA-55_h2) is ignored but added at the end
+NOTE: DW-Dzo14_h1 (identical to 146-DW-NeA-55_h2) is ignored but added at the end
+NOTE: DW-Mam16_h2 (identical to 146-DW-NeA-55_h2) is ignored but added at the end
+NOTE: DW-Asa5_h2 (identical to 14-DW-Tar10_h1) is ignored but added at the end
+NOTE: DW-Mam2_h2 (identical to 14-DW-Tar10_h1) is ignored but added at the end
+NOTE: 177-DW-NeA-20_h1 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: 19-DW-Tak3_h1 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: 61-DW-WE27_h2 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: 85-DW-Sha2_h1 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: 93-DW-Kom4_h1 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: DW-AF26_h1 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: DW-Ash13_h2 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: DW-Bog18_h1 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: DW-Dzo2_h1 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: DW-Dzo4_h2 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: DW-Enc21_h1 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: DW-Mam10_h1 (identical to 14-DW-Tar10_h2) is ignored but added at the end
+NOTE: DW-Man12_h1 (identical to 157-DW-DoM-2_h1) is ignored but added at the end
+NOTE: DW-Nsa13_h1 (identical to 157-DW-DoM-2_h1) is ignored but added at the end
+NOTE: DW-Dzo10_h1 (identical to 176-DW-NeA-17_h2) is ignored but added at the end
+NOTE: 35-DW-Tub11_h1 (identical to 182-DW-NeA-6_h2) is ignored but added at the end
+NOTE: DW-Nsa5_h1 (identical to 183-DW-NeA-9_h2) is ignored but added at the end
+NOTE: DW-Enc18_h2 (identical to 187-DW-NeA-18_h2) is ignored but added at the end
+NOTE: 5-DW-Suh12_h1 (identical to 191-DW-Kom6_h2) is ignored but added at the end
+NOTE: DW-Asi4_h1 (identical to 191-DW-Kom6_h2) is ignored but added at the end
+NOTE: DW-Bog13_h2 (identical to 191-DW-Kom6_h2) is ignored but added at the end
+NOTE: DW-Dzo15_h1 (identical to 191-DW-Kom6_h2) is ignored but added at the end
+NOTE: DW-Dzo1_h2 (identical to 191-DW-Kom6_h2) is ignored but added at the end
+NOTE: DW-Kof10_h2 (identical to 191-DW-Kom6_h2) is ignored but added at the end
+NOTE: DW-Kof12_h1 (identical to 191-DW-Kom6_h2) is ignored but added at the end
+NOTE: DW-Kof19_h2 (identical to 191-DW-Kom6_h2) is ignored but added at the end
+NOTE: DW-Nkw8_h1 (identical to 191-DW-Kom6_h2) is ignored but added at the end
+NOTE: DW-HA9_h2 (identical to 1-DW-Suh2_h1) is ignored but added at the end
+NOTE: DW-Dzo3_h1 (identical to 26-DW-Tub2_h1) is ignored but added at the end
+NOTE: DW-Dzo8_h2 (identical to 26-DW-Tub2_h1) is ignored but added at the end
+NOTE: DW-Mam10_h2 (identical to 26-DW-Tub2_h1) is ignored but added at the end
+NOTE: DW-Dzo8_h1 (identical to 26-DW-Tub2_h2) is ignored but added at the end
+NOTE: DW-Asi3_h2 (identical to 30-DW-Tub6_h2) is ignored but added at the end
+NOTE: DW-HA5_h2 (identical to 65-DW-Mad49_h1) is ignored but added at the end
+NOTE: DW-HA7_h2 (identical to 65-DW-Mad49_h1) is ignored but added at the end
+NOTE: DW-Dod11_h2 (identical to 69-DW-Mad54_h2) is ignored but added at the end
+NOTE: DW-Bog12_h2 (identical to 72-DW-Mad57_h1) is ignored but added at the end
+NOTE: 83-DW-Mad68_h1 (identical to 75-DW-Mad60_h2) is ignored but added at the end
+NOTE: DW-HA2_h1 (identical to 75-DW-Mad60_h2) is ignored but added at the end
+NOTE: DW-HA2_h2 (identical to 75-DW-Mad60_h2) is ignored but added at the end
+NOTE: DW-HA4_h1 (identical to 75-DW-Mad60_h2) is ignored but added at the end
+NOTE: DW-Nsa11_h1 (identical to 75-DW-Mad60_h2) is ignored but added at the end
+NOTE: DW-AdF17_h1 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-AdF19_h2 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-AdF1_h1 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-AdF3_h1 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-AdF3_h2 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-Anl17_h1 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-Ash26_h1 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-Ash6_h2 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-Ash8_h2 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-Ash9_h1 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-Mam4_h1 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-Mam6_h1 (identical to DW-AdF10_h1) is ignored but added at the end
+NOTE: DW-Ash13_h1 (identical to DW-AdF10_h2) is ignored but added at the end
+NOTE: DW-Dzo2_h2 (identical to DW-AdF10_h2) is ignored but added at the end
+Alignment was printed to af_001.grouped.rn.fasta.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to af_001.grouped.rn.fasta.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.006 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -4384.504
+2. Current log-likelihood: -4381.751
+3. Current log-likelihood: -4379.839
+4. Current log-likelihood: -4378.529
+Optimal log-likelihood: -4377.643
+Rate parameters:  A-C: 0.53274  A-G: 2.37920  A-T: 1.49950  C-G: 0.49192  C-T: 2.67653  G-T: 1.00000
+Base frequencies:  A: 0.226  C: 0.278  G: 0.278  T: 0.218
+Proportion of invariable sites: 0.913
+Gamma shape alpha: 0.076
+Parameters optimization took 4 rounds (0.085 sec)
+Time for fast ML tree search: 0.423 seconds
+
+NOTE: ModelFinder requires 1 MB RAM!
+ModelFinder will test up to 88 DNA models (sample size: 2293) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         4977.647     353 10661.293    10790.186    12686.672
+  2  GTR+F+I       4378.370     354 9464.740     9594.430     11495.856
+  3  GTR+F+G4      4741.901     354 10191.801    10321.492    12222.918
+  4  GTR+F+I+G4    4376.124     355 9462.248     9592.738     11499.101
+  6  SYM+I         4394.662     351 9491.324     9618.632     11505.227
+  8  SYM+I+G4      4391.563     352 9487.125     9615.224     11506.766
+ 10  TVM+F+I       4378.659     353 9463.319     9592.212     11488.697
+ 12  TVM+F+I+G4    4376.288     354 9460.575     9590.266     11491.692
+ 14  TVMe+I        4394.822     350 9489.644     9616.163     11497.810
+ 16  TVMe+I+G4     4379.313     351 9460.626     9587.934     11474.529
+ 18  TIM3+F+I      4379.179     352 9462.359     9590.458     11482.000
+ 20  TIM3+F+I+G4   4365.238     353 9436.477     9565.370     11461.855
+ 22  TIM3e+I       4395.322     349 9488.644     9614.377     11491.072
+ 24  TIM3e+I+G4    4379.606     350 9459.213     9585.732     11467.379
+ 26  TIM2+F+I      4385.163     352 9474.327     9602.426     11493.968
+ 28  TIM2+F+I+G4   4370.020     353 9446.041     9574.934     11471.419
+ 30  TIM2e+I       4399.259     349 9496.517     9622.250     11498.945
+ 32  TIM2e+I+G4    4382.483     350 9464.966     9591.485     11473.132
+ 34  TIM+F+I       4385.690     352 9475.380     9603.479     11495.021
+ 36  TIM+F+I+G4    4370.204     353 9446.408     9575.302     11471.787
+ 38  TIMe+I        4399.398     349 9496.796     9622.530     11499.225
+ 40  TIMe+I+G4     4382.397     350 9464.794     9591.313     11472.959
+ 42  TPM3u+F+I     4379.496     351 9460.992     9588.300     11474.896
+ 44  TPM3u+F+I+G4  4365.284     352 9434.567     9562.666     11454.208
+ 46  TPM3+F+I      4379.496     351 9460.992     9588.300     11474.896
+ 48  TPM3+F+I+G4   4365.281     352 9434.562     9562.661     11454.203
+ 50  TPM2u+F+I     4385.433     351 9472.867     9600.174     11486.770
+ 52  TPM2u+F+I+G4  4370.119     352 9444.238     9572.337     11463.879
+ 54  TPM2+F+I      4385.433     351 9472.867     9600.174     11486.770
+ 56  TPM2+F+I+G4   4370.119     352 9444.238     9572.337     11463.879
+ 58  K3Pu+F+I      4385.962     351 9473.923     9601.231     11487.826
+ 60  K3Pu+F+I+G4   4370.296     352 9444.592     9572.691     11464.233
+ 62  K3P+I         4399.566     348 9495.131     9620.082     11491.822
+ 64  K3P+I+G4      4382.448     349 9462.896     9588.630     11465.324
+ 66  TN+F+I        4385.698     351 9473.395     9600.703     11487.298
+ 68  TN+F+I+G4     4370.210     352 9444.421     9572.520     11464.062
+ 70  TNe+I         4399.508     348 9495.016     9619.967     11491.707
+ 72  TNe+I+G4      4382.488     349 9462.977     9588.710     11465.405
+ 74  HKY+F+I       4385.969     350 9471.938     9598.457     11480.104
+ 76  HKY+F+I+G4    4370.303     351 9442.607     9569.914     11456.510
+ 78  K2P+I         4399.608     347 9493.216     9617.387     11484.169
+ 80  K2P+I+G4      4382.542     348 9461.084     9586.034     11457.774
+ 82  F81+F+I       4418.430     349 9534.859     9660.593     11537.288
+ 84  F81+F+I+G4    4402.317     350 9504.634     9631.153     11512.799
+ 86  JC+I          4429.921     346 9551.842     9675.235     11537.057
+ 88  JC+I+G4       4412.999     347 9519.998     9644.169     11510.951
+Akaike Information Criterion:           TPM3+F+I+G4
+Corrected Akaike Information Criterion: TPM3+F+I+G4
+Bayesian Information Criterion:         TPM3+F+I+G4
+Best-fit model: TPM3+F+I+G4 chosen according to BIC
+
+All model information printed to af_001.grouped.rn.fasta.model.gz
+CPU time for ModelFinder: 2.327 seconds (0h:0m:2s)
+Wall-clock time for ModelFinder: 2.348 seconds (0h:0m:2s)
+Generating 1000 samples for ultrafast bootstrap (seed: 475476)...
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 0.669 / Estimate: 0.000, 0.020 / LogL: -4743.848
+Init pinv, alpha: 0.109, 0.669 / Estimate: 0.931, 0.096 / LogL: -4376.773
+Init pinv, alpha: 0.218, 0.669 / Estimate: 0.931, 0.097 / LogL: -4376.753
+Init pinv, alpha: 0.327, 0.669 / Estimate: 0.932, 0.098 / LogL: -4376.735
+Init pinv, alpha: 0.436, 0.669 / Estimate: 0.931, 0.097 / LogL: -4376.778
+Init pinv, alpha: 0.546, 0.669 / Estimate: 0.931, 0.097 / LogL: -4376.788
+Init pinv, alpha: 0.655, 0.669 / Estimate: 0.931, 0.097 / LogL: -4376.799
+Init pinv, alpha: 0.764, 0.669 / Estimate: 0.931, 0.096 / LogL: -4376.861
+Init pinv, alpha: 0.873, 0.669 / Estimate: 0.932, 0.099 / LogL: -4376.906
+Init pinv, alpha: 0.982, 0.669 / Estimate: 0.980, 1.466 / LogL: -4364.699
+Optimal pinv,alpha: 0.980, 1.466 / LogL: -4364.699
+
+Parameters optimization took 3.578 sec
+Computing ML distances based on estimated model parameters... 0.698 sec
+Computing BIONJ tree...
+0.018 seconds
+Log-likelihood of BIONJ tree: -4383.481
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.862 second
+Computing log-likelihood of 98 initial trees ... 0.446 seconds
+Current best score: -4354.270
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -4344.477
+Iteration 10 / LogL: -4352.095 / Time: 0h:0m:9s
+Iteration 20 / LogL: -4361.883 / Time: 0h:0m:15s
+Finish initializing candidate tree set (20)
+Current best tree score: -4344.477 / CPU time: 10.849
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 26: -4341.176
+Iteration 30 / LogL: -4341.809 / Time: 0h:0m:19s (0h:1m:5s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 37: -4337.987
+Iteration 40 / LogL: -4342.897 / Time: 0h:0m:23s (0h:0m:59s left)
+Iteration 50 / LogL: -4344.470 / Time: 0h:0m:27s (0h:0m:49s left)
+Log-likelihood cutoff on original alignment: -4382.593
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 60: -4336.394
+Iteration 60 / LogL: -4336.394 / Time: 0h:0m:32s (0h:0m:55s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 61: -4336.229
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 65: -4335.840
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 66: -4335.740
+Iteration 70 / LogL: -4338.988 / Time: 0h:0m:37s (0h:0m:52s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 73: -4333.843
+Iteration 80 / LogL: -4338.208 / Time: 0h:0m:42s (0h:0m:49s left)
+Iteration 90 / LogL: -4345.836 / Time: 0h:0m:46s (0h:0m:43s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 94: -4333.144
+Iteration 100 / LogL: -4333.961 / Time: 0h:0m:51s (0h:0m:49s left)
+Log-likelihood cutoff on original alignment: -4382.593
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.953
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 102: -4331.202
+Iteration 110 / LogL: -4332.839 / Time: 0h:0m:56s (0h:0m:48s left)
+Iteration 120 / LogL: -4335.248 / Time: 0h:1m:1s (0h:0m:42s left)
+Iteration 130 / LogL: -4331.372 / Time: 0h:1m:6s (0h:0m:36s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 139: -4331.030
+Iteration 140 / LogL: -4331.468 / Time: 0h:1m:10s (0h:0m:50s left)
+Iteration 150 / LogL: -4338.412 / Time: 0h:1m:15s (0h:0m:44s left)
+Log-likelihood cutoff on original alignment: -4382.593
+Iteration 160 / LogL: -4333.145 / Time: 0h:1m:20s (0h:0m:39s left)
+Iteration 170 / LogL: -4337.295 / Time: 0h:1m:25s (0h:0m:34s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 176: -4330.565
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 177: -4330.402
+Iteration 180 / LogL: -4338.788 / Time: 0h:1m:30s (0h:0m:48s left)
+Iteration 190 / LogL: -4336.589 / Time: 0h:1m:34s (0h:0m:43s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 198: -4329.445
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 200: -4329.236
+Iteration 200 / LogL: -4329.236 / Time: 0h:1m:39s (0h:0m:50s left)
+Log-likelihood cutoff on original alignment: -4382.593
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.981
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -4331.422 / Time: 0h:1m:45s (0h:0m:45s left)
+Iteration 220 / LogL: -4344.773 / Time: 0h:1m:50s (0h:0m:40s left)
+Iteration 230 / LogL: -4332.148 / Time: 0h:1m:55s (0h:0m:35s left)
+Iteration 240 / LogL: -4330.638 / Time: 0h:1m:59s (0h:0m:30s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 248: -4328.684
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 249: -4328.643
+Iteration 250 / LogL: -4329.335 / Time: 0h:2m:4s (0h:0m:49s left)
+Log-likelihood cutoff on original alignment: -4382.593
+Iteration 260 / LogL: -4331.343 / Time: 0h:2m:10s (0h:0m:44s left)
+Iteration 270 / LogL: -4329.261 / Time: 0h:2m:14s (0h:0m:39s left)
+Iteration 280 / LogL: -4329.261 / Time: 0h:2m:20s (0h:0m:34s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 286: -4328.480
+Iteration 290 / LogL: -4332.735 / Time: 0h:2m:24s (0h:0m:48s left)
+Iteration 300 / LogL: -4330.111 / Time: 0h:2m:29s (0h:0m:43s left)
+Log-likelihood cutoff on original alignment: -4382.593
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.988
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 310 / LogL: -4330.233 / Time: 0h:2m:35s (0h:0m:45s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 311: -4328.373
+Iteration 320 / LogL: -4328.966 / Time: 0h:2m:41s (0h:0m:45s left)
+Iteration 330 / LogL: -4330.720 / Time: 0h:2m:46s (0h:0m:40s left)
+Iteration 340 / LogL: -4328.514 / Time: 0h:2m:51s (0h:0m:35s left)
+Iteration 350 / LogL: -4335.951 / Time: 0h:2m:56s (0h:0m:30s left)
+Log-likelihood cutoff on original alignment: -4378.204
+Iteration 360 / LogL: -4342.391 / Time: 0h:3m:1s (0h:0m:25s left)
+Iteration 370 / LogL: -4334.964 / Time: 0h:3m:6s (0h:0m:20s left)
+Iteration 380 / LogL: -4339.360 / Time: 0h:3m:11s (0h:0m:15s left)
+Iteration 390 / LogL: -4341.353 / Time: 0h:3m:15s (0h:0m:10s left)
+Iteration 400 / LogL: -4333.738 / Time: 0h:3m:20s (0h:0m:5s left)
+Log-likelihood cutoff on original alignment: -4378.204
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.990
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 410 / LogL: -4334.954 / Time: 0h:3m:26s (0h:0m:45s left)
+Iteration 420 / LogL: -4334.511 / Time: 0h:3m:31s (0h:0m:40s left)
+Iteration 430 / LogL: -4329.475 / Time: 0h:3m:36s (0h:0m:35s left)
+Iteration 440 / LogL: -4329.387 / Time: 0h:3m:42s (0h:0m:30s left)
+Iteration 450 / LogL: -4330.026 / Time: 0h:3m:47s (0h:0m:25s left)
+Log-likelihood cutoff on original alignment: -4378.204
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 453: -4328.294
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 455: -4328.075
+Iteration 460 / LogL: -4328.755 / Time: 0h:3m:53s (0h:0m:48s left)
+Iteration 470 / LogL: -4330.037 / Time: 0h:3m:59s (0h:0m:43s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 473: -4327.739
+Iteration 480 / LogL: -4331.056 / Time: 0h:4m:4s (0h:0m:47s left)
+Iteration 490 / LogL: -4332.785 / Time: 0h:4m:9s (0h:0m:42s left)
+Iteration 500 / LogL: -4339.851 / Time: 0h:4m:15s (0h:0m:37s left)
+Log-likelihood cutoff on original alignment: -4378.204
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.992
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 503: -4326.647
+Iteration 510 / LogL: -4334.098 / Time: 0h:4m:21s (0h:0m:47s left)
+Iteration 520 / LogL: -4328.090 / Time: 0h:4m:26s (0h:0m:42s left)
+Iteration 530 / LogL: -4327.976 / Time: 0h:4m:32s (0h:0m:37s left)
+Iteration 540 / LogL: -4328.792 / Time: 0h:4m:37s (0h:0m:32s left)
+Iteration 550 / LogL: -4328.524 / Time: 0h:4m:43s (0h:0m:27s left)
+Log-likelihood cutoff on original alignment: -4375.835
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 551: -4326.303
+Iteration 560 / LogL: -4327.322 / Time: 0h:4m:49s (0h:0m:47s left)
+BETTER TREE FOUND at iteration 567: -4326.298
+Iteration 570 / LogL: -4331.839 / Time: 0h:4m:55s (0h:0m:50s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 577: -4326.270
+Iteration 580 / LogL: -4327.149 / Time: 0h:5m:0s (0h:0m:50s left)
+Iteration 590 / LogL: -4331.313 / Time: 0h:5m:6s (0h:0m:45s left)
+Iteration 600 / LogL: -4328.472 / Time: 0h:5m:11s (0h:0m:40s left)
+Log-likelihood cutoff on original alignment: -4375.835
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.990
+Iteration 610 / LogL: -4327.328 / Time: 0h:5m:18s (0h:0m:47s left)
+Iteration 620 / LogL: -4331.368 / Time: 0h:5m:24s (0h:0m:41s left)
+Iteration 630 / LogL: -4332.815 / Time: 0h:5m:30s (0h:0m:36s left)
+Iteration 640 / LogL: -4327.549 / Time: 0h:5m:35s (0h:0m:31s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 643: -4326.233
+Iteration 650 / LogL: -4332.927 / Time: 0h:5m:41s (0h:0m:48s left)
+Log-likelihood cutoff on original alignment: -4375.835
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 654: -4325.815
+Iteration 660 / LogL: -4328.029 / Time: 0h:5m:48s (0h:0m:49s left)
+Iteration 670 / LogL: -4329.251 / Time: 0h:5m:54s (0h:0m:44s left)
+Iteration 680 / LogL: -4328.642 / Time: 0h:6m:0s (0h:0m:39s left)
+Iteration 690 / LogL: -4337.368 / Time: 0h:6m:6s (0h:0m:34s left)
+Iteration 700 / LogL: -4328.708 / Time: 0h:6m:12s (0h:0m:28s left)
+Log-likelihood cutoff on original alignment: -4375.835
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.988
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 706: -4325.658
+Iteration 710 / LogL: -4327.406 / Time: 0h:6m:19s (0h:0m:51s left)
+Iteration 720 / LogL: -4336.731 / Time: 0h:6m:25s (0h:0m:46s left)
+Iteration 730 / LogL: -4336.073 / Time: 0h:6m:31s (0h:0m:40s left)
+Iteration 740 / LogL: -4335.250 / Time: 0h:6m:37s (0h:0m:35s left)
+Iteration 750 / LogL: -4325.820 / Time: 0h:6m:43s (0h:0m:30s left)
+Log-likelihood cutoff on original alignment: -4375.835
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 752: -4325.542
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 760: -4325.305
+Iteration 760 / LogL: -4325.305 / Time: 0h:6m:50s (0h:0m:54s left)
+Iteration 770 / LogL: -4326.259 / Time: 0h:6m:56s (0h:0m:48s left)
+Iteration 780 / LogL: -4330.573 / Time: 0h:7m:2s (0h:0m:43s left)
+Iteration 790 / LogL: -4334.242 / Time: 0h:7m:9s (0h:0m:38s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 793: -4324.999
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 800: -4324.854
+Iteration 800 / LogL: -4324.854 / Time: 0h:7m:16s (0h:0m:54s left)
+Log-likelihood cutoff on original alignment: -4375.835
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.986
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 810 / LogL: -4326.165 / Time: 0h:7m:23s (0h:0m:49s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 813: -4324.790
+Iteration 820 / LogL: -4326.166 / Time: 0h:7m:29s (0h:0m:51s left)
+Iteration 830 / LogL: -4325.294 / Time: 0h:7m:36s (0h:0m:45s left)
+Iteration 840 / LogL: -4327.053 / Time: 0h:7m:42s (0h:0m:40s left)
+BETTER TREE FOUND at iteration 848: -4324.784
+Iteration 850 / LogL: -4326.902 / Time: 0h:7m:49s (0h:0m:54s left)
+Log-likelihood cutoff on original alignment: -4375.835
+Iteration 860 / LogL: -4332.760 / Time: 0h:7m:56s (0h:0m:48s left)
+Iteration 870 / LogL: -4330.990 / Time: 0h:8m:2s (0h:0m:43s left)
+Iteration 880 / LogL: -4326.483 / Time: 0h:8m:9s (0h:0m:37s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 882: -4324.569
+Iteration 890 / LogL: -4337.587 / Time: 0h:8m:16s (0h:0m:51s left)
+Iteration 900 / LogL: -4325.964 / Time: 0h:8m:22s (0h:0m:45s left)
+Log-likelihood cutoff on original alignment: -4375.835
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.983
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 910 / LogL: -4332.977 / Time: 0h:8m:30s (0h:0m:50s left)
+BETTER TREE FOUND at iteration 915: -4324.562
+Iteration 920 / LogL: -4327.296 / Time: 0h:8m:36s (0h:0m:53s left)
+Iteration 930 / LogL: -4332.717 / Time: 0h:8m:43s (0h:0m:47s left)
+Iteration 940 / LogL: -4327.666 / Time: 0h:8m:49s (0h:0m:42s left)
+Iteration 950 / LogL: -4336.259 / Time: 0h:8m:56s (0h:0m:36s left)
+Log-likelihood cutoff on original alignment: -4375.835
+Iteration 960 / LogL: -4326.272 / Time: 0h:9m:4s (0h:0m:31s left)
+Iteration 970 / LogL: -4325.233 / Time: 0h:9m:11s (0h:0m:25s left)
+Iteration 980 / LogL: -4328.105 / Time: 0h:9m:18s (0h:0m:19s left)
+Iteration 990 / LogL: -4324.931 / Time: 0h:9m:24s (0h:0m:14s left)
+Iteration 1000 / LogL: -4331.128 / Time: 0h:9m:31s (0h:0m:8s left)
+Log-likelihood cutoff on original alignment: -4375.835
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.982
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+WARNING: bootstrap analysis did not converge. You should rerun with higher number of iterations (-nm option)
+TREE SEARCH COMPLETED AFTER 1001 ITERATIONS / Time: 0h:9m:33s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -4324.562
+Optimal log-likelihood: -4324.560
+Rate parameters:  A-C: 0.38831  A-G: 2.36924  A-T: 1.00000  C-G: 0.38831  C-T: 2.36924  G-T: 1.00000
+Base frequencies:  A: 0.226  C: 0.278  G: 0.278  T: 0.218
+Proportion of invariable sites: 0.980
+Gamma shape alpha: 1.492
+Parameters optimization took 1 rounds (0.014 sec)
+BEST SCORE FOUND : -4324.560
+Creating bootstrap support values...
+Split supports printed to NEXUS file af_001.grouped.rn.fasta.splits.nex
+Total tree length: 0.093
+
+Total number of iterations: 1001
+CPU time used for tree search: 566.381 sec (0h:9m:26s)
+Wall-clock time used for tree search: 568.777 sec (0h:9m:28s)
+Total CPU time used: 571.568 sec (0h:9m:31s)
+Total wall-clock time used: 574.007 sec (0h:9m:34s)
+
+Computing bootstrap consensus tree...
+Reading input file af_001.grouped.rn.fasta.splits.nex...
+174 taxa and 4658 splits.
+Consensus tree written to af_001.grouped.rn.fasta.contree
+Reading input trees file af_001.grouped.rn.fasta.contree
+Log-likelihood of consensus tree: -4325.866
+
+Analysis results written to: 
+  IQ-TREE report:                af_001.grouped.rn.fasta.iqtree
+  Maximum-likelihood tree:       af_001.grouped.rn.fasta.treefile
+  Likelihood distances:          af_001.grouped.rn.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          af_001.grouped.rn.fasta.splits.nex
+  Consensus tree:                af_001.grouped.rn.fasta.contree
+  Screen log file:               af_001.grouped.rn.fasta.log
+
+Date and Time: Tue May  3 17:06:35 2022

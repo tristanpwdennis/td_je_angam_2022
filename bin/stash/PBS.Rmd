@@ -1,0 +1,116 @@
+---
+title: "Speculomics PBS"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+## Population Branch Stats
+
+I'm interested in using population branch statistics (PBS) to measure differentiation (and possible selection) between multiple ecotypes. Particularly, we seem to be observing forest:nonforest differentiation at the CYP9K locus on chrX. I calculated the 2dsfs between all ecotypes (rainforest, deciduous forest, mangrove and savannah) and then the PBS between then using realSFS in ANGSD.
+
+Set env, load externally developed packages, create filelist and names
+
+```{r, setup, echo=FALSE}
+#####setwd, prepare environment, import our shit
+#list pkgs
+pkg = c('tidyverse', 'viridis', 'data.table' ,'cowplot', 'RColorBrewer')
+#import my own metadata prep script
+#install.packages(pkg) #install packages if you need them and load
+new.packages <- pkg[!(pkg %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+lapply(pkg, require, character.only = TRUE)
+#setwd, list files, get condition names from filenames
+knitr::opts_knit$set(root.dir = '/Users/tristanpwdennis/Projects/MOVE/data/anopheles_03_21_DW/angsd-output/by_form_by_ecotype')
+
+```
+
+Def function for plotting pbs
+
+```{r}
+list = list.files(pattern = '*.windowedpbs')
+names = gsub('.windowedpbs', '', list)
+names = gsub('decid_forest', 'decid-forest', names)
+#func for plotting pbs
+plot_pbs <- function(pbsfile) {
+  pbsdf = fread(pbsfile)
+  pnam = gsub('.1kwin200step-windowedpbs', '', pbsfile)
+  ggplot(pbsdf, aes(x=midPos,y=PBS1))+
+  theme_minimal()+
+  ylim(-0.1, 0.3)+
+  geom_line(color = '#104e8b')+
+  labs(x='', y='')
+}
+
+plots = lapply(list, plot_pbs)
+```
+
+Then, plot all of our PBS comparisons (I excluded one because decid_forest and rainforest are essentially the same)
+
+M, decid-forest, savannah, mangrove
+```{r, fig.width=13, fig.height=3}
+labels = c('2L', '2R', '3L', '3R', 'X')
+plot_grid(plotlist = plots[1:5], ncol = 5, nrow = 1, labels = labels)
+```
+m_rainforest_decid-forest_mangrove
+```{r, fig.width=13, fig.height=3}
+labels = c('2L', '2R', '3L', '3R', 'X')
+plot_grid(plotlist = plots[6:10], ncol = 5, nrow = 1, labels = labels)
+```
+
+m_rainforest_decid-forest_savannah
+```{r, fig.width=13, fig.height=3}
+labels = c('2L', '2R', '3L', '3R', 'X')
+plot_grid(plotlist = plots[11:15], ncol = 5, nrow = 1, labels = labels)
+```
+
+s_rainforest_decid-forest_savannah
+```{r, fig.width=13, fig.height=3}
+labels = c('2L', '2R', '3L', '3R', 'X')
+plot_grid(plotlist = plots[21:25], ncol = 5, nrow = 1,  labels = labels)
+```
+
+There's some peaks here. I've extracted the gene annotation at the highest points of each peak > 0.3.
+
+```{r}
+#func for extracting pbs 'peaks' of > 0.15, assign condition name and assign 'peak id' to each one chosen
+extract_pbs <- function(pbsfile, threshold) {
+  pbsdf = fread(pbsfile)
+  pnam = gsub('.1kwin200step-windowedpbs', '', pbsfile)
+  filtered_site = pbsdf[pbsdf$PBS2 > 0.15, ]
+  fs1 = mutate(filtered_site, name = pnam)
+  fs2 = mutate(fs1, peak = paste0(min(midPos),'_', max(midPos)))
+}
+
+
+#get filtered windows, concat into bigdf
+windows = lapply(list, extract_pbs)
+windows_comb = do.call(rbind, windows)
+#create bed start/end coords from midpoint
+windows_comb$chromStart = windows_comb$midPos - 500
+windows_comb$chromEnd = windows_comb$midPos + 500
+#write df of bed file
+bed_prec = as.data.frame(windows_comb)[c("chr", "chromStart", "chromEnd", "name", "PBS2", "peak")]
+write_delim(bed_prec, file = "/Users/tristanpwdennis/Projects/MOVE/td_je_angam_2022/annotations/files/pbs2.bed", delim = '\t', col_names = NA)
+
+#go to dir in question
+setwd('/Users/tristanpwdennis/Projects/MOVE/td_je_angam_2022/annotations/files/')
+#read the output of bedtools intersect to get the annotations overlapping the peaks
+intersect_ann = fread(text = system('bedtools intersect -a pbs2.bed -b VectorBase-55_AgambiaePEST.gff -loj', intern=TRUE))
+
+#filter to get protein coding gene annotations only
+pcgs = intersect_ann[V9 == 'protein_coding_gene']
+#aggregate by peak, and by condition, then select the highest PBS value
+highest_genes = setDT(pcgs)[, .SD[which.max(V5)], by=c('V4', 'V6')]
+highest_genes = data.frame(highest_genes)[c('V4','V6', 'V1','V2','V3','V10', 'V11', 'V15')]
+highest_genes
+colnames(highest_genes) = c('comparison', 'peak_start_end', 'chrom', 'window_start', 'window_end', 'gene_start', 'gene_end', 'annotation')
+#wo
+write_csv(highest_genes, file='/Users/tristanpwdennis/Projects/MOVE/td_je_angam_2022/annotations/files/top_peak_genes.csv')
+highest_genes
+```
+
+
+
+

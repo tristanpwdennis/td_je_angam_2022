@@ -1,0 +1,11 @@
+PCAngsd v.1.02
+Time: 13/12/2021 10:40:29
+Directory: /move_bioinfo/anopheles_03_21/angsd_output/angsd_by_chr_fullset_aug12
+Options:
+	-beagle cyp9k_allpops.beagle.gz
+	-selection
+	-pcadapt
+	-admix
+	-tree
+	-threads 20
+	-out cyp9k_region_pca/cyp9k_region_pca

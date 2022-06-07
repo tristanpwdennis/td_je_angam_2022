@@ -1,0 +1,2075 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Mar 23 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    mafalda-dell (AVX512, FMA3, 125 GB RAM)
+Command: iqtree-omp -s af_all/af_all.grouped.fasta -m TEST -bb 1000
+Seed:    389294 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Apr 29 09:32:48 2022
+Kernel:  AVX+FMA - 1 threads (48 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 48 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file af_all/af_all.grouped.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 628 sequences with 2293 columns, 56 distinct patterns
+59 parsimony-informative, 11 singleton sites, 2223 constant sites
+WARNING: Some sequence names are changed as follows:
+af_all/100-DW-OBP1-4_h1geneonly -> af_all_100-DW-OBP1-4_h1geneonly
+af_all/100-DW-OBP1-4_h2geneonly -> af_all_100-DW-OBP1-4_h2geneonly
+af_all/101-DW-OBP1-5_h1geneonly -> af_all_101-DW-OBP1-5_h1geneonly
+af_all/101-DW-OBP1-5_h2geneonly -> af_all_101-DW-OBP1-5_h2geneonly
+af_all/102-DW-OBP1-6_h1geneonly -> af_all_102-DW-OBP1-6_h1geneonly
+af_all/102-DW-OBP1-6_h2geneonly -> af_all_102-DW-OBP1-6_h2geneonly
+af_all/105-DW-OBP1-9_h1geneonly -> af_all_105-DW-OBP1-9_h1geneonly
+af_all/105-DW-OBP1-9_h2geneonly -> af_all_105-DW-OBP1-9_h2geneonly
+af_all/106-DW-OBP1-10_h1geneonly -> af_all_106-DW-OBP1-10_h1geneonly
+af_all/106-DW-OBP1-10_h2geneonly -> af_all_106-DW-OBP1-10_h2geneonly
+af_all/107-DW-OBP1-12_h1geneonly -> af_all_107-DW-OBP1-12_h1geneonly
+af_all/107-DW-OBP1-12_h2geneonly -> af_all_107-DW-OBP1-12_h2geneonly
+af_all/108-DW-OBP1-13_h1geneonly -> af_all_108-DW-OBP1-13_h1geneonly
+af_all/108-DW-OBP1-13_h2geneonly -> af_all_108-DW-OBP1-13_h2geneonly
+af_all/109-DW-OBP1-14_h1geneonly -> af_all_109-DW-OBP1-14_h1geneonly
+af_all/109-DW-OBP1-14_h2geneonly -> af_all_109-DW-OBP1-14_h2geneonly
+af_all/10-DW-Tar5_h1geneonly -> af_all_10-DW-Tar5_h1geneonly
+af_all/10-DW-Tar5_h2geneonly -> af_all_10-DW-Tar5_h2geneonly
+af_all/110-DW-OBP1-16_h1geneonly -> af_all_110-DW-OBP1-16_h1geneonly
+af_all/110-DW-OBP1-16_h2geneonly -> af_all_110-DW-OBP1-16_h2geneonly
+af_all/112-DW-OBP1-18_h1geneonly -> af_all_112-DW-OBP1-18_h1geneonly
+af_all/112-DW-OBP1-18_h2geneonly -> af_all_112-DW-OBP1-18_h2geneonly
+af_all/113-DW-OBP1-19_h1geneonly -> af_all_113-DW-OBP1-19_h1geneonly
+af_all/113-DW-OBP1-19_h2geneonly -> af_all_113-DW-OBP1-19_h2geneonly
+af_all/114-DW-OBP1-20_h1geneonly -> af_all_114-DW-OBP1-20_h1geneonly
+af_all/114-DW-OBP1-20_h2geneonly -> af_all_114-DW-OBP1-20_h2geneonly
+af_all/116-DW-AnB-1_h1geneonly -> af_all_116-DW-AnB-1_h1geneonly
+af_all/116-DW-AnB-1_h2geneonly -> af_all_116-DW-AnB-1_h2geneonly
+af_all/119-DW-AnB-4_h1geneonly -> af_all_119-DW-AnB-4_h1geneonly
+af_all/119-DW-AnB-4_h2geneonly -> af_all_119-DW-AnB-4_h2geneonly
+af_all/11-DW-Tar6_h1geneonly -> af_all_11-DW-Tar6_h1geneonly
+af_all/11-DW-Tar6_h2geneonly -> af_all_11-DW-Tar6_h2geneonly
+af_all/120-DW-AnB-5_h1geneonly -> af_all_120-DW-AnB-5_h1geneonly
+af_all/120-DW-AnB-5_h2geneonly -> af_all_120-DW-AnB-5_h2geneonly
+af_all/122-DW-AnB-7_h1geneonly -> af_all_122-DW-AnB-7_h1geneonly
+af_all/122-DW-AnB-7_h2geneonly -> af_all_122-DW-AnB-7_h2geneonly
+af_all/123-DW-AnB-8_h1geneonly -> af_all_123-DW-AnB-8_h1geneonly
+af_all/123-DW-AnB-8_h2geneonly -> af_all_123-DW-AnB-8_h2geneonly
+af_all/125-DW-AnB-10_h1geneonly -> af_all_125-DW-AnB-10_h1geneonly
+af_all/125-DW-AnB-10_h2geneonly -> af_all_125-DW-AnB-10_h2geneonly
+af_all/127-DW-AnB-12_h1geneonly -> af_all_127-DW-AnB-12_h1geneonly
+af_all/127-DW-AnB-12_h2geneonly -> af_all_127-DW-AnB-12_h2geneonly
+af_all/12-DW-Tar7_h1geneonly -> af_all_12-DW-Tar7_h1geneonly
+af_all/12-DW-Tar7_h2geneonly -> af_all_12-DW-Tar7_h2geneonly
+af_all/131-DW-AnB-16_h1geneonly -> af_all_131-DW-AnB-16_h1geneonly
+af_all/131-DW-AnB-16_h2geneonly -> af_all_131-DW-AnB-16_h2geneonly
+af_all/134-DW-NeA-66_h1geneonly -> af_all_134-DW-NeA-66_h1geneonly
+af_all/134-DW-NeA-66_h2geneonly -> af_all_134-DW-NeA-66_h2geneonly
+af_all/135-DW-NeA-79_h1geneonly -> af_all_135-DW-NeA-79_h1geneonly
+af_all/135-DW-NeA-79_h2geneonly -> af_all_135-DW-NeA-79_h2geneonly
+af_all/138-DW-NeA-84_h1geneonly -> af_all_138-DW-NeA-84_h1geneonly
+af_all/138-DW-NeA-84_h2geneonly -> af_all_138-DW-NeA-84_h2geneonly
+af_all/139-DW-NeA-87_h1geneonly -> af_all_139-DW-NeA-87_h1geneonly
+af_all/139-DW-NeA-87_h2geneonly -> af_all_139-DW-NeA-87_h2geneonly
+af_all/13-DW-Tar8_h1geneonly -> af_all_13-DW-Tar8_h1geneonly
+af_all/13-DW-Tar8_h2geneonly -> af_all_13-DW-Tar8_h2geneonly
+af_all/140-DW-NeA-49_h1geneonly -> af_all_140-DW-NeA-49_h1geneonly
+af_all/140-DW-NeA-49_h2geneonly -> af_all_140-DW-NeA-49_h2geneonly
+af_all/141-DW-NeA-50_h1geneonly -> af_all_141-DW-NeA-50_h1geneonly
+af_all/141-DW-NeA-50_h2geneonly -> af_all_141-DW-NeA-50_h2geneonly
+af_all/142-DW-NeA-51_h1geneonly -> af_all_142-DW-NeA-51_h1geneonly
+af_all/142-DW-NeA-51_h2geneonly -> af_all_142-DW-NeA-51_h2geneonly
+af_all/143-DW-NeA-52_h1geneonly -> af_all_143-DW-NeA-52_h1geneonly
+af_all/143-DW-NeA-52_h2geneonly -> af_all_143-DW-NeA-52_h2geneonly
+af_all/145-DW-NeA-54_h1geneonly -> af_all_145-DW-NeA-54_h1geneonly
+af_all/145-DW-NeA-54_h2geneonly -> af_all_145-DW-NeA-54_h2geneonly
+af_all/146-DW-NeA-55_h1geneonly -> af_all_146-DW-NeA-55_h1geneonly
+af_all/146-DW-NeA-55_h2geneonly -> af_all_146-DW-NeA-55_h2geneonly
+af_all/147-DW-NeA-57_h1geneonly -> af_all_147-DW-NeA-57_h1geneonly
+af_all/147-DW-NeA-57_h2geneonly -> af_all_147-DW-NeA-57_h2geneonly
+af_all/148-DW-AnB-49_h1geneonly -> af_all_148-DW-AnB-49_h1geneonly
+af_all/148-DW-AnB-49_h2geneonly -> af_all_148-DW-AnB-49_h2geneonly
+af_all/149-DW-AnB-50_h1geneonly -> af_all_149-DW-AnB-50_h1geneonly
+af_all/149-DW-AnB-50_h2geneonly -> af_all_149-DW-AnB-50_h2geneonly
+af_all/14-DW-Tar10_h1geneonly -> af_all_14-DW-Tar10_h1geneonly
+af_all/14-DW-Tar10_h2geneonly -> af_all_14-DW-Tar10_h2geneonly
+af_all/150-DW-AnB-51_h1geneonly -> af_all_150-DW-AnB-51_h1geneonly
+af_all/150-DW-AnB-51_h2geneonly -> af_all_150-DW-AnB-51_h2geneonly
+af_all/151-DW-AnB-53_h1geneonly -> af_all_151-DW-AnB-53_h1geneonly
+af_all/151-DW-AnB-53_h2geneonly -> af_all_151-DW-AnB-53_h2geneonly
+af_all/157-DW-DoM-2_h1geneonly -> af_all_157-DW-DoM-2_h1geneonly
+af_all/157-DW-DoM-2_h2geneonly -> af_all_157-DW-DoM-2_h2geneonly
+af_all/158-DW-DoM-3_h1geneonly -> af_all_158-DW-DoM-3_h1geneonly
+af_all/158-DW-DoM-3_h2geneonly -> af_all_158-DW-DoM-3_h2geneonly
+af_all/159-DW-DoM-4_h1geneonly -> af_all_159-DW-DoM-4_h1geneonly
+af_all/159-DW-DoM-4_h2geneonly -> af_all_159-DW-DoM-4_h2geneonly
+af_all/15-DW-Tar11_h1geneonly -> af_all_15-DW-Tar11_h1geneonly
+af_all/15-DW-Tar11_h2geneonly -> af_all_15-DW-Tar11_h2geneonly
+af_all/160-DW-DoM-5_h1geneonly -> af_all_160-DW-DoM-5_h1geneonly
+af_all/160-DW-DoM-5_h2geneonly -> af_all_160-DW-DoM-5_h2geneonly
+af_all/163-DW-DoM-9_h1geneonly -> af_all_163-DW-DoM-9_h1geneonly
+af_all/163-DW-DoM-9_h2geneonly -> af_all_163-DW-DoM-9_h2geneonly
+af_all/164-DW-DoM-49_h1geneonly -> af_all_164-DW-DoM-49_h1geneonly
+af_all/164-DW-DoM-49_h2geneonly -> af_all_164-DW-DoM-49_h2geneonly
+af_all/165-DW-DoM-50_h1geneonly -> af_all_165-DW-DoM-50_h1geneonly
+af_all/165-DW-DoM-50_h2geneonly -> af_all_165-DW-DoM-50_h2geneonly
+af_all/166-DW-DoM-51_h1geneonly -> af_all_166-DW-DoM-51_h1geneonly
+af_all/166-DW-DoM-51_h2geneonly -> af_all_166-DW-DoM-51_h2geneonly
+af_all/167-DW-DoM-52_h1geneonly -> af_all_167-DW-DoM-52_h1geneonly
+af_all/167-DW-DoM-52_h2geneonly -> af_all_167-DW-DoM-52_h2geneonly
+af_all/169-DW-DoM-54_h1geneonly -> af_all_169-DW-DoM-54_h1geneonly
+af_all/169-DW-DoM-54_h2geneonly -> af_all_169-DW-DoM-54_h2geneonly
+af_all/170-DW-DoM-55_h1geneonly -> af_all_170-DW-DoM-55_h1geneonly
+af_all/170-DW-DoM-55_h2geneonly -> af_all_170-DW-DoM-55_h2geneonly
+af_all/171-DW-DoM-56_h1geneonly -> af_all_171-DW-DoM-56_h1geneonly
+af_all/171-DW-DoM-56_h2geneonly -> af_all_171-DW-DoM-56_h2geneonly
+af_all/173-DW-NeA-11_h1geneonly -> af_all_173-DW-NeA-11_h1geneonly
+af_all/173-DW-NeA-11_h2geneonly -> af_all_173-DW-NeA-11_h2geneonly
+af_all/174-DW-NeA-12_h1geneonly -> af_all_174-DW-NeA-12_h1geneonly
+af_all/174-DW-NeA-12_h2geneonly -> af_all_174-DW-NeA-12_h2geneonly
+af_all/175-DW-NeA-16_h1geneonly -> af_all_175-DW-NeA-16_h1geneonly
+af_all/175-DW-NeA-16_h2geneonly -> af_all_175-DW-NeA-16_h2geneonly
+af_all/176-DW-NeA-17_h1geneonly -> af_all_176-DW-NeA-17_h1geneonly
+af_all/176-DW-NeA-17_h2geneonly -> af_all_176-DW-NeA-17_h2geneonly
+af_all/177-DW-NeA-20_h1geneonly -> af_all_177-DW-NeA-20_h1geneonly
+af_all/177-DW-NeA-20_h2geneonly -> af_all_177-DW-NeA-20_h2geneonly
+af_all/178-DW-NeA-23_h1geneonly -> af_all_178-DW-NeA-23_h1geneonly
+af_all/178-DW-NeA-23_h2geneonly -> af_all_178-DW-NeA-23_h2geneonly
+af_all/17-DW-Tak1_h1geneonly -> af_all_17-DW-Tak1_h1geneonly
+af_all/17-DW-Tak1_h2geneonly -> af_all_17-DW-Tak1_h2geneonly
+af_all/180-DW-NeA-4_h1geneonly -> af_all_180-DW-NeA-4_h1geneonly
+af_all/180-DW-NeA-4_h2geneonly -> af_all_180-DW-NeA-4_h2geneonly
+af_all/181-DW-NeA-5_h1geneonly -> af_all_181-DW-NeA-5_h1geneonly
+af_all/181-DW-NeA-5_h2geneonly -> af_all_181-DW-NeA-5_h2geneonly
+af_all/182-DW-NeA-6_h1geneonly -> af_all_182-DW-NeA-6_h1geneonly
+af_all/182-DW-NeA-6_h2geneonly -> af_all_182-DW-NeA-6_h2geneonly
+af_all/183-DW-NeA-9_h1geneonly -> af_all_183-DW-NeA-9_h1geneonly
+af_all/183-DW-NeA-9_h2geneonly -> af_all_183-DW-NeA-9_h2geneonly
+af_all/185-DW-NeA-14_h1geneonly -> af_all_185-DW-NeA-14_h1geneonly
+af_all/185-DW-NeA-14_h2geneonly -> af_all_185-DW-NeA-14_h2geneonly
+af_all/186-DW-NeA-15_h1geneonly -> af_all_186-DW-NeA-15_h1geneonly
+af_all/186-DW-NeA-15_h2geneonly -> af_all_186-DW-NeA-15_h2geneonly
+af_all/187-DW-NeA-18_h1geneonly -> af_all_187-DW-NeA-18_h1geneonly
+af_all/187-DW-NeA-18_h2geneonly -> af_all_187-DW-NeA-18_h2geneonly
+af_all/188-DW-NeA-19_h1geneonly -> af_all_188-DW-NeA-19_h1geneonly
+af_all/188-DW-NeA-19_h2geneonly -> af_all_188-DW-NeA-19_h2geneonly
+af_all/18-DW-Tak2_h1geneonly -> af_all_18-DW-Tak2_h1geneonly
+af_all/18-DW-Tak2_h2geneonly -> af_all_18-DW-Tak2_h2geneonly
+af_all/190-DW-Sha16_h1geneonly -> af_all_190-DW-Sha16_h1geneonly
+af_all/190-DW-Sha16_h2geneonly -> af_all_190-DW-Sha16_h2geneonly
+af_all/191-DW-Kom6_h1geneonly -> af_all_191-DW-Kom6_h1geneonly
+af_all/191-DW-Kom6_h2geneonly -> af_all_191-DW-Kom6_h2geneonly
+af_all/192-DW-Kom7_h1geneonly -> af_all_192-DW-Kom7_h1geneonly
+af_all/192-DW-Kom7_h2geneonly -> af_all_192-DW-Kom7_h2geneonly
+af_all/19-DW-Tak3_h1geneonly -> af_all_19-DW-Tak3_h1geneonly
+af_all/19-DW-Tak3_h2geneonly -> af_all_19-DW-Tak3_h2geneonly
+af_all/1-DW-Suh2_h1geneonly -> af_all_1-DW-Suh2_h1geneonly
+af_all/1-DW-Suh2_h2geneonly -> af_all_1-DW-Suh2_h2geneonly
+af_all/20-DW-Tak4_h1geneonly -> af_all_20-DW-Tak4_h1geneonly
+af_all/20-DW-Tak4_h2geneonly -> af_all_20-DW-Tak4_h2geneonly
+af_all/21-DW-Tak5_h1geneonly -> af_all_21-DW-Tak5_h1geneonly
+af_all/21-DW-Tak5_h2geneonly -> af_all_21-DW-Tak5_h2geneonly
+af_all/22-DW-Tak6_h1geneonly -> af_all_22-DW-Tak6_h1geneonly
+af_all/22-DW-Tak6_h2geneonly -> af_all_22-DW-Tak6_h2geneonly
+af_all/23-DW-Tak7_h1geneonly -> af_all_23-DW-Tak7_h1geneonly
+af_all/23-DW-Tak7_h2geneonly -> af_all_23-DW-Tak7_h2geneonly
+af_all/24-DW-Tak8_h1geneonly -> af_all_24-DW-Tak8_h1geneonly
+af_all/24-DW-Tak8_h2geneonly -> af_all_24-DW-Tak8_h2geneonly
+af_all/25-DW-Tub1_h1geneonly -> af_all_25-DW-Tub1_h1geneonly
+af_all/25-DW-Tub1_h2geneonly -> af_all_25-DW-Tub1_h2geneonly
+af_all/26-DW-Tub2_h1geneonly -> af_all_26-DW-Tub2_h1geneonly
+af_all/26-DW-Tub2_h2geneonly -> af_all_26-DW-Tub2_h2geneonly
+af_all/27-DW-Tub3_h1geneonly -> af_all_27-DW-Tub3_h1geneonly
+af_all/27-DW-Tub3_h2geneonly -> af_all_27-DW-Tub3_h2geneonly
+af_all/29-DW-Tub5_h1geneonly -> af_all_29-DW-Tub5_h1geneonly
+af_all/29-DW-Tub5_h2geneonly -> af_all_29-DW-Tub5_h2geneonly
+af_all/2-DW-Suh5_h1geneonly -> af_all_2-DW-Suh5_h1geneonly
+af_all/2-DW-Suh5_h2geneonly -> af_all_2-DW-Suh5_h2geneonly
+af_all/30-DW-Tub6_h1geneonly -> af_all_30-DW-Tub6_h1geneonly
+af_all/30-DW-Tub6_h2geneonly -> af_all_30-DW-Tub6_h2geneonly
+af_all/31-DW-Tub7_h1geneonly -> af_all_31-DW-Tub7_h1geneonly
+af_all/31-DW-Tub7_h2geneonly -> af_all_31-DW-Tub7_h2geneonly
+af_all/32-DW-Tub8_h1geneonly -> af_all_32-DW-Tub8_h1geneonly
+af_all/32-DW-Tub8_h2geneonly -> af_all_32-DW-Tub8_h2geneonly
+af_all/35-DW-Tub11_h1geneonly -> af_all_35-DW-Tub11_h1geneonly
+af_all/35-DW-Tub11_h2geneonly -> af_all_35-DW-Tub11_h2geneonly
+af_all/36-DW-Tub12_h1geneonly -> af_all_36-DW-Tub12_h1geneonly
+af_all/36-DW-Tub12_h2geneonly -> af_all_36-DW-Tub12_h2geneonly
+af_all/37-DW-Tub14_h1geneonly -> af_all_37-DW-Tub14_h1geneonly
+af_all/37-DW-Tub14_h2geneonly -> af_all_37-DW-Tub14_h2geneonly
+af_all/38-DW-Tub15_h1geneonly -> af_all_38-DW-Tub15_h1geneonly
+af_all/38-DW-Tub15_h2geneonly -> af_all_38-DW-Tub15_h2geneonly
+af_all/3-DW-Suh7_h1geneonly -> af_all_3-DW-Suh7_h1geneonly
+af_all/3-DW-Suh7_h2geneonly -> af_all_3-DW-Suh7_h2geneonly
+af_all/40-DW-Tub17_h1geneonly -> af_all_40-DW-Tub17_h1geneonly
+af_all/40-DW-Tub17_h2geneonly -> af_all_40-DW-Tub17_h2geneonly
+af_all/41-DW-TP4_h1geneonly -> af_all_41-DW-TP4_h1geneonly
+af_all/41-DW-TP4_h2geneonly -> af_all_41-DW-TP4_h2geneonly
+af_all/42-DW-TP5_h1geneonly -> af_all_42-DW-TP5_h1geneonly
+af_all/42-DW-TP5_h2geneonly -> af_all_42-DW-TP5_h2geneonly
+af_all/43-DW-TP6_h1geneonly -> af_all_43-DW-TP6_h1geneonly
+af_all/43-DW-TP6_h2geneonly -> af_all_43-DW-TP6_h2geneonly
+af_all/44-DW-TP7_h1geneonly -> af_all_44-DW-TP7_h1geneonly
+af_all/44-DW-TP7_h2geneonly -> af_all_44-DW-TP7_h2geneonly
+af_all/45-DW-TP9_h1geneonly -> af_all_45-DW-TP9_h1geneonly
+af_all/45-DW-TP9_h2geneonly -> af_all_45-DW-TP9_h2geneonly
+af_all/46-DW-TP10_h1geneonly -> af_all_46-DW-TP10_h1geneonly
+af_all/46-DW-TP10_h2geneonly -> af_all_46-DW-TP10_h2geneonly
+af_all/47-DW-TP11_h1geneonly -> af_all_47-DW-TP11_h1geneonly
+af_all/47-DW-TP11_h2geneonly -> af_all_47-DW-TP11_h2geneonly
+af_all/48-DW-TP15_h1geneonly -> af_all_48-DW-TP15_h1geneonly
+af_all/48-DW-TP15_h2geneonly -> af_all_48-DW-TP15_h2geneonly
+af_all/49-DW-WE1_h1geneonly -> af_all_49-DW-WE1_h1geneonly
+af_all/49-DW-WE1_h2geneonly -> af_all_49-DW-WE1_h2geneonly
+af_all/4-DW-Suh11_h1geneonly -> af_all_4-DW-Suh11_h1geneonly
+af_all/4-DW-Suh11_h2geneonly -> af_all_4-DW-Suh11_h2geneonly
+af_all/53-DW-WE6_h1geneonly -> af_all_53-DW-WE6_h1geneonly
+af_all/53-DW-WE6_h2geneonly -> af_all_53-DW-WE6_h2geneonly
+af_all/54-DW-WE7_h1geneonly -> af_all_54-DW-WE7_h1geneonly
+af_all/54-DW-WE7_h2geneonly -> af_all_54-DW-WE7_h2geneonly
+af_all/55-DW-WE8_h1geneonly -> af_all_55-DW-WE8_h1geneonly
+af_all/55-DW-WE8_h2geneonly -> af_all_55-DW-WE8_h2geneonly
+af_all/56-DW-WE9_h1geneonly -> af_all_56-DW-WE9_h1geneonly
+af_all/56-DW-WE9_h2geneonly -> af_all_56-DW-WE9_h2geneonly
+af_all/57-DW-WE11_h1geneonly -> af_all_57-DW-WE11_h1geneonly
+af_all/57-DW-WE11_h2geneonly -> af_all_57-DW-WE11_h2geneonly
+af_all/59-DW-WE19_h1geneonly -> af_all_59-DW-WE19_h1geneonly
+af_all/59-DW-WE19_h2geneonly -> af_all_59-DW-WE19_h2geneonly
+af_all/5-DW-Suh12_h1geneonly -> af_all_5-DW-Suh12_h1geneonly
+af_all/5-DW-Suh12_h2geneonly -> af_all_5-DW-Suh12_h2geneonly
+af_all/61-DW-WE27_h1geneonly -> af_all_61-DW-WE27_h1geneonly
+af_all/61-DW-WE27_h2geneonly -> af_all_61-DW-WE27_h2geneonly
+af_all/62-DW-WE28_h1geneonly -> af_all_62-DW-WE28_h1geneonly
+af_all/62-DW-WE28_h2geneonly -> af_all_62-DW-WE28_h2geneonly
+af_all/65-DW-Mad49_h1geneonly -> af_all_65-DW-Mad49_h1geneonly
+af_all/65-DW-Mad49_h2geneonly -> af_all_65-DW-Mad49_h2geneonly
+af_all/66-DW-Mad50_h1geneonly -> af_all_66-DW-Mad50_h1geneonly
+af_all/66-DW-Mad50_h2geneonly -> af_all_66-DW-Mad50_h2geneonly
+af_all/68-DW-Mad53_h1geneonly -> af_all_68-DW-Mad53_h1geneonly
+af_all/68-DW-Mad53_h2geneonly -> af_all_68-DW-Mad53_h2geneonly
+af_all/69-DW-Mad54_h1geneonly -> af_all_69-DW-Mad54_h1geneonly
+af_all/69-DW-Mad54_h2geneonly -> af_all_69-DW-Mad54_h2geneonly
+af_all/6-DW-Suh18_h1geneonly -> af_all_6-DW-Suh18_h1geneonly
+af_all/6-DW-Suh18_h2geneonly -> af_all_6-DW-Suh18_h2geneonly
+af_all/70-DW-Mad55_h1geneonly -> af_all_70-DW-Mad55_h1geneonly
+af_all/70-DW-Mad55_h2geneonly -> af_all_70-DW-Mad55_h2geneonly
+af_all/71-DW-Mad56_h1geneonly -> af_all_71-DW-Mad56_h1geneonly
+af_all/71-DW-Mad56_h2geneonly -> af_all_71-DW-Mad56_h2geneonly
+af_all/72-DW-Mad57_h1geneonly -> af_all_72-DW-Mad57_h1geneonly
+af_all/72-DW-Mad57_h2geneonly -> af_all_72-DW-Mad57_h2geneonly
+af_all/73-DW-Mad58_h1geneonly -> af_all_73-DW-Mad58_h1geneonly
+af_all/73-DW-Mad58_h2geneonly -> af_all_73-DW-Mad58_h2geneonly
+af_all/74-DW-Mad59_h1geneonly -> af_all_74-DW-Mad59_h1geneonly
+af_all/74-DW-Mad59_h2geneonly -> af_all_74-DW-Mad59_h2geneonly
+af_all/75-DW-Mad60_h1geneonly -> af_all_75-DW-Mad60_h1geneonly
+af_all/75-DW-Mad60_h2geneonly -> af_all_75-DW-Mad60_h2geneonly
+af_all/76-DW-Mad61_h1geneonly -> af_all_76-DW-Mad61_h1geneonly
+af_all/76-DW-Mad61_h2geneonly -> af_all_76-DW-Mad61_h2geneonly
+af_all/77-DW-Mad62_h1geneonly -> af_all_77-DW-Mad62_h1geneonly
+af_all/77-DW-Mad62_h2geneonly -> af_all_77-DW-Mad62_h2geneonly
+af_all/78-DW-Mad63_h1geneonly -> af_all_78-DW-Mad63_h1geneonly
+af_all/78-DW-Mad63_h2geneonly -> af_all_78-DW-Mad63_h2geneonly
+af_all/79-DW-Mad64_h1geneonly -> af_all_79-DW-Mad64_h1geneonly
+af_all/79-DW-Mad64_h2geneonly -> af_all_79-DW-Mad64_h2geneonly
+af_all/7-DW-Suh19_h1geneonly -> af_all_7-DW-Suh19_h1geneonly
+af_all/7-DW-Suh19_h2geneonly -> af_all_7-DW-Suh19_h2geneonly
+af_all/80-DW-Mad65_h1geneonly -> af_all_80-DW-Mad65_h1geneonly
+af_all/80-DW-Mad65_h2geneonly -> af_all_80-DW-Mad65_h2geneonly
+af_all/81-DW-Mad66_h1geneonly -> af_all_81-DW-Mad66_h1geneonly
+af_all/81-DW-Mad66_h2geneonly -> af_all_81-DW-Mad66_h2geneonly
+af_all/82-DW-Mad67_h1geneonly -> af_all_82-DW-Mad67_h1geneonly
+af_all/82-DW-Mad67_h2geneonly -> af_all_82-DW-Mad67_h2geneonly
+af_all/83-DW-Mad68_h1geneonly -> af_all_83-DW-Mad68_h1geneonly
+af_all/83-DW-Mad68_h2geneonly -> af_all_83-DW-Mad68_h2geneonly
+af_all/84-DW-Mad69_h1geneonly -> af_all_84-DW-Mad69_h1geneonly
+af_all/84-DW-Mad69_h2geneonly -> af_all_84-DW-Mad69_h2geneonly
+af_all/85-DW-Sha2_h1geneonly -> af_all_85-DW-Sha2_h1geneonly
+af_all/85-DW-Sha2_h2geneonly -> af_all_85-DW-Sha2_h2geneonly
+af_all/86-DW-Sha3_h1geneonly -> af_all_86-DW-Sha3_h1geneonly
+af_all/86-DW-Sha3_h2geneonly -> af_all_86-DW-Sha3_h2geneonly
+af_all/87-DW-Sha4_h1geneonly -> af_all_87-DW-Sha4_h1geneonly
+af_all/87-DW-Sha4_h2geneonly -> af_all_87-DW-Sha4_h2geneonly
+af_all/88-DW-Sha6_h1geneonly -> af_all_88-DW-Sha6_h1geneonly
+af_all/88-DW-Sha6_h2geneonly -> af_all_88-DW-Sha6_h2geneonly
+af_all/90-DW-Sha14_h1geneonly -> af_all_90-DW-Sha14_h1geneonly
+af_all/90-DW-Sha14_h2geneonly -> af_all_90-DW-Sha14_h2geneonly
+af_all/91-DW-Kom2_h1geneonly -> af_all_91-DW-Kom2_h1geneonly
+af_all/91-DW-Kom2_h2geneonly -> af_all_91-DW-Kom2_h2geneonly
+af_all/92-DW-Kom3_h1geneonly -> af_all_92-DW-Kom3_h1geneonly
+af_all/92-DW-Kom3_h2geneonly -> af_all_92-DW-Kom3_h2geneonly
+af_all/93-DW-Kom4_h1geneonly -> af_all_93-DW-Kom4_h1geneonly
+af_all/93-DW-Kom4_h2geneonly -> af_all_93-DW-Kom4_h2geneonly
+af_all/94-DW-Kom12_h1geneonly -> af_all_94-DW-Kom12_h1geneonly
+af_all/94-DW-Kom12_h2geneonly -> af_all_94-DW-Kom12_h2geneonly
+af_all/95-DW-Kom13_h1geneonly -> af_all_95-DW-Kom13_h1geneonly
+af_all/95-DW-Kom13_h2geneonly -> af_all_95-DW-Kom13_h2geneonly
+af_all/96-DW-Kom14_h1geneonly -> af_all_96-DW-Kom14_h1geneonly
+af_all/96-DW-Kom14_h2geneonly -> af_all_96-DW-Kom14_h2geneonly
+af_all/97-DW-OBP1-1_h1geneonly -> af_all_97-DW-OBP1-1_h1geneonly
+af_all/97-DW-OBP1-1_h2geneonly -> af_all_97-DW-OBP1-1_h2geneonly
+af_all/98-DW-OBP1-2_h1geneonly -> af_all_98-DW-OBP1-2_h1geneonly
+af_all/98-DW-OBP1-2_h2geneonly -> af_all_98-DW-OBP1-2_h2geneonly
+af_all/99-DW-OBP1-3_h1geneonly -> af_all_99-DW-OBP1-3_h1geneonly
+af_all/99-DW-OBP1-3_h2geneonly -> af_all_99-DW-OBP1-3_h2geneonly
+af_all/9-DW-Tar2_h1geneonly -> af_all_9-DW-Tar2_h1geneonly
+af_all/9-DW-Tar2_h2geneonly -> af_all_9-DW-Tar2_h2geneonly
+af_all/DW-AdF10_h1geneonly -> af_all_DW-AdF10_h1geneonly
+af_all/DW-AdF10_h2geneonly -> af_all_DW-AdF10_h2geneonly
+af_all/DW-AdF11_h1geneonly -> af_all_DW-AdF11_h1geneonly
+af_all/DW-AdF11_h2geneonly -> af_all_DW-AdF11_h2geneonly
+af_all/DW-AdF17_h1geneonly -> af_all_DW-AdF17_h1geneonly
+af_all/DW-AdF17_h2geneonly -> af_all_DW-AdF17_h2geneonly
+af_all/DW-AdF18_h1geneonly -> af_all_DW-AdF18_h1geneonly
+af_all/DW-AdF18_h2geneonly -> af_all_DW-AdF18_h2geneonly
+af_all/DW-AdF19_h1geneonly -> af_all_DW-AdF19_h1geneonly
+af_all/DW-AdF19_h2geneonly -> af_all_DW-AdF19_h2geneonly
+af_all/DW-AdF1_h1geneonly -> af_all_DW-AdF1_h1geneonly
+af_all/DW-AdF1_h2geneonly -> af_all_DW-AdF1_h2geneonly
+af_all/DW-AdF3_h1geneonly -> af_all_DW-AdF3_h1geneonly
+af_all/DW-AdF3_h2geneonly -> af_all_DW-AdF3_h2geneonly
+af_all/DW-AdF7_h1geneonly -> af_all_DW-AdF7_h1geneonly
+af_all/DW-AdF7_h2geneonly -> af_all_DW-AdF7_h2geneonly
+af_all/DW-AF11_h1geneonly -> af_all_DW-AF11_h1geneonly
+af_all/DW-AF11_h2geneonly -> af_all_DW-AF11_h2geneonly
+af_all/DW-AF17_h1geneonly -> af_all_DW-AF17_h1geneonly
+af_all/DW-AF17_h2geneonly -> af_all_DW-AF17_h2geneonly
+af_all/DW-AF19_h1geneonly -> af_all_DW-AF19_h1geneonly
+af_all/DW-AF19_h2geneonly -> af_all_DW-AF19_h2geneonly
+af_all/DW-AF22_h1geneonly -> af_all_DW-AF22_h1geneonly
+af_all/DW-AF22_h2geneonly -> af_all_DW-AF22_h2geneonly
+af_all/DW-AF23_h1geneonly -> af_all_DW-AF23_h1geneonly
+af_all/DW-AF23_h2geneonly -> af_all_DW-AF23_h2geneonly
+af_all/DW-AF24_h1geneonly -> af_all_DW-AF24_h1geneonly
+af_all/DW-AF24_h2geneonly -> af_all_DW-AF24_h2geneonly
+af_all/DW-AF26_h1geneonly -> af_all_DW-AF26_h1geneonly
+af_all/DW-AF26_h2geneonly -> af_all_DW-AF26_h2geneonly
+af_all/DW-AF2_h1geneonly -> af_all_DW-AF2_h1geneonly
+af_all/DW-AF2_h2geneonly -> af_all_DW-AF2_h2geneonly
+af_all/DW-AF3_h1geneonly -> af_all_DW-AF3_h1geneonly
+af_all/DW-AF3_h2geneonly -> af_all_DW-AF3_h2geneonly
+af_all/DW-AF4_h1geneonly -> af_all_DW-AF4_h1geneonly
+af_all/DW-AF4_h2geneonly -> af_all_DW-AF4_h2geneonly
+af_all/DW-AF5_h1geneonly -> af_all_DW-AF5_h1geneonly
+af_all/DW-AF5_h2geneonly -> af_all_DW-AF5_h2geneonly
+af_all/DW-AF6_h1geneonly -> af_all_DW-AF6_h1geneonly
+af_all/DW-AF6_h2geneonly -> af_all_DW-AF6_h2geneonly
+af_all/DW-AF7_h1geneonly -> af_all_DW-AF7_h1geneonly
+af_all/DW-AF7_h2geneonly -> af_all_DW-AF7_h2geneonly
+af_all/DW-AF8_h1geneonly -> af_all_DW-AF8_h1geneonly
+af_all/DW-AF8_h2geneonly -> af_all_DW-AF8_h2geneonly
+af_all/DW-AF9_h1geneonly -> af_all_DW-AF9_h1geneonly
+af_all/DW-AF9_h2geneonly -> af_all_DW-AF9_h2geneonly
+af_all/DW-AgD34_h1geneonly -> af_all_DW-AgD34_h1geneonly
+af_all/DW-AgD34_h2geneonly -> af_all_DW-AgD34_h2geneonly
+af_all/DW-AgD37_h1geneonly -> af_all_DW-AgD37_h1geneonly
+af_all/DW-AgD37_h2geneonly -> af_all_DW-AgD37_h2geneonly
+af_all/DW-AgD4_h1geneonly -> af_all_DW-AgD4_h1geneonly
+af_all/DW-AgD4_h2geneonly -> af_all_DW-AgD4_h2geneonly
+af_all/DW-AgD5_h1geneonly -> af_all_DW-AgD5_h1geneonly
+af_all/DW-AgD5_h2geneonly -> af_all_DW-AgD5_h2geneonly
+af_all/DW-Aka10_h1geneonly -> af_all_DW-Aka10_h1geneonly
+af_all/DW-Aka10_h2geneonly -> af_all_DW-Aka10_h2geneonly
+af_all/DW-Aka15_h1geneonly -> af_all_DW-Aka15_h1geneonly
+af_all/DW-Aka15_h2geneonly -> af_all_DW-Aka15_h2geneonly
+af_all/DW-Aka20_h1geneonly -> af_all_DW-Aka20_h1geneonly
+af_all/DW-Aka20_h2geneonly -> af_all_DW-Aka20_h2geneonly
+af_all/DW-Aka22_h1geneonly -> af_all_DW-Aka22_h1geneonly
+af_all/DW-Aka22_h2geneonly -> af_all_DW-Aka22_h2geneonly
+af_all/DW-Aka23_h1geneonly -> af_all_DW-Aka23_h1geneonly
+af_all/DW-Aka23_h2geneonly -> af_all_DW-Aka23_h2geneonly
+af_all/DW-Anl11_h1geneonly -> af_all_DW-Anl11_h1geneonly
+af_all/DW-Anl11_h2geneonly -> af_all_DW-Anl11_h2geneonly
+af_all/DW-Anl17_h1geneonly -> af_all_DW-Anl17_h1geneonly
+af_all/DW-Anl17_h2geneonly -> af_all_DW-Anl17_h2geneonly
+af_all/DW-Asa11_h1geneonly -> af_all_DW-Asa11_h1geneonly
+af_all/DW-Asa11_h2geneonly -> af_all_DW-Asa11_h2geneonly
+af_all/DW-Asa12_h1geneonly -> af_all_DW-Asa12_h1geneonly
+af_all/DW-Asa12_h2geneonly -> af_all_DW-Asa12_h2geneonly
+af_all/DW-Asa14_h1geneonly -> af_all_DW-Asa14_h1geneonly
+af_all/DW-Asa14_h2geneonly -> af_all_DW-Asa14_h2geneonly
+af_all/DW-Asa5_h1geneonly -> af_all_DW-Asa5_h1geneonly
+af_all/DW-Asa5_h2geneonly -> af_all_DW-Asa5_h2geneonly
+af_all/DW-Asa9_h1geneonly -> af_all_DW-Asa9_h1geneonly
+af_all/DW-Asa9_h2geneonly -> af_all_DW-Asa9_h2geneonly
+af_all/DW-Ash12_h1geneonly -> af_all_DW-Ash12_h1geneonly
+af_all/DW-Ash12_h2geneonly -> af_all_DW-Ash12_h2geneonly
+af_all/DW-Ash13_h1geneonly -> af_all_DW-Ash13_h1geneonly
+af_all/DW-Ash13_h2geneonly -> af_all_DW-Ash13_h2geneonly
+af_all/DW-Ash26_h1geneonly -> af_all_DW-Ash26_h1geneonly
+af_all/DW-Ash26_h2geneonly -> af_all_DW-Ash26_h2geneonly
+af_all/DW-Ash6_h1geneonly -> af_all_DW-Ash6_h1geneonly
+af_all/DW-Ash6_h2geneonly -> af_all_DW-Ash6_h2geneonly
+af_all/DW-Ash8_h1geneonly -> af_all_DW-Ash8_h1geneonly
+af_all/DW-Ash8_h2geneonly -> af_all_DW-Ash8_h2geneonly
+af_all/DW-Ash9_h1geneonly -> af_all_DW-Ash9_h1geneonly
+af_all/DW-Ash9_h2geneonly -> af_all_DW-Ash9_h2geneonly
+af_all/DW-Asi11_h1geneonly -> af_all_DW-Asi11_h1geneonly
+af_all/DW-Asi11_h2geneonly -> af_all_DW-Asi11_h2geneonly
+af_all/DW-Asi13_h1geneonly -> af_all_DW-Asi13_h1geneonly
+af_all/DW-Asi13_h2geneonly -> af_all_DW-Asi13_h2geneonly
+af_all/DW-Asi2_h1geneonly -> af_all_DW-Asi2_h1geneonly
+af_all/DW-Asi2_h2geneonly -> af_all_DW-Asi2_h2geneonly
+af_all/DW-Asi3_h1geneonly -> af_all_DW-Asi3_h1geneonly
+af_all/DW-Asi3_h2geneonly -> af_all_DW-Asi3_h2geneonly
+af_all/DW-Asi4_h1geneonly -> af_all_DW-Asi4_h1geneonly
+af_all/DW-Asi4_h2geneonly -> af_all_DW-Asi4_h2geneonly
+af_all/DW-Asi5_h1geneonly -> af_all_DW-Asi5_h1geneonly
+af_all/DW-Asi5_h2geneonly -> af_all_DW-Asi5_h2geneonly
+af_all/DW-Asi9_h1geneonly -> af_all_DW-Asi9_h1geneonly
+af_all/DW-Asi9_h2geneonly -> af_all_DW-Asi9_h2geneonly
+af_all/DW-Axi13_h1geneonly -> af_all_DW-Axi13_h1geneonly
+af_all/DW-Axi13_h2geneonly -> af_all_DW-Axi13_h2geneonly
+af_all/DW-Axi14_h1geneonly -> af_all_DW-Axi14_h1geneonly
+af_all/DW-Axi14_h2geneonly -> af_all_DW-Axi14_h2geneonly
+af_all/DW-Axi15_h1geneonly -> af_all_DW-Axi15_h1geneonly
+af_all/DW-Axi15_h2geneonly -> af_all_DW-Axi15_h2geneonly
+af_all/DW-Axi16_h1geneonly -> af_all_DW-Axi16_h1geneonly
+af_all/DW-Axi16_h2geneonly -> af_all_DW-Axi16_h2geneonly
+af_all/DW-Axi1_h1geneonly -> af_all_DW-Axi1_h1geneonly
+af_all/DW-Axi1_h2geneonly -> af_all_DW-Axi1_h2geneonly
+af_all/DW-Axi2_h1geneonly -> af_all_DW-Axi2_h1geneonly
+af_all/DW-Axi2_h2geneonly -> af_all_DW-Axi2_h2geneonly
+af_all/DW-Axi3_h1geneonly -> af_all_DW-Axi3_h1geneonly
+af_all/DW-Axi3_h2geneonly -> af_all_DW-Axi3_h2geneonly
+af_all/DW-Axi4_h1geneonly -> af_all_DW-Axi4_h1geneonly
+af_all/DW-Axi4_h2geneonly -> af_all_DW-Axi4_h2geneonly
+af_all/DW-Bog10_h1geneonly -> af_all_DW-Bog10_h1geneonly
+af_all/DW-Bog10_h2geneonly -> af_all_DW-Bog10_h2geneonly
+af_all/DW-Bog11_h1geneonly -> af_all_DW-Bog11_h1geneonly
+af_all/DW-Bog11_h2geneonly -> af_all_DW-Bog11_h2geneonly
+af_all/DW-Bog12_h1geneonly -> af_all_DW-Bog12_h1geneonly
+af_all/DW-Bog12_h2geneonly -> af_all_DW-Bog12_h2geneonly
+af_all/DW-Bog13_h1geneonly -> af_all_DW-Bog13_h1geneonly
+af_all/DW-Bog13_h2geneonly -> af_all_DW-Bog13_h2geneonly
+af_all/DW-Bog14_h1geneonly -> af_all_DW-Bog14_h1geneonly
+af_all/DW-Bog14_h2geneonly -> af_all_DW-Bog14_h2geneonly
+af_all/DW-Bog15_h1geneonly -> af_all_DW-Bog15_h1geneonly
+af_all/DW-Bog15_h2geneonly -> af_all_DW-Bog15_h2geneonly
+af_all/DW-Bog16_h1geneonly -> af_all_DW-Bog16_h1geneonly
+af_all/DW-Bog16_h2geneonly -> af_all_DW-Bog16_h2geneonly
+af_all/DW-Bog18_h1geneonly -> af_all_DW-Bog18_h1geneonly
+af_all/DW-Bog18_h2geneonly -> af_all_DW-Bog18_h2geneonly
+af_all/DW-Bog1_h1geneonly -> af_all_DW-Bog1_h1geneonly
+af_all/DW-Bog1_h2geneonly -> af_all_DW-Bog1_h2geneonly
+af_all/DW-Bog23_h1geneonly -> af_all_DW-Bog23_h1geneonly
+af_all/DW-Bog23_h2geneonly -> af_all_DW-Bog23_h2geneonly
+af_all/DW-Bog25_h1geneonly -> af_all_DW-Bog25_h1geneonly
+af_all/DW-Bog25_h2geneonly -> af_all_DW-Bog25_h2geneonly
+af_all/DW-Bog2_h1geneonly -> af_all_DW-Bog2_h1geneonly
+af_all/DW-Bog2_h2geneonly -> af_all_DW-Bog2_h2geneonly
+af_all/DW-Bog5_h1geneonly -> af_all_DW-Bog5_h1geneonly
+af_all/DW-Bog5_h2geneonly -> af_all_DW-Bog5_h2geneonly
+af_all/DW-Bog6_h1geneonly -> af_all_DW-Bog6_h1geneonly
+af_all/DW-Bog6_h2geneonly -> af_all_DW-Bog6_h2geneonly
+af_all/DW-Bog8_h1geneonly -> af_all_DW-Bog8_h1geneonly
+af_all/DW-Bog8_h2geneonly -> af_all_DW-Bog8_h2geneonly
+af_all/DW-Bog9_h1geneonly -> af_all_DW-Bog9_h1geneonly
+af_all/DW-Bog9_h2geneonly -> af_all_DW-Bog9_h2geneonly
+af_all/DW-Dod11_h1geneonly -> af_all_DW-Dod11_h1geneonly
+af_all/DW-Dod11_h2geneonly -> af_all_DW-Dod11_h2geneonly
+af_all/DW-Dod15_h1geneonly -> af_all_DW-Dod15_h1geneonly
+af_all/DW-Dod15_h2geneonly -> af_all_DW-Dod15_h2geneonly
+af_all/DW-Dod16_h1geneonly -> af_all_DW-Dod16_h1geneonly
+af_all/DW-Dod16_h2geneonly -> af_all_DW-Dod16_h2geneonly
+af_all/DW-Dod18_h1geneonly -> af_all_DW-Dod18_h1geneonly
+af_all/DW-Dod18_h2geneonly -> af_all_DW-Dod18_h2geneonly
+af_all/DW-Dod2_h1geneonly -> af_all_DW-Dod2_h1geneonly
+af_all/DW-Dod2_h2geneonly -> af_all_DW-Dod2_h2geneonly
+af_all/DW-Dod7_h1geneonly -> af_all_DW-Dod7_h1geneonly
+af_all/DW-Dod7_h2geneonly -> af_all_DW-Dod7_h2geneonly
+af_all/DW-Dod8_h1geneonly -> af_all_DW-Dod8_h1geneonly
+af_all/DW-Dod8_h2geneonly -> af_all_DW-Dod8_h2geneonly
+af_all/DW-Dod9_h1geneonly -> af_all_DW-Dod9_h1geneonly
+af_all/DW-Dod9_h2geneonly -> af_all_DW-Dod9_h2geneonly
+af_all/DW-Dzo10_h1geneonly -> af_all_DW-Dzo10_h1geneonly
+af_all/DW-Dzo10_h2geneonly -> af_all_DW-Dzo10_h2geneonly
+af_all/DW-Dzo11_h1geneonly -> af_all_DW-Dzo11_h1geneonly
+af_all/DW-Dzo11_h2geneonly -> af_all_DW-Dzo11_h2geneonly
+af_all/DW-Dzo12_h1geneonly -> af_all_DW-Dzo12_h1geneonly
+af_all/DW-Dzo12_h2geneonly -> af_all_DW-Dzo12_h2geneonly
+af_all/DW-Dzo13_h1geneonly -> af_all_DW-Dzo13_h1geneonly
+af_all/DW-Dzo13_h2geneonly -> af_all_DW-Dzo13_h2geneonly
+af_all/DW-Dzo14_h1geneonly -> af_all_DW-Dzo14_h1geneonly
+af_all/DW-Dzo14_h2geneonly -> af_all_DW-Dzo14_h2geneonly
+af_all/DW-Dzo15_h1geneonly -> af_all_DW-Dzo15_h1geneonly
+af_all/DW-Dzo15_h2geneonly -> af_all_DW-Dzo15_h2geneonly
+af_all/DW-Dzo16_h1geneonly -> af_all_DW-Dzo16_h1geneonly
+af_all/DW-Dzo16_h2geneonly -> af_all_DW-Dzo16_h2geneonly
+af_all/DW-Dzo1_h1geneonly -> af_all_DW-Dzo1_h1geneonly
+af_all/DW-Dzo1_h2geneonly -> af_all_DW-Dzo1_h2geneonly
+af_all/DW-Dzo2_h1geneonly -> af_all_DW-Dzo2_h1geneonly
+af_all/DW-Dzo2_h2geneonly -> af_all_DW-Dzo2_h2geneonly
+af_all/DW-Dzo3_h1geneonly -> af_all_DW-Dzo3_h1geneonly
+af_all/DW-Dzo3_h2geneonly -> af_all_DW-Dzo3_h2geneonly
+af_all/DW-Dzo4_h1geneonly -> af_all_DW-Dzo4_h1geneonly
+af_all/DW-Dzo4_h2geneonly -> af_all_DW-Dzo4_h2geneonly
+af_all/DW-Dzo6_h1geneonly -> af_all_DW-Dzo6_h1geneonly
+af_all/DW-Dzo6_h2geneonly -> af_all_DW-Dzo6_h2geneonly
+af_all/DW-Dzo7_h1geneonly -> af_all_DW-Dzo7_h1geneonly
+af_all/DW-Dzo7_h2geneonly -> af_all_DW-Dzo7_h2geneonly
+af_all/DW-Dzo8_h1geneonly -> af_all_DW-Dzo8_h1geneonly
+af_all/DW-Dzo8_h2geneonly -> af_all_DW-Dzo8_h2geneonly
+af_all/DW-Dzo9_h1geneonly -> af_all_DW-Dzo9_h1geneonly
+af_all/DW-Dzo9_h2geneonly -> af_all_DW-Dzo9_h2geneonly
+af_all/DW-Enc10_h1geneonly -> af_all_DW-Enc10_h1geneonly
+af_all/DW-Enc10_h2geneonly -> af_all_DW-Enc10_h2geneonly
+af_all/DW-Enc12_h1geneonly -> af_all_DW-Enc12_h1geneonly
+af_all/DW-Enc12_h2geneonly -> af_all_DW-Enc12_h2geneonly
+af_all/DW-Enc14_h1geneonly -> af_all_DW-Enc14_h1geneonly
+af_all/DW-Enc14_h2geneonly -> af_all_DW-Enc14_h2geneonly
+af_all/DW-Enc16_h1geneonly -> af_all_DW-Enc16_h1geneonly
+af_all/DW-Enc16_h2geneonly -> af_all_DW-Enc16_h2geneonly
+af_all/DW-Enc17_h1geneonly -> af_all_DW-Enc17_h1geneonly
+af_all/DW-Enc17_h2geneonly -> af_all_DW-Enc17_h2geneonly
+af_all/DW-Enc18_h1geneonly -> af_all_DW-Enc18_h1geneonly
+af_all/DW-Enc18_h2geneonly -> af_all_DW-Enc18_h2geneonly
+af_all/DW-Enc19_h1geneonly -> af_all_DW-Enc19_h1geneonly
+af_all/DW-Enc19_h2geneonly -> af_all_DW-Enc19_h2geneonly
+af_all/DW-Enc20_h1geneonly -> af_all_DW-Enc20_h1geneonly
+af_all/DW-Enc20_h2geneonly -> af_all_DW-Enc20_h2geneonly
+af_all/DW-Enc21_h1geneonly -> af_all_DW-Enc21_h1geneonly
+af_all/DW-Enc21_h2geneonly -> af_all_DW-Enc21_h2geneonly
+af_all/DW-Enc22_h1geneonly -> af_all_DW-Enc22_h1geneonly
+af_all/DW-Enc22_h2geneonly -> af_all_DW-Enc22_h2geneonly
+af_all/DW-Enc2_h1geneonly -> af_all_DW-Enc2_h1geneonly
+af_all/DW-Enc2_h2geneonly -> af_all_DW-Enc2_h2geneonly
+af_all/DW-Enc3_h1geneonly -> af_all_DW-Enc3_h1geneonly
+af_all/DW-Enc3_h2geneonly -> af_all_DW-Enc3_h2geneonly
+af_all/DW-Enc4_h1geneonly -> af_all_DW-Enc4_h1geneonly
+af_all/DW-Enc4_h2geneonly -> af_all_DW-Enc4_h2geneonly
+af_all/DW-Enc7_h1geneonly -> af_all_DW-Enc7_h1geneonly
+af_all/DW-Enc7_h2geneonly -> af_all_DW-Enc7_h2geneonly
+af_all/DW-Enc9_h1geneonly -> af_all_DW-Enc9_h1geneonly
+af_all/DW-Enc9_h2geneonly -> af_all_DW-Enc9_h2geneonly
+af_all/DW-HA2_h1geneonly -> af_all_DW-HA2_h1geneonly
+af_all/DW-HA2_h2geneonly -> af_all_DW-HA2_h2geneonly
+af_all/DW-HA4_h1geneonly -> af_all_DW-HA4_h1geneonly
+af_all/DW-HA4_h2geneonly -> af_all_DW-HA4_h2geneonly
+af_all/DW-HA5_h1geneonly -> af_all_DW-HA5_h1geneonly
+af_all/DW-HA5_h2geneonly -> af_all_DW-HA5_h2geneonly
+af_all/DW-HA6_h1geneonly -> af_all_DW-HA6_h1geneonly
+af_all/DW-HA6_h2geneonly -> af_all_DW-HA6_h2geneonly
+af_all/DW-HA7_h1geneonly -> af_all_DW-HA7_h1geneonly
+af_all/DW-HA7_h2geneonly -> af_all_DW-HA7_h2geneonly
+af_all/DW-HA9_h1geneonly -> af_all_DW-HA9_h1geneonly
+af_all/DW-HA9_h2geneonly -> af_all_DW-HA9_h2geneonly
+af_all/DW-Kof10_h1geneonly -> af_all_DW-Kof10_h1geneonly
+af_all/DW-Kof10_h2geneonly -> af_all_DW-Kof10_h2geneonly
+af_all/DW-Kof12_h1geneonly -> af_all_DW-Kof12_h1geneonly
+af_all/DW-Kof12_h2geneonly -> af_all_DW-Kof12_h2geneonly
+af_all/DW-Kof16_h1geneonly -> af_all_DW-Kof16_h1geneonly
+af_all/DW-Kof16_h2geneonly -> af_all_DW-Kof16_h2geneonly
+af_all/DW-Kof18_h1geneonly -> af_all_DW-Kof18_h1geneonly
+af_all/DW-Kof18_h2geneonly -> af_all_DW-Kof18_h2geneonly
+af_all/DW-Kof19_h1geneonly -> af_all_DW-Kof19_h1geneonly
+af_all/DW-Kof19_h2geneonly -> af_all_DW-Kof19_h2geneonly
+af_all/DW-Kof20_h1geneonly -> af_all_DW-Kof20_h1geneonly
+af_all/DW-Kof20_h2geneonly -> af_all_DW-Kof20_h2geneonly
+af_all/DW-Kof21_h1geneonly -> af_all_DW-Kof21_h1geneonly
+af_all/DW-Kof21_h2geneonly -> af_all_DW-Kof21_h2geneonly
+af_all/DW-Kof23_h1geneonly -> af_all_DW-Kof23_h1geneonly
+af_all/DW-Kof23_h2geneonly -> af_all_DW-Kof23_h2geneonly
+af_all/DW-Mam10_h1geneonly -> af_all_DW-Mam10_h1geneonly
+af_all/DW-Mam10_h2geneonly -> af_all_DW-Mam10_h2geneonly
+af_all/DW-Mam15_h1geneonly -> af_all_DW-Mam15_h1geneonly
+af_all/DW-Mam15_h2geneonly -> af_all_DW-Mam15_h2geneonly
+af_all/DW-Mam16_h1geneonly -> af_all_DW-Mam16_h1geneonly
+af_all/DW-Mam16_h2geneonly -> af_all_DW-Mam16_h2geneonly
+af_all/DW-Mam2_h1geneonly -> af_all_DW-Mam2_h1geneonly
+af_all/DW-Mam2_h2geneonly -> af_all_DW-Mam2_h2geneonly
+af_all/DW-Mam4_h1geneonly -> af_all_DW-Mam4_h1geneonly
+af_all/DW-Mam4_h2geneonly -> af_all_DW-Mam4_h2geneonly
+af_all/DW-Mam6_h1geneonly -> af_all_DW-Mam6_h1geneonly
+af_all/DW-Mam6_h2geneonly -> af_all_DW-Mam6_h2geneonly
+af_all/DW-Mam9_h1geneonly -> af_all_DW-Mam9_h1geneonly
+af_all/DW-Mam9_h2geneonly -> af_all_DW-Mam9_h2geneonly
+af_all/DW-Man10_h1geneonly -> af_all_DW-Man10_h1geneonly
+af_all/DW-Man10_h2geneonly -> af_all_DW-Man10_h2geneonly
+af_all/DW-Man12_h1geneonly -> af_all_DW-Man12_h1geneonly
+af_all/DW-Man12_h2geneonly -> af_all_DW-Man12_h2geneonly
+af_all/DW-Man4_h1geneonly -> af_all_DW-Man4_h1geneonly
+af_all/DW-Man4_h2geneonly -> af_all_DW-Man4_h2geneonly
+af_all/DW-Man5_h1geneonly -> af_all_DW-Man5_h1geneonly
+af_all/DW-Man5_h2geneonly -> af_all_DW-Man5_h2geneonly
+af_all/DW-Man6_h1geneonly -> af_all_DW-Man6_h1geneonly
+af_all/DW-Man6_h2geneonly -> af_all_DW-Man6_h2geneonly
+af_all/DW-Man7_h1geneonly -> af_all_DW-Man7_h1geneonly
+af_all/DW-Man7_h2geneonly -> af_all_DW-Man7_h2geneonly
+af_all/DW-Man9_h1geneonly -> af_all_DW-Man9_h1geneonly
+af_all/DW-Man9_h2geneonly -> af_all_DW-Man9_h2geneonly
+af_all/DW-Nkw1_h1geneonly -> af_all_DW-Nkw1_h1geneonly
+af_all/DW-Nkw1_h2geneonly -> af_all_DW-Nkw1_h2geneonly
+af_all/DW-Nkw2_h1geneonly -> af_all_DW-Nkw2_h1geneonly
+af_all/DW-Nkw2_h2geneonly -> af_all_DW-Nkw2_h2geneonly
+af_all/DW-Nkw3_h1geneonly -> af_all_DW-Nkw3_h1geneonly
+af_all/DW-Nkw3_h2geneonly -> af_all_DW-Nkw3_h2geneonly
+af_all/DW-Nkw4_h1geneonly -> af_all_DW-Nkw4_h1geneonly
+af_all/DW-Nkw4_h2geneonly -> af_all_DW-Nkw4_h2geneonly
+af_all/DW-Nkw5_h1geneonly -> af_all_DW-Nkw5_h1geneonly
+af_all/DW-Nkw5_h2geneonly -> af_all_DW-Nkw5_h2geneonly
+af_all/DW-Nkw6_h1geneonly -> af_all_DW-Nkw6_h1geneonly
+af_all/DW-Nkw6_h2geneonly -> af_all_DW-Nkw6_h2geneonly
+af_all/DW-Nkw7_h1geneonly -> af_all_DW-Nkw7_h1geneonly
+af_all/DW-Nkw7_h2geneonly -> af_all_DW-Nkw7_h2geneonly
+af_all/DW-Nkw8_h1geneonly -> af_all_DW-Nkw8_h1geneonly
+af_all/DW-Nkw8_h2geneonly -> af_all_DW-Nkw8_h2geneonly
+af_all/DW-Nsa10_h1geneonly -> af_all_DW-Nsa10_h1geneonly
+af_all/DW-Nsa10_h2geneonly -> af_all_DW-Nsa10_h2geneonly
+af_all/DW-Nsa11_h1geneonly -> af_all_DW-Nsa11_h1geneonly
+af_all/DW-Nsa11_h2geneonly -> af_all_DW-Nsa11_h2geneonly
+af_all/DW-Nsa12_h1geneonly -> af_all_DW-Nsa12_h1geneonly
+af_all/DW-Nsa12_h2geneonly -> af_all_DW-Nsa12_h2geneonly
+af_all/DW-Nsa13_h1geneonly -> af_all_DW-Nsa13_h1geneonly
+af_all/DW-Nsa13_h2geneonly -> af_all_DW-Nsa13_h2geneonly
+af_all/DW-Nsa15_h1geneonly -> af_all_DW-Nsa15_h1geneonly
+af_all/DW-Nsa15_h2geneonly -> af_all_DW-Nsa15_h2geneonly
+af_all/DW-Nsa16_h1geneonly -> af_all_DW-Nsa16_h1geneonly
+af_all/DW-Nsa16_h2geneonly -> af_all_DW-Nsa16_h2geneonly
+af_all/DW-Nsa17_h1geneonly -> af_all_DW-Nsa17_h1geneonly
+af_all/DW-Nsa17_h2geneonly -> af_all_DW-Nsa17_h2geneonly
+af_all/DW-Nsa18_h1geneonly -> af_all_DW-Nsa18_h1geneonly
+af_all/DW-Nsa18_h2geneonly -> af_all_DW-Nsa18_h2geneonly
+af_all/DW-Nsa1_h1geneonly -> af_all_DW-Nsa1_h1geneonly
+af_all/DW-Nsa1_h2geneonly -> af_all_DW-Nsa1_h2geneonly
+af_all/DW-Nsa2_h1geneonly -> af_all_DW-Nsa2_h1geneonly
+af_all/DW-Nsa2_h2geneonly -> af_all_DW-Nsa2_h2geneonly
+af_all/DW-Nsa3_h1geneonly -> af_all_DW-Nsa3_h1geneonly
+af_all/DW-Nsa3_h2geneonly -> af_all_DW-Nsa3_h2geneonly
+af_all/DW-Nsa4_h1geneonly -> af_all_DW-Nsa4_h1geneonly
+af_all/DW-Nsa4_h2geneonly -> af_all_DW-Nsa4_h2geneonly
+af_all/DW-Nsa5_h1geneonly -> af_all_DW-Nsa5_h1geneonly
+af_all/DW-Nsa5_h2geneonly -> af_all_DW-Nsa5_h2geneonly
+af_all/DW-Nsa6_h1geneonly -> af_all_DW-Nsa6_h1geneonly
+af_all/DW-Nsa6_h2geneonly -> af_all_DW-Nsa6_h2geneonly
+af_all/DW-Nsa8_h1geneonly -> af_all_DW-Nsa8_h1geneonly
+af_all/DW-Nsa8_h2geneonly -> af_all_DW-Nsa8_h2geneonly
+af_all/DW-Nsa9_h1geneonly -> af_all_DW-Nsa9_h1geneonly
+af_all/DW-Nsa9_h2geneonly -> af_all_DW-Nsa9_h2geneonly
+
+                                  Gap/Ambiguity  Composition  p-value
+   1  af_all_100-DW-OBP1-4_h1geneonly     0.00%    passed     99.98%
+   2  af_all_100-DW-OBP1-4_h2geneonly     0.00%    passed    100.00%
+   3  af_all_101-DW-OBP1-5_h1geneonly     0.00%    passed     99.99%
+   4  af_all_101-DW-OBP1-5_h2geneonly     0.00%    passed     99.98%
+   5  af_all_102-DW-OBP1-6_h1geneonly     0.00%    passed     99.99%
+   6  af_all_102-DW-OBP1-6_h2geneonly     0.00%    passed     99.99%
+   7  af_all_105-DW-OBP1-9_h1geneonly     0.00%    passed     99.98%
+   8  af_all_105-DW-OBP1-9_h2geneonly     0.00%    passed    100.00%
+   9  af_all_106-DW-OBP1-10_h1geneonly    0.00%    passed     99.99%
+  10  af_all_106-DW-OBP1-10_h2geneonly    0.00%    passed     99.99%
+  11  af_all_107-DW-OBP1-12_h1geneonly    0.00%    passed     99.99%
+  12  af_all_107-DW-OBP1-12_h2geneonly    0.00%    passed     99.98%
+  13  af_all_108-DW-OBP1-13_h1geneonly    0.00%    passed     99.99%
+  14  af_all_108-DW-OBP1-13_h2geneonly    0.00%    passed     99.99%
+  15  af_all_109-DW-OBP1-14_h1geneonly    0.00%    passed    100.00%
+  16  af_all_109-DW-OBP1-14_h2geneonly    0.00%    passed    100.00%
+  17  af_all_10-DW-Tar5_h1geneonly        0.00%    passed    100.00%
+  18  af_all_10-DW-Tar5_h2geneonly        0.00%    passed    100.00%
+  19  af_all_110-DW-OBP1-16_h1geneonly    0.00%    passed     99.99%
+  20  af_all_110-DW-OBP1-16_h2geneonly    0.00%    passed     99.99%
+  21  af_all_112-DW-OBP1-18_h1geneonly    0.00%    passed    100.00%
+  22  af_all_112-DW-OBP1-18_h2geneonly    0.00%    passed     99.99%
+  23  af_all_113-DW-OBP1-19_h1geneonly    0.00%    passed     99.98%
+  24  af_all_113-DW-OBP1-19_h2geneonly    0.00%    passed     99.98%
+  25  af_all_114-DW-OBP1-20_h1geneonly    0.00%    passed     99.98%
+  26  af_all_114-DW-OBP1-20_h2geneonly    0.00%    passed     99.98%
+  27  af_all_116-DW-AnB-1_h1geneonly      0.00%    passed     99.99%
+  28  af_all_116-DW-AnB-1_h2geneonly      0.00%    passed     99.98%
+  29  af_all_119-DW-AnB-4_h1geneonly      0.00%    passed     99.98%
+  30  af_all_119-DW-AnB-4_h2geneonly      0.00%    passed    100.00%
+  31  af_all_11-DW-Tar6_h1geneonly        0.00%    passed    100.00%
+  32  af_all_11-DW-Tar6_h2geneonly        0.00%    passed    100.00%
+  33  af_all_120-DW-AnB-5_h1geneonly      0.00%    passed    100.00%
+  34  af_all_120-DW-AnB-5_h2geneonly      0.00%    passed    100.00%
+  35  af_all_122-DW-AnB-7_h1geneonly      0.00%    passed    100.00%
+  36  af_all_122-DW-AnB-7_h2geneonly      0.00%    passed     99.99%
+  37  af_all_123-DW-AnB-8_h1geneonly      0.00%    passed    100.00%
+  38  af_all_123-DW-AnB-8_h2geneonly      0.00%    passed    100.00%
+  39  af_all_125-DW-AnB-10_h1geneonly     0.00%    passed    100.00%
+  40  af_all_125-DW-AnB-10_h2geneonly     0.00%    passed    100.00%
+  41  af_all_127-DW-AnB-12_h1geneonly     0.00%    passed     99.98%
+  42  af_all_127-DW-AnB-12_h2geneonly     0.00%    passed     99.98%
+  43  af_all_12-DW-Tar7_h1geneonly        0.00%    passed    100.00%
+  44  af_all_12-DW-Tar7_h2geneonly        0.00%    passed    100.00%
+  45  af_all_131-DW-AnB-16_h1geneonly     0.00%    passed    100.00%
+  46  af_all_131-DW-AnB-16_h2geneonly     0.00%    passed     99.98%
+  47  af_all_134-DW-NeA-66_h1geneonly     0.00%    passed    100.00%
+  48  af_all_134-DW-NeA-66_h2geneonly     0.00%    passed    100.00%
+  49  af_all_135-DW-NeA-79_h1geneonly     0.00%    passed    100.00%
+  50  af_all_135-DW-NeA-79_h2geneonly     0.00%    passed    100.00%
+  51  af_all_138-DW-NeA-84_h1geneonly     0.00%    passed    100.00%
+  52  af_all_138-DW-NeA-84_h2geneonly     0.00%    passed    100.00%
+  53  af_all_139-DW-NeA-87_h1geneonly     0.00%    passed    100.00%
+  54  af_all_139-DW-NeA-87_h2geneonly     0.00%    passed    100.00%
+  55  af_all_13-DW-Tar8_h1geneonly        0.00%    passed    100.00%
+  56  af_all_13-DW-Tar8_h2geneonly        0.00%    passed    100.00%
+  57  af_all_140-DW-NeA-49_h1geneonly     0.00%    passed    100.00%
+  58  af_all_140-DW-NeA-49_h2geneonly     0.00%    passed     99.98%
+  59  af_all_141-DW-NeA-50_h1geneonly     0.00%    passed     99.99%
+  60  af_all_141-DW-NeA-50_h2geneonly     0.00%    passed    100.00%
+  61  af_all_142-DW-NeA-51_h1geneonly     0.00%    passed     99.99%
+  62  af_all_142-DW-NeA-51_h2geneonly     0.00%    passed     99.99%
+  63  af_all_143-DW-NeA-52_h1geneonly     0.00%    passed     99.98%
+  64  af_all_143-DW-NeA-52_h2geneonly     0.00%    passed    100.00%
+  65  af_all_145-DW-NeA-54_h1geneonly     0.00%    passed    100.00%
+  66  af_all_145-DW-NeA-54_h2geneonly     0.00%    passed     99.99%
+  67  af_all_146-DW-NeA-55_h1geneonly     0.00%    passed    100.00%
+  68  af_all_146-DW-NeA-55_h2geneonly     0.00%    passed    100.00%
+  69  af_all_147-DW-NeA-57_h1geneonly     0.00%    passed    100.00%
+  70  af_all_147-DW-NeA-57_h2geneonly     0.00%    passed    100.00%
+  71  af_all_148-DW-AnB-49_h1geneonly     0.00%    passed    100.00%
+  72  af_all_148-DW-AnB-49_h2geneonly     0.00%    passed    100.00%
+  73  af_all_149-DW-AnB-50_h1geneonly     0.00%    passed    100.00%
+  74  af_all_149-DW-AnB-50_h2geneonly     0.00%    passed    100.00%
+  75  af_all_14-DW-Tar10_h1geneonly       0.00%    passed    100.00%
+  76  af_all_14-DW-Tar10_h2geneonly       0.00%    passed    100.00%
+  77  af_all_150-DW-AnB-51_h1geneonly     0.00%    passed    100.00%
+  78  af_all_150-DW-AnB-51_h2geneonly     0.00%    passed    100.00%
+  79  af_all_151-DW-AnB-53_h1geneonly     0.00%    passed    100.00%
+  80  af_all_151-DW-AnB-53_h2geneonly     0.00%    passed    100.00%
+  81  af_all_157-DW-DoM-2_h1geneonly      0.00%    passed    100.00%
+  82  af_all_157-DW-DoM-2_h2geneonly      0.00%    passed    100.00%
+  83  af_all_158-DW-DoM-3_h1geneonly      0.00%    passed    100.00%
+  84  af_all_158-DW-DoM-3_h2geneonly      0.00%    passed    100.00%
+  85  af_all_159-DW-DoM-4_h1geneonly      0.00%    passed    100.00%
+  86  af_all_159-DW-DoM-4_h2geneonly      0.00%    passed    100.00%
+  87  af_all_15-DW-Tar11_h1geneonly       0.00%    passed    100.00%
+  88  af_all_15-DW-Tar11_h2geneonly       0.00%    passed    100.00%
+  89  af_all_160-DW-DoM-5_h1geneonly      0.00%    passed     99.99%
+  90  af_all_160-DW-DoM-5_h2geneonly      0.00%    passed    100.00%
+  91  af_all_163-DW-DoM-9_h1geneonly      0.00%    passed    100.00%
+  92  af_all_163-DW-DoM-9_h2geneonly      0.00%    passed    100.00%
+  93  af_all_164-DW-DoM-49_h1geneonly     0.00%    passed    100.00%
+  94  af_all_164-DW-DoM-49_h2geneonly     0.00%    passed    100.00%
+  95  af_all_165-DW-DoM-50_h1geneonly     0.00%    passed    100.00%
+  96  af_all_165-DW-DoM-50_h2geneonly     0.00%    passed    100.00%
+  97  af_all_166-DW-DoM-51_h1geneonly     0.00%    passed    100.00%
+  98  af_all_166-DW-DoM-51_h2geneonly     0.00%    passed    100.00%
+  99  af_all_167-DW-DoM-52_h1geneonly     0.00%    passed    100.00%
+ 100  af_all_167-DW-DoM-52_h2geneonly     0.00%    passed    100.00%
+ 101  af_all_169-DW-DoM-54_h1geneonly     0.00%    passed    100.00%
+ 102  af_all_169-DW-DoM-54_h2geneonly     0.00%    passed    100.00%
+ 103  af_all_170-DW-DoM-55_h1geneonly     0.00%    passed    100.00%
+ 104  af_all_170-DW-DoM-55_h2geneonly     0.00%    passed    100.00%
+ 105  af_all_171-DW-DoM-56_h1geneonly     0.00%    passed    100.00%
+ 106  af_all_171-DW-DoM-56_h2geneonly     0.00%    passed    100.00%
+ 107  af_all_173-DW-NeA-11_h1geneonly     0.00%    passed    100.00%
+ 108  af_all_173-DW-NeA-11_h2geneonly     0.00%    passed    100.00%
+ 109  af_all_174-DW-NeA-12_h1geneonly     0.00%    passed    100.00%
+ 110  af_all_174-DW-NeA-12_h2geneonly     0.00%    passed     99.98%
+ 111  af_all_175-DW-NeA-16_h1geneonly     0.00%    passed    100.00%
+ 112  af_all_175-DW-NeA-16_h2geneonly     0.00%    passed    100.00%
+ 113  af_all_176-DW-NeA-17_h1geneonly     0.00%    passed    100.00%
+ 114  af_all_176-DW-NeA-17_h2geneonly     0.00%    passed    100.00%
+ 115  af_all_177-DW-NeA-20_h1geneonly     0.00%    passed    100.00%
+ 116  af_all_177-DW-NeA-20_h2geneonly     0.00%    passed    100.00%
+ 117  af_all_178-DW-NeA-23_h1geneonly     0.00%    passed    100.00%
+ 118  af_all_178-DW-NeA-23_h2geneonly     0.00%    passed    100.00%
+ 119  af_all_17-DW-Tak1_h1geneonly        0.00%    passed     99.99%
+ 120  af_all_17-DW-Tak1_h2geneonly        0.00%    passed     99.98%
+ 121  af_all_180-DW-NeA-4_h1geneonly      0.00%    passed    100.00%
+ 122  af_all_180-DW-NeA-4_h2geneonly      0.00%    passed     99.99%
+ 123  af_all_181-DW-NeA-5_h1geneonly      0.00%    passed    100.00%
+ 124  af_all_181-DW-NeA-5_h2geneonly      0.00%    passed    100.00%
+ 125  af_all_182-DW-NeA-6_h1geneonly      0.00%    passed    100.00%
+ 126  af_all_182-DW-NeA-6_h2geneonly      0.00%    passed     99.99%
+ 127  af_all_183-DW-NeA-9_h1geneonly      0.00%    passed     99.98%
+ 128  af_all_183-DW-NeA-9_h2geneonly      0.00%    passed    100.00%
+ 129  af_all_185-DW-NeA-14_h1geneonly     0.00%    passed     99.99%
+ 130  af_all_185-DW-NeA-14_h2geneonly     0.00%    passed     99.99%
+ 131  af_all_186-DW-NeA-15_h1geneonly     0.00%    passed     99.99%
+ 132  af_all_186-DW-NeA-15_h2geneonly     0.00%    passed     99.99%
+ 133  af_all_187-DW-NeA-18_h1geneonly     0.00%    passed     99.99%
+ 134  af_all_187-DW-NeA-18_h2geneonly     0.00%    passed     99.99%
+ 135  af_all_188-DW-NeA-19_h1geneonly     0.00%    passed    100.00%
+ 136  af_all_188-DW-NeA-19_h2geneonly     0.00%    passed    100.00%
+ 137  af_all_18-DW-Tak2_h1geneonly        0.00%    passed     99.98%
+ 138  af_all_18-DW-Tak2_h2geneonly        0.00%    passed     99.98%
+ 139  af_all_190-DW-Sha16_h1geneonly      0.00%    passed    100.00%
+ 140  af_all_190-DW-Sha16_h2geneonly      0.00%    passed    100.00%
+ 141  af_all_191-DW-Kom6_h1geneonly       0.00%    passed    100.00%
+ 142  af_all_191-DW-Kom6_h2geneonly       0.00%    passed    100.00%
+ 143  af_all_192-DW-Kom7_h1geneonly       0.00%    passed    100.00%
+ 144  af_all_192-DW-Kom7_h2geneonly       0.00%    passed    100.00%
+ 145  af_all_19-DW-Tak3_h1geneonly        0.00%    passed    100.00%
+ 146  af_all_19-DW-Tak3_h2geneonly        0.00%    passed     99.98%
+ 147  af_all_1-DW-Suh2_h1geneonly         0.00%    passed    100.00%
+ 148  af_all_1-DW-Suh2_h2geneonly         0.00%    passed    100.00%
+ 149  af_all_20-DW-Tak4_h1geneonly        0.00%    passed    100.00%
+ 150  af_all_20-DW-Tak4_h2geneonly        0.00%    passed    100.00%
+ 151  af_all_21-DW-Tak5_h1geneonly        0.00%    passed    100.00%
+ 152  af_all_21-DW-Tak5_h2geneonly        0.00%    passed    100.00%
+ 153  af_all_22-DW-Tak6_h1geneonly        0.00%    passed    100.00%
+ 154  af_all_22-DW-Tak6_h2geneonly        0.00%    passed    100.00%
+ 155  af_all_23-DW-Tak7_h1geneonly        0.00%    passed    100.00%
+ 156  af_all_23-DW-Tak7_h2geneonly        0.00%    passed    100.00%
+ 157  af_all_24-DW-Tak8_h1geneonly        0.00%    passed    100.00%
+ 158  af_all_24-DW-Tak8_h2geneonly        0.00%    passed    100.00%
+ 159  af_all_25-DW-Tub1_h1geneonly        0.00%    passed    100.00%
+ 160  af_all_25-DW-Tub1_h2geneonly        0.00%    passed    100.00%
+ 161  af_all_26-DW-Tub2_h1geneonly        0.00%    passed     99.98%
+ 162  af_all_26-DW-Tub2_h2geneonly        0.00%    passed     99.99%
+ 163  af_all_27-DW-Tub3_h1geneonly        0.00%    passed     99.98%
+ 164  af_all_27-DW-Tub3_h2geneonly        0.00%    passed     99.98%
+ 165  af_all_29-DW-Tub5_h1geneonly        0.00%    passed    100.00%
+ 166  af_all_29-DW-Tub5_h2geneonly        0.00%    passed    100.00%
+ 167  af_all_2-DW-Suh5_h1geneonly         0.00%    passed     99.98%
+ 168  af_all_2-DW-Suh5_h2geneonly         0.00%    passed     99.94%
+ 169  af_all_30-DW-Tub6_h1geneonly        0.00%    passed    100.00%
+ 170  af_all_30-DW-Tub6_h2geneonly        0.00%    passed    100.00%
+ 171  af_all_31-DW-Tub7_h1geneonly        0.00%    passed    100.00%
+ 172  af_all_31-DW-Tub7_h2geneonly        0.00%    passed     99.96%
+ 173  af_all_32-DW-Tub8_h1geneonly        0.00%    passed    100.00%
+ 174  af_all_32-DW-Tub8_h2geneonly        0.00%    passed    100.00%
+ 175  af_all_35-DW-Tub11_h1geneonly       0.00%    passed     99.98%
+ 176  af_all_35-DW-Tub11_h2geneonly       0.00%    passed    100.00%
+ 177  af_all_36-DW-Tub12_h1geneonly       0.00%    passed    100.00%
+ 178  af_all_36-DW-Tub12_h2geneonly       0.00%    passed     99.99%
+ 179  af_all_37-DW-Tub14_h1geneonly       0.00%    passed    100.00%
+ 180  af_all_37-DW-Tub14_h2geneonly       0.00%    passed    100.00%
+ 181  af_all_38-DW-Tub15_h1geneonly       0.00%    passed    100.00%
+ 182  af_all_38-DW-Tub15_h2geneonly       0.00%    passed     99.98%
+ 183  af_all_3-DW-Suh7_h1geneonly         0.00%    passed     99.99%
+ 184  af_all_3-DW-Suh7_h2geneonly         0.00%    passed    100.00%
+ 185  af_all_40-DW-Tub17_h1geneonly       0.00%    passed    100.00%
+ 186  af_all_40-DW-Tub17_h2geneonly       0.00%    passed     99.99%
+ 187  af_all_41-DW-TP4_h1geneonly         0.00%    passed    100.00%
+ 188  af_all_41-DW-TP4_h2geneonly         0.00%    passed    100.00%
+ 189  af_all_42-DW-TP5_h1geneonly         0.00%    passed    100.00%
+ 190  af_all_42-DW-TP5_h2geneonly         0.00%    passed    100.00%
+ 191  af_all_43-DW-TP6_h1geneonly         0.00%    passed    100.00%
+ 192  af_all_43-DW-TP6_h2geneonly         0.00%    passed    100.00%
+ 193  af_all_44-DW-TP7_h1geneonly         0.00%    passed    100.00%
+ 194  af_all_44-DW-TP7_h2geneonly         0.00%    passed    100.00%
+ 195  af_all_45-DW-TP9_h1geneonly         0.00%    passed    100.00%
+ 196  af_all_45-DW-TP9_h2geneonly         0.00%    passed    100.00%
+ 197  af_all_46-DW-TP10_h1geneonly        0.00%    passed    100.00%
+ 198  af_all_46-DW-TP10_h2geneonly        0.00%    passed    100.00%
+ 199  af_all_47-DW-TP11_h1geneonly        0.00%    passed    100.00%
+ 200  af_all_47-DW-TP11_h2geneonly        0.00%    passed    100.00%
+ 201  af_all_48-DW-TP15_h1geneonly        0.00%    passed    100.00%
+ 202  af_all_48-DW-TP15_h2geneonly        0.00%    passed    100.00%
+ 203  af_all_49-DW-WE1_h1geneonly         0.00%    passed     99.99%
+ 204  af_all_49-DW-WE1_h2geneonly         0.00%    passed     99.98%
+ 205  af_all_4-DW-Suh11_h1geneonly        0.00%    passed    100.00%
+ 206  af_all_4-DW-Suh11_h2geneonly        0.00%    passed     99.99%
+ 207  af_all_53-DW-WE6_h1geneonly         0.00%    passed    100.00%
+ 208  af_all_53-DW-WE6_h2geneonly         0.00%    passed    100.00%
+ 209  af_all_54-DW-WE7_h1geneonly         0.00%    passed    100.00%
+ 210  af_all_54-DW-WE7_h2geneonly         0.00%    passed    100.00%
+ 211  af_all_55-DW-WE8_h1geneonly         0.00%    passed    100.00%
+ 212  af_all_55-DW-WE8_h2geneonly         0.00%    passed    100.00%
+ 213  af_all_56-DW-WE9_h1geneonly         0.00%    passed     99.99%
+ 214  af_all_56-DW-WE9_h2geneonly         0.00%    passed     99.99%
+ 215  af_all_57-DW-WE11_h1geneonly        0.00%    passed    100.00%
+ 216  af_all_57-DW-WE11_h2geneonly        0.00%    passed    100.00%
+ 217  af_all_59-DW-WE19_h1geneonly        0.00%    passed    100.00%
+ 218  af_all_59-DW-WE19_h2geneonly        0.00%    passed    100.00%
+ 219  af_all_5-DW-Suh12_h1geneonly        0.00%    passed    100.00%
+ 220  af_all_5-DW-Suh12_h2geneonly        0.00%    passed    100.00%
+ 221  af_all_61-DW-WE27_h1geneonly        0.00%    passed    100.00%
+ 222  af_all_61-DW-WE27_h2geneonly        0.00%    passed    100.00%
+ 223  af_all_62-DW-WE28_h1geneonly        0.00%    passed    100.00%
+ 224  af_all_62-DW-WE28_h2geneonly        0.00%    passed    100.00%
+ 225  af_all_65-DW-Mad49_h1geneonly       0.00%    passed    100.00%
+ 226  af_all_65-DW-Mad49_h2geneonly       0.00%    passed    100.00%
+ 227  af_all_66-DW-Mad50_h1geneonly       0.00%    passed     99.94%
+ 228  af_all_66-DW-Mad50_h2geneonly       0.00%    passed     99.75%
+ 229  af_all_68-DW-Mad53_h1geneonly       0.00%    passed     99.99%
+ 230  af_all_68-DW-Mad53_h2geneonly       0.00%    passed     99.98%
+ 231  af_all_69-DW-Mad54_h1geneonly       0.00%    passed     99.99%
+ 232  af_all_69-DW-Mad54_h2geneonly       0.00%    passed    100.00%
+ 233  af_all_6-DW-Suh18_h1geneonly        0.00%    passed    100.00%
+ 234  af_all_6-DW-Suh18_h2geneonly        0.00%    passed     99.98%
+ 235  af_all_70-DW-Mad55_h1geneonly       0.00%    passed     99.98%
+ 236  af_all_70-DW-Mad55_h2geneonly       0.00%    passed     99.98%
+ 237  af_all_71-DW-Mad56_h1geneonly       0.00%    passed     99.99%
+ 238  af_all_71-DW-Mad56_h2geneonly       0.00%    passed     99.98%
+ 239  af_all_72-DW-Mad57_h1geneonly       0.00%    passed     99.99%
+ 240  af_all_72-DW-Mad57_h2geneonly       0.00%    passed     99.99%
+ 241  af_all_73-DW-Mad58_h1geneonly       0.00%    passed     99.99%
+ 242  af_all_73-DW-Mad58_h2geneonly       0.00%    passed     99.98%
+ 243  af_all_74-DW-Mad59_h1geneonly       0.00%    passed     99.98%
+ 244  af_all_74-DW-Mad59_h2geneonly       0.00%    passed    100.00%
+ 245  af_all_75-DW-Mad60_h1geneonly       0.00%    passed     99.99%
+ 246  af_all_75-DW-Mad60_h2geneonly       0.00%    passed     99.98%
+ 247  af_all_76-DW-Mad61_h1geneonly       0.00%    passed     99.98%
+ 248  af_all_76-DW-Mad61_h2geneonly       0.00%    passed    100.00%
+ 249  af_all_77-DW-Mad62_h1geneonly       0.00%    passed    100.00%
+ 250  af_all_77-DW-Mad62_h2geneonly       0.00%    passed     99.99%
+ 251  af_all_78-DW-Mad63_h1geneonly       0.00%    passed     99.99%
+ 252  af_all_78-DW-Mad63_h2geneonly       0.00%    passed     99.99%
+ 253  af_all_79-DW-Mad64_h1geneonly       0.00%    passed     99.99%
+ 254  af_all_79-DW-Mad64_h2geneonly       0.00%    passed     99.98%
+ 255  af_all_7-DW-Suh19_h1geneonly        0.00%    passed     99.98%
+ 256  af_all_7-DW-Suh19_h2geneonly        0.00%    passed     99.95%
+ 257  af_all_80-DW-Mad65_h1geneonly       0.00%    passed    100.00%
+ 258  af_all_80-DW-Mad65_h2geneonly       0.00%    passed     99.98%
+ 259  af_all_81-DW-Mad66_h1geneonly       0.00%    passed    100.00%
+ 260  af_all_81-DW-Mad66_h2geneonly       0.00%    passed    100.00%
+ 261  af_all_82-DW-Mad67_h1geneonly       0.00%    passed     99.95%
+ 262  af_all_82-DW-Mad67_h2geneonly       0.00%    passed     99.93%
+ 263  af_all_83-DW-Mad68_h1geneonly       0.00%    passed    100.00%
+ 264  af_all_83-DW-Mad68_h2geneonly       0.00%    passed     99.95%
+ 265  af_all_84-DW-Mad69_h1geneonly       0.00%    passed     99.95%
+ 266  af_all_84-DW-Mad69_h2geneonly       0.00%    passed     99.91%
+ 267  af_all_85-DW-Sha2_h1geneonly        0.00%    passed    100.00%
+ 268  af_all_85-DW-Sha2_h2geneonly        0.00%    passed    100.00%
+ 269  af_all_86-DW-Sha3_h1geneonly        0.00%    passed    100.00%
+ 270  af_all_86-DW-Sha3_h2geneonly        0.00%    passed    100.00%
+ 271  af_all_87-DW-Sha4_h1geneonly        0.00%    passed    100.00%
+ 272  af_all_87-DW-Sha4_h2geneonly        0.00%    passed    100.00%
+ 273  af_all_88-DW-Sha6_h1geneonly        0.00%    passed    100.00%
+ 274  af_all_88-DW-Sha6_h2geneonly        0.00%    passed    100.00%
+ 275  af_all_90-DW-Sha14_h1geneonly       0.00%    passed    100.00%
+ 276  af_all_90-DW-Sha14_h2geneonly       0.00%    passed    100.00%
+ 277  af_all_91-DW-Kom2_h1geneonly        0.00%    passed    100.00%
+ 278  af_all_91-DW-Kom2_h2geneonly        0.00%    passed    100.00%
+ 279  af_all_92-DW-Kom3_h1geneonly        0.00%    passed    100.00%
+ 280  af_all_92-DW-Kom3_h2geneonly        0.00%    passed    100.00%
+ 281  af_all_93-DW-Kom4_h1geneonly        0.00%    passed    100.00%
+ 282  af_all_93-DW-Kom4_h2geneonly        0.00%    passed    100.00%
+ 283  af_all_94-DW-Kom12_h1geneonly       0.00%    passed    100.00%
+ 284  af_all_94-DW-Kom12_h2geneonly       0.00%    passed    100.00%
+ 285  af_all_95-DW-Kom13_h1geneonly       0.00%    passed    100.00%
+ 286  af_all_95-DW-Kom13_h2geneonly       0.00%    passed    100.00%
+ 287  af_all_96-DW-Kom14_h1geneonly       0.00%    passed    100.00%
+ 288  af_all_96-DW-Kom14_h2geneonly       0.00%    passed    100.00%
+ 289  af_all_97-DW-OBP1-1_h1geneonly      0.00%    passed     99.99%
+ 290  af_all_97-DW-OBP1-1_h2geneonly      0.00%    passed     99.99%
+ 291  af_all_98-DW-OBP1-2_h1geneonly      0.00%    passed     99.98%
+ 292  af_all_98-DW-OBP1-2_h2geneonly      0.00%    passed     99.99%
+ 293  af_all_99-DW-OBP1-3_h1geneonly      0.00%    passed     99.99%
+ 294  af_all_99-DW-OBP1-3_h2geneonly      0.00%    passed     99.99%
+ 295  af_all_9-DW-Tar2_h1geneonly         0.00%    passed    100.00%
+ 296  af_all_9-DW-Tar2_h2geneonly         0.00%    passed     99.99%
+ 297  af_all_DW-AdF10_h1geneonly          0.00%    passed     99.98%
+ 298  af_all_DW-AdF10_h2geneonly          0.00%    passed     99.96%
+ 299  af_all_DW-AdF11_h1geneonly          0.00%    passed     99.96%
+ 300  af_all_DW-AdF11_h2geneonly          0.00%    passed     99.91%
+ 301  af_all_DW-AdF17_h1geneonly          0.00%    passed     99.98%
+ 302  af_all_DW-AdF17_h2geneonly          0.00%    passed     99.98%
+ 303  af_all_DW-AdF18_h1geneonly          0.00%    passed     96.35%
+ 304  af_all_DW-AdF18_h2geneonly          0.00%    passed     96.26%
+ 305  af_all_DW-AdF19_h1geneonly          0.00%    passed     99.98%
+ 306  af_all_DW-AdF19_h2geneonly          0.00%    passed     99.96%
+ 307  af_all_DW-AdF1_h1geneonly           0.00%    passed     99.98%
+ 308  af_all_DW-AdF1_h2geneonly           0.00%    passed     99.98%
+ 309  af_all_DW-AdF3_h1geneonly           0.00%    passed     99.98%
+ 310  af_all_DW-AdF3_h2geneonly           0.00%    passed     99.98%
+ 311  af_all_DW-AdF7_h1geneonly           0.00%    passed     99.98%
+ 312  af_all_DW-AdF7_h2geneonly           0.00%    passed     99.98%
+ 313  af_all_DW-AF11_h1geneonly           0.00%    passed    100.00%
+ 314  af_all_DW-AF11_h2geneonly           0.00%    passed    100.00%
+ 315  af_all_DW-AF17_h1geneonly           0.00%    passed     99.98%
+ 316  af_all_DW-AF17_h2geneonly           0.00%    passed     99.99%
+ 317  af_all_DW-AF19_h1geneonly           0.00%    passed    100.00%
+ 318  af_all_DW-AF19_h2geneonly           0.00%    passed    100.00%
+ 319  af_all_DW-AF22_h1geneonly           0.00%    passed    100.00%
+ 320  af_all_DW-AF22_h2geneonly           0.00%    passed    100.00%
+ 321  af_all_DW-AF23_h1geneonly           0.00%    passed     99.99%
+ 322  af_all_DW-AF23_h2geneonly           0.00%    passed    100.00%
+ 323  af_all_DW-AF24_h1geneonly           0.00%    passed     99.99%
+ 324  af_all_DW-AF24_h2geneonly           0.00%    passed    100.00%
+ 325  af_all_DW-AF26_h1geneonly           0.00%    passed    100.00%
+ 326  af_all_DW-AF26_h2geneonly           0.00%    passed    100.00%
+ 327  af_all_DW-AF2_h1geneonly            0.00%    passed     99.98%
+ 328  af_all_DW-AF2_h2geneonly            0.00%    passed    100.00%
+ 329  af_all_DW-AF3_h1geneonly            0.00%    passed     99.99%
+ 330  af_all_DW-AF3_h2geneonly            0.00%    passed    100.00%
+ 331  af_all_DW-AF4_h1geneonly            0.00%    passed     99.98%
+ 332  af_all_DW-AF4_h2geneonly            0.00%    passed    100.00%
+ 333  af_all_DW-AF5_h1geneonly            0.00%    passed    100.00%
+ 334  af_all_DW-AF5_h2geneonly            0.00%    passed     99.98%
+ 335  af_all_DW-AF6_h1geneonly            0.00%    passed    100.00%
+ 336  af_all_DW-AF6_h2geneonly            0.00%    passed    100.00%
+ 337  af_all_DW-AF7_h1geneonly            0.00%    passed    100.00%
+ 338  af_all_DW-AF7_h2geneonly            0.00%    passed    100.00%
+ 339  af_all_DW-AF8_h1geneonly            0.00%    passed    100.00%
+ 340  af_all_DW-AF8_h2geneonly            0.00%    passed    100.00%
+ 341  af_all_DW-AF9_h1geneonly            0.00%    passed    100.00%
+ 342  af_all_DW-AF9_h2geneonly            0.00%    passed    100.00%
+ 343  af_all_DW-AgD34_h1geneonly          0.00%    passed    100.00%
+ 344  af_all_DW-AgD34_h2geneonly          0.00%    passed    100.00%
+ 345  af_all_DW-AgD37_h1geneonly          0.00%    passed     99.99%
+ 346  af_all_DW-AgD37_h2geneonly          0.00%    passed    100.00%
+ 347  af_all_DW-AgD4_h1geneonly           0.00%    passed    100.00%
+ 348  af_all_DW-AgD4_h2geneonly           0.00%    passed     99.98%
+ 349  af_all_DW-AgD5_h1geneonly           0.00%    passed    100.00%
+ 350  af_all_DW-AgD5_h2geneonly           0.00%    passed     99.99%
+ 351  af_all_DW-Aka10_h1geneonly          0.00%    passed    100.00%
+ 352  af_all_DW-Aka10_h2geneonly          0.00%    passed    100.00%
+ 353  af_all_DW-Aka15_h1geneonly          0.00%    passed    100.00%
+ 354  af_all_DW-Aka15_h2geneonly          0.00%    passed     99.99%
+ 355  af_all_DW-Aka20_h1geneonly          0.00%    passed    100.00%
+ 356  af_all_DW-Aka20_h2geneonly          0.00%    passed     99.99%
+ 357  af_all_DW-Aka22_h1geneonly          0.00%    passed     99.87%
+ 358  af_all_DW-Aka22_h2geneonly          0.00%    passed     99.96%
+ 359  af_all_DW-Aka23_h1geneonly          0.00%    passed     99.99%
+ 360  af_all_DW-Aka23_h2geneonly          0.00%    passed     99.99%
+ 361  af_all_DW-Anl11_h1geneonly          0.00%    passed     99.94%
+ 362  af_all_DW-Anl11_h2geneonly          0.00%    passed     99.98%
+ 363  af_all_DW-Anl17_h1geneonly          0.00%    passed    100.00%
+ 364  af_all_DW-Anl17_h2geneonly          0.00%    passed     99.98%
+ 365  af_all_DW-Asa11_h1geneonly          0.00%    passed    100.00%
+ 366  af_all_DW-Asa11_h2geneonly          0.00%    passed    100.00%
+ 367  af_all_DW-Asa12_h1geneonly          0.00%    passed    100.00%
+ 368  af_all_DW-Asa12_h2geneonly          0.00%    passed    100.00%
+ 369  af_all_DW-Asa14_h1geneonly          0.00%    passed    100.00%
+ 370  af_all_DW-Asa14_h2geneonly          0.00%    passed    100.00%
+ 371  af_all_DW-Asa5_h1geneonly           0.00%    passed    100.00%
+ 372  af_all_DW-Asa5_h2geneonly           0.00%    passed    100.00%
+ 373  af_all_DW-Asa9_h1geneonly           0.00%    passed    100.00%
+ 374  af_all_DW-Asa9_h2geneonly           0.00%    passed    100.00%
+ 375  af_all_DW-Ash12_h1geneonly          0.00%    passed     99.98%
+ 376  af_all_DW-Ash12_h2geneonly          0.00%    passed    100.00%
+ 377  af_all_DW-Ash13_h1geneonly          0.00%    passed    100.00%
+ 378  af_all_DW-Ash13_h2geneonly          0.00%    passed     99.98%
+ 379  af_all_DW-Ash26_h1geneonly          0.00%    passed     99.99%
+ 380  af_all_DW-Ash26_h2geneonly          0.00%    passed     99.98%
+ 381  af_all_DW-Ash6_h1geneonly           0.00%    passed     99.98%
+ 382  af_all_DW-Ash6_h2geneonly           0.00%    passed     99.99%
+ 383  af_all_DW-Ash8_h1geneonly           0.00%    passed    100.00%
+ 384  af_all_DW-Ash8_h2geneonly           0.00%    passed    100.00%
+ 385  af_all_DW-Ash9_h1geneonly           0.00%    passed     99.98%
+ 386  af_all_DW-Ash9_h2geneonly           0.00%    passed     99.98%
+ 387  af_all_DW-Asi11_h1geneonly          0.00%    passed    100.00%
+ 388  af_all_DW-Asi11_h2geneonly          0.00%    passed    100.00%
+ 389  af_all_DW-Asi13_h1geneonly          0.00%    passed    100.00%
+ 390  af_all_DW-Asi13_h2geneonly          0.00%    passed    100.00%
+ 391  af_all_DW-Asi2_h1geneonly           0.00%    passed    100.00%
+ 392  af_all_DW-Asi2_h2geneonly           0.00%    passed     99.99%
+ 393  af_all_DW-Asi3_h1geneonly           0.00%    passed     99.97%
+ 394  af_all_DW-Asi3_h2geneonly           0.00%    passed     99.98%
+ 395  af_all_DW-Asi4_h1geneonly           0.00%    passed    100.00%
+ 396  af_all_DW-Asi4_h2geneonly           0.00%    passed     99.99%
+ 397  af_all_DW-Asi5_h1geneonly           0.00%    passed    100.00%
+ 398  af_all_DW-Asi5_h2geneonly           0.00%    passed    100.00%
+ 399  af_all_DW-Asi9_h1geneonly           0.00%    passed     99.98%
+ 400  af_all_DW-Asi9_h2geneonly           0.00%    passed     99.99%
+ 401  af_all_DW-Axi13_h1geneonly          0.00%    passed    100.00%
+ 402  af_all_DW-Axi13_h2geneonly          0.00%    passed    100.00%
+ 403  af_all_DW-Axi14_h1geneonly          0.00%    passed    100.00%
+ 404  af_all_DW-Axi14_h2geneonly          0.00%    passed    100.00%
+ 405  af_all_DW-Axi15_h1geneonly          0.00%    passed    100.00%
+ 406  af_all_DW-Axi15_h2geneonly          0.00%    passed    100.00%
+ 407  af_all_DW-Axi16_h1geneonly          0.00%    passed    100.00%
+ 408  af_all_DW-Axi16_h2geneonly          0.00%    passed    100.00%
+ 409  af_all_DW-Axi1_h1geneonly           0.00%    passed    100.00%
+ 410  af_all_DW-Axi1_h2geneonly           0.00%    passed     99.95%
+ 411  af_all_DW-Axi2_h1geneonly           0.00%    passed    100.00%
+ 412  af_all_DW-Axi2_h2geneonly           0.00%    passed    100.00%
+ 413  af_all_DW-Axi3_h1geneonly           0.00%    passed    100.00%
+ 414  af_all_DW-Axi3_h2geneonly           0.00%    passed    100.00%
+ 415  af_all_DW-Axi4_h1geneonly           0.00%    passed    100.00%
+ 416  af_all_DW-Axi4_h2geneonly           0.00%    passed     99.98%
+ 417  af_all_DW-Bog10_h1geneonly          0.00%    passed    100.00%
+ 418  af_all_DW-Bog10_h2geneonly          0.00%    passed    100.00%
+ 419  af_all_DW-Bog11_h1geneonly          0.00%    passed    100.00%
+ 420  af_all_DW-Bog11_h2geneonly          0.00%    passed    100.00%
+ 421  af_all_DW-Bog12_h1geneonly          0.00%    passed     99.99%
+ 422  af_all_DW-Bog12_h2geneonly          0.00%    passed     99.99%
+ 423  af_all_DW-Bog13_h1geneonly          0.00%    passed    100.00%
+ 424  af_all_DW-Bog13_h2geneonly          0.00%    passed    100.00%
+ 425  af_all_DW-Bog14_h1geneonly          0.00%    passed     99.98%
+ 426  af_all_DW-Bog14_h2geneonly          0.00%    passed     99.99%
+ 427  af_all_DW-Bog15_h1geneonly          0.00%    passed     99.98%
+ 428  af_all_DW-Bog15_h2geneonly          0.00%    passed    100.00%
+ 429  af_all_DW-Bog16_h1geneonly          0.00%    passed    100.00%
+ 430  af_all_DW-Bog16_h2geneonly          0.00%    passed    100.00%
+ 431  af_all_DW-Bog18_h1geneonly          0.00%    passed    100.00%
+ 432  af_all_DW-Bog18_h2geneonly          0.00%    passed    100.00%
+ 433  af_all_DW-Bog1_h1geneonly           0.00%    passed    100.00%
+ 434  af_all_DW-Bog1_h2geneonly           0.00%    passed    100.00%
+ 435  af_all_DW-Bog23_h1geneonly          0.00%    passed    100.00%
+ 436  af_all_DW-Bog23_h2geneonly          0.00%    passed    100.00%
+ 437  af_all_DW-Bog25_h1geneonly          0.00%    passed    100.00%
+ 438  af_all_DW-Bog25_h2geneonly          0.00%    passed    100.00%
+ 439  af_all_DW-Bog2_h1geneonly           0.00%    passed    100.00%
+ 440  af_all_DW-Bog2_h2geneonly           0.00%    passed     99.99%
+ 441  af_all_DW-Bog5_h1geneonly           0.00%    passed    100.00%
+ 442  af_all_DW-Bog5_h2geneonly           0.00%    passed    100.00%
+ 443  af_all_DW-Bog6_h1geneonly           0.00%    passed    100.00%
+ 444  af_all_DW-Bog6_h2geneonly           0.00%    passed     99.98%
+ 445  af_all_DW-Bog8_h1geneonly           0.00%    passed    100.00%
+ 446  af_all_DW-Bog8_h2geneonly           0.00%    passed    100.00%
+ 447  af_all_DW-Bog9_h1geneonly           0.00%    passed    100.00%
+ 448  af_all_DW-Bog9_h2geneonly           0.00%    passed    100.00%
+ 449  af_all_DW-Dod11_h1geneonly          0.00%    passed     99.98%
+ 450  af_all_DW-Dod11_h2geneonly          0.00%    passed     99.98%
+ 451  af_all_DW-Dod15_h1geneonly          0.00%    passed    100.00%
+ 452  af_all_DW-Dod15_h2geneonly          0.00%    passed     99.98%
+ 453  af_all_DW-Dod16_h1geneonly          0.00%    passed     99.98%
+ 454  af_all_DW-Dod16_h2geneonly          0.00%    passed     99.98%
+ 455  af_all_DW-Dod18_h1geneonly          0.00%    passed    100.00%
+ 456  af_all_DW-Dod18_h2geneonly          0.00%    passed     99.99%
+ 457  af_all_DW-Dod2_h1geneonly           0.00%    passed    100.00%
+ 458  af_all_DW-Dod2_h2geneonly           0.00%    passed     99.99%
+ 459  af_all_DW-Dod7_h1geneonly           0.00%    passed     99.99%
+ 460  af_all_DW-Dod7_h2geneonly           0.00%    passed     99.96%
+ 461  af_all_DW-Dod8_h1geneonly           0.00%    passed     99.98%
+ 462  af_all_DW-Dod8_h2geneonly           0.00%    passed     99.99%
+ 463  af_all_DW-Dod9_h1geneonly           0.00%    passed     99.87%
+ 464  af_all_DW-Dod9_h2geneonly           0.00%    passed    100.00%
+ 465  af_all_DW-Dzo10_h1geneonly          0.00%    passed    100.00%
+ 466  af_all_DW-Dzo10_h2geneonly          0.00%    passed    100.00%
+ 467  af_all_DW-Dzo11_h1geneonly          0.00%    passed    100.00%
+ 468  af_all_DW-Dzo11_h2geneonly          0.00%    passed    100.00%
+ 469  af_all_DW-Dzo12_h1geneonly          0.00%    passed    100.00%
+ 470  af_all_DW-Dzo12_h2geneonly          0.00%    passed    100.00%
+ 471  af_all_DW-Dzo13_h1geneonly          0.00%    passed     99.94%
+ 472  af_all_DW-Dzo13_h2geneonly          0.00%    passed     99.99%
+ 473  af_all_DW-Dzo14_h1geneonly          0.00%    passed    100.00%
+ 474  af_all_DW-Dzo14_h2geneonly          0.00%    passed    100.00%
+ 475  af_all_DW-Dzo15_h1geneonly          0.00%    passed     99.99%
+ 476  af_all_DW-Dzo15_h2geneonly          0.00%    passed    100.00%
+ 477  af_all_DW-Dzo16_h1geneonly          0.00%    passed    100.00%
+ 478  af_all_DW-Dzo16_h2geneonly          0.00%    passed    100.00%
+ 479  af_all_DW-Dzo1_h1geneonly           0.00%    passed    100.00%
+ 480  af_all_DW-Dzo1_h2geneonly           0.00%    passed     99.99%
+ 481  af_all_DW-Dzo2_h1geneonly           0.00%    passed    100.00%
+ 482  af_all_DW-Dzo2_h2geneonly           0.00%    passed     99.89%
+ 483  af_all_DW-Dzo3_h1geneonly           0.00%    passed    100.00%
+ 484  af_all_DW-Dzo3_h2geneonly           0.00%    passed    100.00%
+ 485  af_all_DW-Dzo4_h1geneonly           0.00%    passed    100.00%
+ 486  af_all_DW-Dzo4_h2geneonly           0.00%    passed     99.99%
+ 487  af_all_DW-Dzo6_h1geneonly           0.00%    passed     99.98%
+ 488  af_all_DW-Dzo6_h2geneonly           0.00%    passed     99.98%
+ 489  af_all_DW-Dzo7_h1geneonly           0.00%    passed    100.00%
+ 490  af_all_DW-Dzo7_h2geneonly           0.00%    passed    100.00%
+ 491  af_all_DW-Dzo8_h1geneonly           0.00%    passed    100.00%
+ 492  af_all_DW-Dzo8_h2geneonly           0.00%    passed     99.99%
+ 493  af_all_DW-Dzo9_h1geneonly           0.00%    passed     99.98%
+ 494  af_all_DW-Dzo9_h2geneonly           0.00%    passed    100.00%
+ 495  af_all_DW-Enc10_h1geneonly          0.00%    passed     99.98%
+ 496  af_all_DW-Enc10_h2geneonly          0.00%    passed    100.00%
+ 497  af_all_DW-Enc12_h1geneonly          0.00%    passed    100.00%
+ 498  af_all_DW-Enc12_h2geneonly          0.00%    passed    100.00%
+ 499  af_all_DW-Enc14_h1geneonly          0.00%    passed    100.00%
+ 500  af_all_DW-Enc14_h2geneonly          0.00%    passed     99.99%
+ 501  af_all_DW-Enc16_h1geneonly          0.00%    passed    100.00%
+ 502  af_all_DW-Enc16_h2geneonly          0.00%    passed     99.98%
+ 503  af_all_DW-Enc17_h1geneonly          0.00%    passed    100.00%
+ 504  af_all_DW-Enc17_h2geneonly          0.00%    passed    100.00%
+ 505  af_all_DW-Enc18_h1geneonly          0.00%    passed     99.98%
+ 506  af_all_DW-Enc18_h2geneonly          0.00%    passed    100.00%
+ 507  af_all_DW-Enc19_h1geneonly          0.00%    passed    100.00%
+ 508  af_all_DW-Enc19_h2geneonly          0.00%    passed     99.93%
+ 509  af_all_DW-Enc20_h1geneonly          0.00%    passed    100.00%
+ 510  af_all_DW-Enc20_h2geneonly          0.00%    passed    100.00%
+ 511  af_all_DW-Enc21_h1geneonly          0.00%    passed    100.00%
+ 512  af_all_DW-Enc21_h2geneonly          0.00%    passed    100.00%
+ 513  af_all_DW-Enc22_h1geneonly          0.00%    passed    100.00%
+ 514  af_all_DW-Enc22_h2geneonly          0.00%    passed    100.00%
+ 515  af_all_DW-Enc2_h1geneonly           0.00%    passed     99.98%
+ 516  af_all_DW-Enc2_h2geneonly           0.00%    passed    100.00%
+ 517  af_all_DW-Enc3_h1geneonly           0.00%    passed    100.00%
+ 518  af_all_DW-Enc3_h2geneonly           0.00%    passed    100.00%
+ 519  af_all_DW-Enc4_h1geneonly           0.00%    passed    100.00%
+ 520  af_all_DW-Enc4_h2geneonly           0.00%    passed     99.98%
+ 521  af_all_DW-Enc7_h1geneonly           0.00%    passed    100.00%
+ 522  af_all_DW-Enc7_h2geneonly           0.00%    passed    100.00%
+ 523  af_all_DW-Enc9_h1geneonly           0.00%    passed    100.00%
+ 524  af_all_DW-Enc9_h2geneonly           0.00%    passed    100.00%
+ 525  af_all_DW-HA2_h1geneonly            0.00%    passed     99.99%
+ 526  af_all_DW-HA2_h2geneonly            0.00%    passed     99.99%
+ 527  af_all_DW-HA4_h1geneonly            0.00%    passed     99.99%
+ 528  af_all_DW-HA4_h2geneonly            0.00%    passed     99.99%
+ 529  af_all_DW-HA5_h1geneonly            0.00%    passed    100.00%
+ 530  af_all_DW-HA5_h2geneonly            0.00%    passed    100.00%
+ 531  af_all_DW-HA6_h1geneonly            0.00%    passed    100.00%
+ 532  af_all_DW-HA6_h2geneonly            0.00%    passed    100.00%
+ 533  af_all_DW-HA7_h1geneonly            0.00%    passed    100.00%
+ 534  af_all_DW-HA7_h2geneonly            0.00%    passed     99.92%
+ 535  af_all_DW-HA9_h1geneonly            0.00%    passed    100.00%
+ 536  af_all_DW-HA9_h2geneonly            0.00%    passed    100.00%
+ 537  af_all_DW-Kof10_h1geneonly          0.00%    passed    100.00%
+ 538  af_all_DW-Kof10_h2geneonly          0.00%    passed    100.00%
+ 539  af_all_DW-Kof12_h1geneonly          0.00%    passed    100.00%
+ 540  af_all_DW-Kof12_h2geneonly          0.00%    passed    100.00%
+ 541  af_all_DW-Kof16_h1geneonly          0.00%    passed    100.00%
+ 542  af_all_DW-Kof16_h2geneonly          0.00%    passed     99.98%
+ 543  af_all_DW-Kof18_h1geneonly          0.00%    passed    100.00%
+ 544  af_all_DW-Kof18_h2geneonly          0.00%    passed    100.00%
+ 545  af_all_DW-Kof19_h1geneonly          0.00%    passed    100.00%
+ 546  af_all_DW-Kof19_h2geneonly          0.00%    passed    100.00%
+ 547  af_all_DW-Kof20_h1geneonly          0.00%    passed    100.00%
+ 548  af_all_DW-Kof20_h2geneonly          0.00%    passed    100.00%
+ 549  af_all_DW-Kof21_h1geneonly          0.00%    passed    100.00%
+ 550  af_all_DW-Kof21_h2geneonly          0.00%    passed    100.00%
+ 551  af_all_DW-Kof23_h1geneonly          0.00%    passed     99.99%
+ 552  af_all_DW-Kof23_h2geneonly          0.00%    passed     99.98%
+ 553  af_all_DW-Mam10_h1geneonly          0.00%    passed    100.00%
+ 554  af_all_DW-Mam10_h2geneonly          0.00%    passed     99.99%
+ 555  af_all_DW-Mam15_h1geneonly          0.00%    passed    100.00%
+ 556  af_all_DW-Mam15_h2geneonly          0.00%    passed    100.00%
+ 557  af_all_DW-Mam16_h1geneonly          0.00%    passed     99.98%
+ 558  af_all_DW-Mam16_h2geneonly          0.00%    passed     99.98%
+ 559  af_all_DW-Mam2_h1geneonly           0.00%    passed    100.00%
+ 560  af_all_DW-Mam2_h2geneonly           0.00%    passed    100.00%
+ 561  af_all_DW-Mam4_h1geneonly           0.00%    passed     99.98%
+ 562  af_all_DW-Mam4_h2geneonly           0.00%    passed     99.99%
+ 563  af_all_DW-Mam6_h1geneonly           0.00%    passed    100.00%
+ 564  af_all_DW-Mam6_h2geneonly           0.00%    passed     99.98%
+ 565  af_all_DW-Mam9_h1geneonly           0.00%    passed    100.00%
+ 566  af_all_DW-Mam9_h2geneonly           0.00%    passed    100.00%
+ 567  af_all_DW-Man10_h1geneonly          0.00%    passed    100.00%
+ 568  af_all_DW-Man10_h2geneonly          0.00%    passed    100.00%
+ 569  af_all_DW-Man12_h1geneonly          0.00%    passed    100.00%
+ 570  af_all_DW-Man12_h2geneonly          0.00%    passed    100.00%
+ 571  af_all_DW-Man4_h1geneonly           0.00%    passed    100.00%
+ 572  af_all_DW-Man4_h2geneonly           0.00%    passed    100.00%
+ 573  af_all_DW-Man5_h1geneonly           0.00%    passed    100.00%
+ 574  af_all_DW-Man5_h2geneonly           0.00%    passed    100.00%
+ 575  af_all_DW-Man6_h1geneonly           0.00%    passed     99.95%
+ 576  af_all_DW-Man6_h2geneonly           0.00%    passed     99.98%
+ 577  af_all_DW-Man7_h1geneonly           0.00%    passed    100.00%
+ 578  af_all_DW-Man7_h2geneonly           0.00%    passed    100.00%
+ 579  af_all_DW-Man9_h1geneonly           0.00%    passed    100.00%
+ 580  af_all_DW-Man9_h2geneonly           0.00%    passed    100.00%
+ 581  af_all_DW-Nkw1_h1geneonly           0.00%    passed    100.00%
+ 582  af_all_DW-Nkw1_h2geneonly           0.00%    passed    100.00%
+ 583  af_all_DW-Nkw2_h1geneonly           0.00%    passed    100.00%
+ 584  af_all_DW-Nkw2_h2geneonly           0.00%    passed    100.00%
+ 585  af_all_DW-Nkw3_h1geneonly           0.00%    passed     99.99%
+ 586  af_all_DW-Nkw3_h2geneonly           0.00%    passed     99.99%
+ 587  af_all_DW-Nkw4_h1geneonly           0.00%    passed     99.99%
+ 588  af_all_DW-Nkw4_h2geneonly           0.00%    passed    100.00%
+ 589  af_all_DW-Nkw5_h1geneonly           0.00%    passed     99.99%
+ 590  af_all_DW-Nkw5_h2geneonly           0.00%    passed    100.00%
+ 591  af_all_DW-Nkw6_h1geneonly           0.00%    passed     99.98%
+ 592  af_all_DW-Nkw6_h2geneonly           0.00%    passed    100.00%
+ 593  af_all_DW-Nkw7_h1geneonly           0.00%    passed    100.00%
+ 594  af_all_DW-Nkw7_h2geneonly           0.00%    passed    100.00%
+ 595  af_all_DW-Nkw8_h1geneonly           0.00%    passed    100.00%
+ 596  af_all_DW-Nkw8_h2geneonly           0.00%    passed     99.99%
+ 597  af_all_DW-Nsa10_h1geneonly          0.00%    passed     99.98%
+ 598  af_all_DW-Nsa10_h2geneonly          0.00%    passed     99.97%
+ 599  af_all_DW-Nsa11_h1geneonly          0.00%    passed    100.00%
+ 600  af_all_DW-Nsa11_h2geneonly          0.00%    passed     99.99%
+ 601  af_all_DW-Nsa12_h1geneonly          0.00%    passed    100.00%
+ 602  af_all_DW-Nsa12_h2geneonly          0.00%    passed     99.99%
+ 603  af_all_DW-Nsa13_h1geneonly          0.00%    passed    100.00%
+ 604  af_all_DW-Nsa13_h2geneonly          0.00%    passed    100.00%
+ 605  af_all_DW-Nsa15_h1geneonly          0.00%    passed    100.00%
+ 606  af_all_DW-Nsa15_h2geneonly          0.00%    passed    100.00%
+ 607  af_all_DW-Nsa16_h1geneonly          0.00%    passed    100.00%
+ 608  af_all_DW-Nsa16_h2geneonly          0.00%    passed    100.00%
+ 609  af_all_DW-Nsa17_h1geneonly          0.00%    passed    100.00%
+ 610  af_all_DW-Nsa17_h2geneonly          0.00%    passed    100.00%
+ 611  af_all_DW-Nsa18_h1geneonly          0.00%    passed    100.00%
+ 612  af_all_DW-Nsa18_h2geneonly          0.00%    passed    100.00%
+ 613  af_all_DW-Nsa1_h1geneonly           0.00%    passed    100.00%
+ 614  af_all_DW-Nsa1_h2geneonly           0.00%    passed    100.00%
+ 615  af_all_DW-Nsa2_h1geneonly           0.00%    passed     99.98%
+ 616  af_all_DW-Nsa2_h2geneonly           0.00%    passed    100.00%
+ 617  af_all_DW-Nsa3_h1geneonly           0.00%    passed    100.00%
+ 618  af_all_DW-Nsa3_h2geneonly           0.00%    passed    100.00%
+ 619  af_all_DW-Nsa4_h1geneonly           0.00%    passed     99.89%
+ 620  af_all_DW-Nsa4_h2geneonly           0.00%    passed     99.95%
+ 621  af_all_DW-Nsa5_h1geneonly           0.00%    passed    100.00%
+ 622  af_all_DW-Nsa5_h2geneonly           0.00%    passed     99.99%
+ 623  af_all_DW-Nsa6_h1geneonly           0.00%    passed     99.98%
+ 624  af_all_DW-Nsa6_h2geneonly           0.00%    passed    100.00%
+ 625  af_all_DW-Nsa8_h1geneonly           0.00%    passed    100.00%
+ 626  af_all_DW-Nsa8_h2geneonly           0.00%    passed    100.00%
+ 627  af_all_DW-Nsa9_h1geneonly           0.00%    passed    100.00%
+ 628  af_all_DW-Nsa9_h2geneonly           0.00%    passed     99.98%
+****  TOTAL                               0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: af_all_101-DW-OBP1-5_h2geneonly is identical to af_all_100-DW-OBP1-4_h1geneonly but kept for subsequent analysis
+NOTE: af_all_119-DW-AnB-4_h2geneonly is identical to af_all_100-DW-OBP1-4_h2geneonly but kept for subsequent analysis
+NOTE: af_all_102-DW-OBP1-6_h1geneonly is identical to af_all_101-DW-OBP1-5_h1geneonly but kept for subsequent analysis
+NOTE: af_all_109-DW-OBP1-14_h1geneonly is identical to af_all_105-DW-OBP1-9_h2geneonly but kept for subsequent analysis
+NOTE: af_all_1-DW-Suh2_h2geneonly is identical to af_all_109-DW-OBP1-14_h2geneonly but kept for subsequent analysis
+NOTE: af_all_10-DW-Tar5_h2geneonly is identical to af_all_10-DW-Tar5_h1geneonly but kept for subsequent analysis
+NOTE: af_all_127-DW-AnB-12_h2geneonly is identical to af_all_116-DW-AnB-1_h2geneonly but kept for subsequent analysis
+NOTE: af_all_120-DW-AnB-5_h2geneonly is identical to af_all_120-DW-AnB-5_h1geneonly but kept for subsequent analysis
+NOTE: af_all_DW-AF24_h1geneonly is identical to af_all_142-DW-NeA-51_h2geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Bog6_h2geneonly is identical to af_all_143-DW-NeA-52_h1geneonly but kept for subsequent analysis
+NOTE: af_all_36-DW-Tub12_h1geneonly is identical to af_all_145-DW-NeA-54_h1geneonly but kept for subsequent analysis
+NOTE: af_all_146-DW-NeA-55_h2geneonly is identical to af_all_146-DW-NeA-55_h1geneonly but kept for subsequent analysis
+NOTE: af_all_14-DW-Tar10_h2geneonly is identical to af_all_14-DW-Tar10_h1geneonly but kept for subsequent analysis
+NOTE: af_all_9-DW-Tar2_h1geneonly is identical to af_all_150-DW-AnB-51_h1geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Bog14_h2geneonly is identical to af_all_17-DW-Tak1_h1geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Bog14_h1geneonly is identical to af_all_17-DW-Tak1_h2geneonly but kept for subsequent analysis
+NOTE: af_all_187-DW-NeA-18_h2geneonly is identical to af_all_182-DW-NeA-6_h2geneonly but kept for subsequent analysis
+NOTE: af_all_72-DW-Mad57_h1geneonly is identical to af_all_185-DW-NeA-14_h1geneonly but kept for subsequent analysis
+NOTE: af_all_72-DW-Mad57_h2geneonly is identical to af_all_185-DW-NeA-14_h2geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Asi2_h2geneonly is identical to af_all_186-DW-NeA-15_h2geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Nsa5_h2geneonly is identical to af_all_187-DW-NeA-18_h1geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Dzo3_h2geneonly is identical to af_all_22-DW-Tak6_h2geneonly but kept for subsequent analysis
+NOTE: af_all_27-DW-Tub3_h1geneonly is identical to af_all_26-DW-Tub2_h1geneonly but kept for subsequent analysis
+NOTE: af_all_9-DW-Tar2_h2geneonly is identical to af_all_26-DW-Tub2_h2geneonly but kept for subsequent analysis
+NOTE: af_all_DW-AdF10_h2geneonly is identical to af_all_31-DW-Tub7_h2geneonly but kept for subsequent analysis
+NOTE: af_all_DW-AdF10_h1geneonly is identical to af_all_38-DW-Tub15_h2geneonly but kept for subsequent analysis
+NOTE: af_all_46-DW-TP10_h2geneonly is identical to af_all_46-DW-TP10_h1geneonly but kept for subsequent analysis
+NOTE: af_all_56-DW-WE9_h2geneonly is identical to af_all_56-DW-WE9_h1geneonly but kept for subsequent analysis
+NOTE: af_all_DW-AF5_h1geneonly is identical to af_all_65-DW-Mad49_h2geneonly but kept for subsequent analysis
+NOTE: af_all_98-DW-OBP1-2_h1geneonly is identical to af_all_68-DW-Mad53_h2geneonly but kept for subsequent analysis
+NOTE: af_all_DW-AF17_h2geneonly is identical to af_all_75-DW-Mad60_h1geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Nsa4_h2geneonly is identical to af_all_7-DW-Suh19_h2geneonly but kept for subsequent analysis
+NOTE: af_all_84-DW-Mad69_h1geneonly is identical to af_all_82-DW-Mad67_h1geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Dod9_h1geneonly is identical to af_all_DW-Aka22_h1geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Ash8_h2geneonly is identical to af_all_DW-Ash8_h1geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Man6_h1geneonly is identical to af_all_DW-Axi1_h2geneonly but kept for subsequent analysis
+NOTE: af_all_DW-Man6_h2geneonly is identical to af_all_DW-Axi4_h2geneonly but kept for subsequent analysis
+NOTE: 490 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: af_all_105-DW-OBP1-9_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_107-DW-OBP1-12_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_113-DW-OBP1-19_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_113-DW-OBP1-19_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_114-DW-OBP1-20_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_114-DW-OBP1-20_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_119-DW-AnB-4_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_127-DW-AnB-12_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_131-DW-AnB-16_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_183-DW-NeA-9_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_2-DW-Suh5_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_35-DW-Tub11_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_6-DW-Suh18_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_70-DW-Mad55_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_70-DW-Mad55_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_74-DW-Mad59_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_76-DW-Mad61_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF2_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF4_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AgD4_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi3_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog15_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod11_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod16_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod16_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod8_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo9_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc10_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc16_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc18_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc2_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc4_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw6_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa2_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa6_h1geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa9_h2geneonly (identical to af_all_100-DW-OBP1-4_h1geneonly) is ignored but added at the end
+NOTE: af_all_183-DW-NeA-9_h2geneonly (identical to af_all_100-DW-OBP1-4_h2geneonly) is ignored but added at the end
+NOTE: af_all_76-DW-Mad61_h2geneonly (identical to af_all_100-DW-OBP1-4_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc16_h1geneonly (identical to af_all_100-DW-OBP1-4_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa5_h1geneonly (identical to af_all_100-DW-OBP1-4_h2geneonly) is ignored but added at the end
+NOTE: af_all_102-DW-OBP1-6_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_106-DW-OBP1-10_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_106-DW-OBP1-10_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_107-DW-OBP1-12_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_108-DW-OBP1-13_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_108-DW-OBP1-13_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_110-DW-OBP1-16_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_110-DW-OBP1-16_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_112-DW-OBP1-18_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_116-DW-AnB-1_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_122-DW-AnB-7_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_141-DW-NeA-50_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_142-DW-NeA-51_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_145-DW-NeA-54_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_180-DW-NeA-4_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_36-DW-Tub12_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_3-DW-Suh7_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_49-DW-WE1_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_4-DW-Suh11_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_69-DW-Mad54_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_71-DW-Mad56_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_73-DW-Mad58_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_78-DW-Mad63_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_78-DW-Mad63_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_79-DW-Mad64_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_97-DW-OBP1-1_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_97-DW-OBP1-1_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_98-DW-OBP1-2_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_99-DW-OBP1-3_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_99-DW-OBP1-3_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF23_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF3_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AgD37_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Aka15_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Aka23_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi9_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo15_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc14_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw3_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw5_h1geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw8_h2geneonly (identical to af_all_101-DW-OBP1-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_112-DW-OBP1-18_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_122-DW-AnB-7_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_131-DW-AnB-16_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_140-DW-NeA-49_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_141-DW-NeA-50_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_143-DW-NeA-52_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_147-DW-NeA-57_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_147-DW-NeA-57_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_180-DW-NeA-4_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_182-DW-NeA-6_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_188-DW-NeA-19_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_188-DW-NeA-19_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_191-DW-Kom6_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_1-DW-Suh2_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_30-DW-Tub6_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_30-DW-Tub6_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_3-DW-Suh7_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_54-DW-WE7_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_54-DW-WE7_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_55-DW-WE8_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_5-DW-Suh12_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_5-DW-Suh12_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_69-DW-Mad54_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_81-DW-Mad66_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_81-DW-Mad66_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_92-DW-Kom3_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_94-DW-Kom12_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF24_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF3_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF4_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AgD34_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AgD37_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AgD5_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Aka20_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi11_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi11_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi2_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi4_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi5_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi5_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog15_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog8_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod2_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod9_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo11_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo11_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo12_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo12_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo15_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo1_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc10_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc14_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA6_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof10_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof12_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof12_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof16_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof18_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof18_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof19_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof19_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof20_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof20_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof21_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof21_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw1_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw1_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw5_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw7_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw7_h2geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw8_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa11_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa12_h1geneonly (identical to af_all_105-DW-OBP1-9_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA5_h2geneonly (identical to af_all_109-DW-OBP1-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_11-DW-Tar6_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_11-DW-Tar6_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_123-DW-AnB-8_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_123-DW-AnB-8_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_125-DW-AnB-10_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_125-DW-AnB-10_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_12-DW-Tar7_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_12-DW-Tar7_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_134-DW-NeA-66_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_134-DW-NeA-66_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_139-DW-NeA-87_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_139-DW-NeA-87_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_148-DW-AnB-49_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_148-DW-AnB-49_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_149-DW-AnB-50_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_149-DW-AnB-50_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_157-DW-DoM-2_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_157-DW-DoM-2_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_158-DW-DoM-3_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_158-DW-DoM-3_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_159-DW-DoM-4_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_159-DW-DoM-4_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_15-DW-Tar11_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_15-DW-Tar11_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_164-DW-DoM-49_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_164-DW-DoM-49_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_165-DW-DoM-50_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_165-DW-DoM-50_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_166-DW-DoM-51_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_166-DW-DoM-51_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_167-DW-DoM-52_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_167-DW-DoM-52_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_169-DW-DoM-54_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_169-DW-DoM-54_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_170-DW-DoM-55_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_170-DW-DoM-55_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_171-DW-DoM-56_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_171-DW-DoM-56_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_173-DW-NeA-11_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_173-DW-NeA-11_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_174-DW-NeA-12_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_175-DW-NeA-16_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_175-DW-NeA-16_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_190-DW-Sha16_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_191-DW-Kom6_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_192-DW-Kom7_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_192-DW-Kom7_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_19-DW-Tak3_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_21-DW-Tak5_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_23-DW-Tak7_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_23-DW-Tak7_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_24-DW-Tak8_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_24-DW-Tak8_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_25-DW-Tub1_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_25-DW-Tub1_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_32-DW-Tub8_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_32-DW-Tub8_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_37-DW-Tub14_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_37-DW-Tub14_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_38-DW-Tub15_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_41-DW-TP4_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_41-DW-TP4_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_42-DW-TP5_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_42-DW-TP5_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_43-DW-TP6_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_43-DW-TP6_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_44-DW-TP7_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_44-DW-TP7_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_47-DW-TP11_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_47-DW-TP11_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_53-DW-WE6_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_53-DW-WE6_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_59-DW-WE19_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_59-DW-WE19_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_87-DW-Sha4_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_87-DW-Sha4_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_88-DW-Sha6_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_88-DW-Sha6_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_91-DW-Kom2_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_91-DW-Kom2_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_92-DW-Kom3_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_93-DW-Kom4_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_93-DW-Kom4_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_94-DW-Kom12_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_95-DW-Kom13_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_95-DW-Kom13_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_96-DW-Kom14_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_96-DW-Kom14_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF22_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF22_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF6_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF6_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF8_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF8_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF9_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF9_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Anl17_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa12_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa12_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa14_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa14_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa5_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa5_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa9_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa9_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Ash12_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Ash13_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi13_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi13_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi14_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi14_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi16_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi16_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi1_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi2_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi2_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog10_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog10_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog18_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog18_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog1_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog1_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog23_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog23_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog9_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog9_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod15_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo10_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo10_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo14_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo14_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo16_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo16_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo2_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo4_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo7_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo7_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo8_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc17_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc17_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc20_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc20_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc21_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc21_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc3_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc3_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc7_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc7_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA6_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA9_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam10_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam15_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam15_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam2_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam2_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam6_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man10_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man10_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man12_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man12_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man4_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man4_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man5_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man5_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man7_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man7_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man9_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Man9_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa13_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa13_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa15_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa17_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa17_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa18_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa18_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa1_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa1_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa3_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa3_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa8_h1geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa8_h2geneonly (identical to af_all_10-DW-Tar5_h1geneonly) is ignored but added at the end
+NOTE: af_all_75-DW-Mad60_h2geneonly (identical to af_all_116-DW-AnB-1_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF17_h1geneonly (identical to af_all_116-DW-AnB-1_h2geneonly) is ignored but added at the end
+NOTE: af_all_135-DW-NeA-79_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_135-DW-NeA-79_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_138-DW-NeA-84_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_138-DW-NeA-84_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_13-DW-Tar8_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_13-DW-Tar8_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_151-DW-AnB-53_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_163-DW-DoM-9_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_163-DW-DoM-9_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_176-DW-NeA-17_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_176-DW-NeA-17_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_177-DW-NeA-20_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_177-DW-NeA-20_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_178-DW-NeA-23_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_178-DW-NeA-23_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_190-DW-Sha16_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_20-DW-Tak4_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_20-DW-Tak4_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_21-DW-Tak5_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_22-DW-Tak6_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_29-DW-Tub5_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_29-DW-Tub5_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_31-DW-Tub7_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_45-DW-TP9_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_45-DW-TP9_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_48-DW-TP15_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_48-DW-TP15_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_57-DW-WE11_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_57-DW-WE11_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_61-DW-WE27_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_61-DW-WE27_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_62-DW-WE28_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_62-DW-WE28_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_85-DW-Sha2_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_85-DW-Sha2_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_86-DW-Sha3_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_86-DW-Sha3_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_90-DW-Sha14_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_90-DW-Sha14_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF11_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF19_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF19_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF26_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF26_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa11_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asa11_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi13_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi13_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi15_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi15_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi3_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi3_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Axi4_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog11_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog11_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog16_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog16_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc12_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc12_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc22_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc22_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc9_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc9_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA9_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam9_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam9_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa16_h1geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa16_h2geneonly (identical to af_all_120-DW-AnB-5_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod11_h2geneonly (identical to af_all_143-DW-NeA-52_h1geneonly) is ignored but added at the end
+NOTE: af_all_40-DW-Tub17_h1geneonly (identical to af_all_145-DW-NeA-54_h1geneonly) is ignored but added at the end
+NOTE: af_all_4-DW-Suh11_h1geneonly (identical to af_all_145-DW-NeA-54_h1geneonly) is ignored but added at the end
+NOTE: af_all_65-DW-Mad49_h1geneonly (identical to af_all_145-DW-NeA-54_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF23_h2geneonly (identical to af_all_145-DW-NeA-54_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Aka15_h1geneonly (identical to af_all_145-DW-NeA-54_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog6_h1geneonly (identical to af_all_145-DW-NeA-54_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod18_h1geneonly (identical to af_all_145-DW-NeA-54_h1geneonly) is ignored but added at the end
+NOTE: af_all_181-DW-NeA-5_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_181-DW-NeA-5_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_35-DW-Tub11_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_6-DW-Suh18_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF2_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF7_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AF7_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AgD34_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AgD4_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog13_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog13_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog25_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog25_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog5_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog5_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog8_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo9_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc18_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc2_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Enc4_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Kof10_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw2_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw2_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nkw6_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa2_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa6_h2geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa9_h1geneonly (identical to af_all_146-DW-NeA-55_h1geneonly) is ignored but added at the end
+NOTE: af_all_40-DW-Tub17_h2geneonly (identical to af_all_182-DW-NeA-6_h2geneonly) is ignored but added at the end
+NOTE: af_all_68-DW-Mad53_h1geneonly (identical to af_all_182-DW-NeA-6_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod18_h2geneonly (identical to af_all_182-DW-NeA-6_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa12_h2geneonly (identical to af_all_182-DW-NeA-6_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi4_h2geneonly (identical to af_all_185-DW-NeA-14_h1geneonly) is ignored but added at the end
+NOTE: af_all_DW-AgD5_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Aka20_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Aka23_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog12_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod2_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod7_h1geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dod8_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo1_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA2_h1geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA2_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA4_h1geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA4_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa11_h2geneonly (identical to af_all_185-DW-NeA-14_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Ash26_h1geneonly (identical to af_all_26-DW-Tub2_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Ash6_h2geneonly (identical to af_all_26-DW-Tub2_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo4_h2geneonly (identical to af_all_26-DW-Tub2_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo8_h2geneonly (identical to af_all_26-DW-Tub2_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam10_h2geneonly (identical to af_all_26-DW-Tub2_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam4_h2geneonly (identical to af_all_26-DW-Tub2_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF19_h2geneonly (identical to af_all_31-DW-Tub7_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF17_h1geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF17_h2geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF19_h1geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF1_h1geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF1_h2geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF3_h1geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF3_h2geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF7_h1geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-AdF7_h2geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Anl17_h2geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Ash26_h2geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Ash6_h1geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Ash9_h1geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam16_h1geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam16_h2geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam4_h1geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Mam6_h2geneonly (identical to af_all_38-DW-Tub15_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA5_h1geneonly (identical to af_all_65-DW-Mad49_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-HA7_h1geneonly (identical to af_all_65-DW-Mad49_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Asi9_h1geneonly (identical to af_all_68-DW-Mad53_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo6_h1geneonly (identical to af_all_68-DW-Mad53_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Dzo6_h2geneonly (identical to af_all_68-DW-Mad53_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Nsa10_h1geneonly (identical to af_all_68-DW-Mad53_h2geneonly) is ignored but added at the end
+NOTE: af_all_DW-Bog12_h1geneonly (identical to af_all_75-DW-Mad60_h1geneonly) is ignored but added at the end
+
+For your convenience alignment with unique sequences printed to af_all/af_all.grouped.fasta.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.007 seconds
+NOTE: ModelFinder requires 1 MB RAM!
+ModelFinder will test 88 DNA models (sample size: 2293) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            4529.176     273 9604.352     9678.450     11170.721
+  2  JC+I          4305.284     274 9158.568     9233.246     10730.675
+  3  JC+G4         4418.267     274 9384.534     9459.212     10956.641
+  4  JC+I+G4       4285.198     275 9120.395     9195.655     10698.240
+  5  F81+F         4519.359     276 9590.718     9666.564     11174.301
+  6  F81+F+I       4295.172     277 9144.344     9220.777     10733.664
+  7  F81+F+G4      4408.472     277 9370.944     9447.377     10960.264
+  8  F81+F+I+G4    4274.945     278 9105.890     9182.913     10700.948
+  9  K2P           4499.814     274 9547.628     9622.306     11119.735
+ 10  K2P+I         4275.504     275 9101.008     9176.268     10678.852
+ 11  K2P+G4        4388.919     275 9327.837     9403.098     10905.682
+ 12  K2P+I+G4      4255.048     276 9062.096     9137.941     10645.678
+ 13  HKY+F         4490.063     277 9534.126     9610.559     11123.446
+ 14  HKY+F+I       4265.207     278 9086.415     9163.438     10681.472
+ 15  HKY+F+G4      4379.046     278 9314.093     9391.115     10909.150
+ 16  HKY+F+I+G4    4243.065     279 9044.130     9121.745     10644.925
+ 17  TNe           4498.486     275 9546.973     9622.233     11124.817
+ 18  TNe+I         4272.990     276 9097.980     9173.826     10681.563
+ 19  TNe+G4        4387.303     276 9326.607     9402.452     10910.189
+ 20  TNe+I+G4      4251.295     277 9056.589     9133.022     10645.909
+ 21  TN+F          4488.546     278 9533.093     9610.116     11128.150
+ 22  TN+F+I        4262.720     279 9083.440     9161.055     10684.235
+ 23  TN+F+G4       4377.240     279 9312.481     9390.096     10913.276
+ 24  TN+F+I+G4     4239.183     280 9038.367     9116.577     10644.899
+ 25  K3P           4495.959     275 9541.919     9617.179     11119.763
+ 26  K3P+I         4269.217     276 9090.434     9166.279     10674.016
+ 27  K3P+G4        4384.811     276 9321.622     9397.467     10905.204
+ 28  K3P+I+G4      4249.343     277 9052.686     9129.118     10642.005
+ 29  K3Pu+F        4485.942     278 9527.884     9604.907     11122.941
+ 30  K3Pu+F+I      4258.244     279 9074.489     9152.104     10675.284
+ 31  K3Pu+F+G4     4374.607     279 9307.213     9384.829     10908.008
+ 32  K3Pu+F+I+G4   4236.155     280 9032.311     9110.521     10638.843
+ 33  TPM2+F        4489.864     278 9535.728     9612.751     11130.786
+ 34  TPM2+F+I      4265.207     279 9088.413     9166.029     10689.208
+ 35  TPM2+F+G4     4378.902     279 9315.804     9393.419     10916.598
+ 36  TPM2+F+I+G4   4242.959     280 9045.919     9124.130     10652.451
+ 37  TPM2u+F       4489.868     278 9535.735     9612.758     11130.793
+ 38  TPM2u+F+I     4265.208     279 9088.416     9166.031     10689.211
+ 39  TPM2u+F+G4    4378.904     279 9315.809     9393.424     10916.604
+ 40  TPM2u+F+I+G4  4242.966     280 9045.931     9124.142     10652.464
+ 41  TPM3+F        4486.771     278 9529.542     9606.565     11124.599
+ 42  TPM3+F+I      4261.817     279 9081.634     9159.250     10682.429
+ 43  TPM3+F+G4     4375.499     279 9308.998     9386.613     10909.793
+ 44  TPM3+F+I+G4   4237.664     280 9035.328     9113.539     10641.861
+ 45  TPM3u+F       4486.778     278 9529.555     9606.578     11124.613
+ 46  TPM3u+F+I     4261.823     279 9081.646     9159.262     10682.441
+ 47  TPM3u+F+G4    4375.505     279 9309.010     9386.626     10909.805
+ 48  TPM3u+F+I+G4  4237.667     280 9035.333     9113.544     10641.866
+ 49  TIMe          4494.641     276 9541.282     9617.127     11124.864
+ 50  TIMe+I        4266.659     277 9087.317     9163.750     10676.637
+ 51  TIMe+G4       4383.201     277 9320.402     9396.834     10909.721
+ 52  TIMe+I+G4     4245.478     278 9046.956     9123.978     10642.013
+ 53  TIM+F         4484.433     279 9526.866     9604.482     11127.661
+ 54  TIM+F+I       4255.732     280 9071.464     9149.675     10677.997
+ 55  TIM+F+G4      4372.804     280 9305.608     9383.819     10912.140
+ 56  TIM+F+I+G4    4232.168     281 9026.335     9105.144     10638.606
+ 57  TIM2e         4498.005     276 9548.011     9623.856     11131.593
+ 58  TIM2e+I       4272.891     277 9099.783     9176.215     10689.102
+ 59  TIM2e+G4      4386.871     277 9327.742     9404.175     10917.062
+ 60  TIM2e+I+G4    4251.304     278 9058.608     9135.631     10653.665
+ 61  TIM2+F        4488.357     279 9534.713     9612.329     11135.508
+ 62  TIM2+F+I      4262.726     280 9085.452     9163.663     10691.985
+ 63  TIM2+F+G4     4377.099     280 9314.199     9392.410     10920.732
+ 64  TIM2+F+I+G4   4239.039     281 9040.078     9118.886     10652.348
+ 65  TIM3e         4496.290     276 9544.581     9620.426     11128.163
+ 66  TIM3e+I       4270.933     277 9095.866     9172.299     10685.185
+ 67  TIM3e+G4      4385.071     277 9324.142     9400.575     10913.462
+ 68  TIM3e+I+G4    4248.442     278 9052.885     9129.908     10647.942
+ 69  TIM3+F        4485.260     279 9528.521     9606.136     11129.316
+ 70  TIM3+F+I      4259.369     280 9078.739     9156.950     10685.271
+ 71  TIM3+F+G4     4373.662     280 9307.324     9385.535     10913.857
+ 72  TIM3+F+I+G4   4234.105     281 9030.210     9109.019     10642.480
+ 73  TVMe          4493.920     277 9541.840     9618.273     11131.160
+ 74  TVMe+I        4267.777     278 9091.554     9168.577     10686.611
+ 75  TVMe+G4       4382.775     278 9321.549     9398.572     10916.607
+ 76  TVMe+I+G4     4247.156     279 9052.311     9129.927     10653.106
+ 77  TVM+F         4483.299     280 9526.598     9604.809     11133.130
+ 78  TVM+F+I       4256.083     281 9074.165     9152.974     10686.435
+ 79  TVM+F+G4      4371.834     281 9305.668     9384.477     10917.938
+ 80  TVM+F+I+G4    4232.458     282 9028.915     9108.324     10646.923
+ 81  SYM           4492.581     278 9541.163     9618.186     11136.220
+ 82  SYM+I         4265.223     279 9088.446     9166.062     10689.241
+ 83  SYM+G4        4381.176     279 9320.351     9397.967     10921.146
+ 84  SYM+I+G4      4243.639     280 9047.279     9125.489     10653.811
+ 85  GTR+F         4481.782     281 9525.563     9604.372     11137.834
+ 86  GTR+F+I       4253.578     282 9071.155     9150.564     10689.163
+ 87  GTR+F+G4      4369.975     282 9303.950     9383.359     10921.958
+ 88  GTR+F+I+G4    4228.829     283 9023.657     9103.669     10647.403
+Akaike Information Criterion:           GTR+F+I+G4
+Corrected Akaike Information Criterion: GTR+F+I+G4
+Bayesian Information Criterion:         TIM+F+I+G4
+Best-fit model: TIM+F+I+G4 chosen according to BIC
+
+All model information printed to af_all/af_all.grouped.fasta.model.gz
+CPU time for ModelFinder: 2.463 seconds (0h:0m:2s)
+Wall-clock time for ModelFinder: 2.539 seconds (0h:0m:2s)
+Generating 1000 samples for ultrafast bootstrap (seed: 389294)...
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 1.000 / Estimate: 0.000, 0.020 / LogL: -4372.805
+Init pinv, alpha: 0.108, 1.000 / Estimate: 0.942, 0.428 / LogL: -4232.005
+Init pinv, alpha: 0.215, 1.000 / Estimate: 0.941, 0.424 / LogL: -4232.033
+Init pinv, alpha: 0.323, 1.000 / Estimate: 0.942, 0.431 / LogL: -4231.994
+Init pinv, alpha: 0.431, 1.000 / Estimate: 0.941, 0.422 / LogL: -4232.048
+Init pinv, alpha: 0.539, 1.000 / Estimate: 0.942, 0.425 / LogL: -4232.040
+Init pinv, alpha: 0.646, 1.000 / Estimate: 0.942, 0.430 / LogL: -4232.018
+Init pinv, alpha: 0.754, 1.000 / Estimate: 0.942, 0.430 / LogL: -4232.034
+Init pinv, alpha: 0.862, 1.000 / Estimate: 0.942, 0.424 / LogL: -4232.121
+Init pinv, alpha: 0.969, 1.000 / Estimate: 0.950, 0.539 / LogL: -4232.406
+Optimal pinv,alpha: 0.942, 0.431 / LogL: -4231.994
+
+Parameters optimization took 5.114 sec
+Computing ML distances based on estimated model parameters... 0.040 sec
+Computing BIONJ tree...
+0.009 seconds
+Log-likelihood of BIONJ tree: -4209.262
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.717 second
+Computing log-likelihood of 98 initial trees ... 0.829 seconds
+Current best score: -4209.262
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -4202.425
+Iteration 10 / LogL: -4216.717 / Time: 0h:0m:9s
+Iteration 20 / LogL: -4219.092 / Time: 0h:0m:11s
+Finish initializing candidate tree set (20)
+Current best tree score: -4202.425 / CPU time: 6.056
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 26: -4201.524
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 28: -4200.336
+Iteration 30 / LogL: -4213.904 / Time: 0h:0m:14s (0h:0m:50s left)
+Iteration 40 / LogL: -4204.148 / Time: 0h:0m:17s (0h:0m:39s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 47: -4200.187
+Iteration 50 / LogL: -4204.248 / Time: 0h:0m:20s (0h:0m:40s left)
+Log-likelihood cutoff on original alignment: -4233.447
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 52: -4200.074
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 57: -4199.868
+Iteration 60 / LogL: -4205.784 / Time: 0h:0m:23s (0h:0m:39s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 62: -4199.720
+Iteration 70 / LogL: -4200.619 / Time: 0h:0m:27s (0h:0m:36s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 78: -4199.318
+Iteration 80 / LogL: -4201.391 / Time: 0h:0m:30s (0h:0m:37s left)
+BETTER TREE FOUND at iteration 89: -4199.317
+Iteration 90 / LogL: -4200.448 / Time: 0h:0m:33s (0h:0m:37s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 98: -4199.139
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 100: -4198.853
+Iteration 100 / LogL: -4198.853 / Time: 0h:0m:36s (0h:0m:36s left)
+Log-likelihood cutoff on original alignment: -4233.447
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.990
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+BETTER TREE FOUND at iteration 104: -4198.849
+Iteration 110 / LogL: -4200.711 / Time: 0h:0m:40s (0h:0m:34s left)
+Iteration 120 / LogL: -4199.096 / Time: 0h:0m:43s (0h:0m:30s left)
+Iteration 130 / LogL: -4198.861 / Time: 0h:0m:46s (0h:0m:26s left)
+Iteration 140 / LogL: -4199.094 / Time: 0h:0m:49s (0h:0m:22s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 141: -4197.312
+Iteration 150 / LogL: -4199.250 / Time: 0h:0m:52s (0h:0m:32s left)
+Log-likelihood cutoff on original alignment: -4233.447
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 154: -4197.278
+Iteration 160 / LogL: -4199.279 / Time: 0h:0m:56s (0h:0m:33s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 170: -4196.394
+Iteration 170 / LogL: -4196.394 / Time: 0h:0m:59s (0h:0m:35s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 172: -4195.977
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 179: -4195.495
+Iteration 180 / LogL: -4212.471 / Time: 0h:1m:3s (0h:0m:34s left)
+Iteration 190 / LogL: -4195.980 / Time: 0h:1m:6s (0h:0m:31s left)
+Iteration 200 / LogL: -4198.709 / Time: 0h:1m:9s (0h:0m:27s left)
+Log-likelihood cutoff on original alignment: -4233.447
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.982
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -4197.711 / Time: 0h:1m:13s (0h:0m:31s left)
+Iteration 220 / LogL: -4204.676 / Time: 0h:1m:16s (0h:0m:27s left)
+Iteration 230 / LogL: -4200.683 / Time: 0h:1m:19s (0h:0m:24s left)
+Iteration 240 / LogL: -4201.549 / Time: 0h:1m:22s (0h:0m:20s left)
+Iteration 250 / LogL: -4195.742 / Time: 0h:1m:25s (0h:0m:17s left)
+Log-likelihood cutoff on original alignment: -4233.447
+Iteration 260 / LogL: -4205.725 / Time: 0h:1m:29s (0h:0m:13s left)
+Iteration 270 / LogL: -4202.730 / Time: 0h:1m:33s (0h:0m:10s left)
+Iteration 280 / LogL: -4196.125 / Time: 0h:1m:36s (0h:0m:6s left)
+Iteration 290 / LogL: -4199.142 / Time: 0h:1m:40s (0h:0m:3s left)
+Iteration 300 / LogL: -4206.096 / Time: 0h:1m:43s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -4233.447
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.984
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 310 / LogL: -4197.034 / Time: 0h:1m:47s (0h:0m:31s left)
+Iteration 320 / LogL: -4198.531 / Time: 0h:1m:51s (0h:0m:27s left)
+Iteration 330 / LogL: -4198.662 / Time: 0h:1m:54s (0h:0m:24s left)
+Iteration 340 / LogL: -4204.675 / Time: 0h:1m:58s (0h:0m:20s left)
+Iteration 350 / LogL: -4195.973 / Time: 0h:2m:2s (0h:0m:17s left)
+Log-likelihood cutoff on original alignment: -4233.447
+Iteration 360 / LogL: -4195.773 / Time: 0h:2m:6s (0h:0m:14s left)
+Iteration 370 / LogL: -4195.508 / Time: 0h:2m:9s (0h:0m:10s left)
+Iteration 380 / LogL: -4198.084 / Time: 0h:2m:13s (0h:0m:7s left)
+Iteration 390 / LogL: -4198.310 / Time: 0h:2m:17s (0h:0m:3s left)
+Iteration 400 / LogL: -4200.441 / Time: 0h:2m:21s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -4233.447
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.995
+TREE SEARCH COMPLETED AFTER 400 ITERATIONS / Time: 0h:2m:21s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -4195.495
+Optimal log-likelihood: -4195.495
+Rate parameters:  A-C: 1.00000  A-G: 1.18191  A-T: 0.26788  C-G: 0.26788  C-T: 5.93821  G-T: 1.00000
+Base frequencies:  A: 0.227  C: 0.279  G: 0.277  T: 0.217
+Proportion of invariable sites: 0.948
+Gamma shape alpha: 0.453
+Parameters optimization took 1 rounds (0.010 sec)
+BEST SCORE FOUND : -4195.495
+Creating bootstrap support values...
+Split supports printed to NEXUS file af_all/af_all.grouped.fasta.splits.nex
+Total tree length: 0.168
+
+Total number of iterations: 400
+CPU time used for tree search: 132.737 sec (0h:2m:12s)
+Wall-clock time used for tree search: 136.204 sec (0h:2m:16s)
+Total CPU time used: 138.226 sec (0h:2m:18s)
+Total wall-clock time used: 141.768 sec (0h:2m:21s)
+
+Computing bootstrap consensus tree...
+Reading input file af_all/af_all.grouped.fasta.splits.nex...
+138 taxa and 3762 splits.
+Consensus tree written to af_all/af_all.grouped.fasta.contree
+Reading input trees file af_all/af_all.grouped.fasta.contree
+Log-likelihood of consensus tree: -4195.625
+
+Analysis results written to: 
+  IQ-TREE report:                af_all/af_all.grouped.fasta.iqtree
+  Maximum-likelihood tree:       af_all/af_all.grouped.fasta.treefile
+  Likelihood distances:          af_all/af_all.grouped.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          af_all/af_all.grouped.fasta.splits.nex
+  Consensus tree:                af_all/af_all.grouped.fasta.contree
+  Screen log file:               af_all/af_all.grouped.fasta.log
+
+Date and Time: Fri Apr 29 09:35:13 2022
