@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-pkg = c("tidyverse", "rnaturalearth", "rnaturalearthdata", "sf", "cowplot", "scatterpie", "parallel", "gridExtra", "grid", "data.table")
+pkg = c("tidyverse", "rnaturalearth", "rnaturalearthdata", "sf", "cowplot", "parallel", "gridExtra", "grid", "data.table")
 #install.packages(pkg) #install packages if you need them and load
 new.packages <- pkg[!(pkg %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -283,6 +283,34 @@ ag_fig <- plot_grid(ag_rf_dfl, ag_cs_dfl, ncol =1, align = 'hv')
 ag_fig <- grid.arrange(arrangeGrob(ag_fig, left = y.grob, bottom = x.grob))
 
 #ac_fig = egg::ggarrange(ac_df_mh, ac_rf_mh, ac_cs_mh, ncol = 1, nrow = 3, labels=c('A', 'B', 'C'))
-ggsave(plot=ag_fig,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig4_angam_fst.tiff', device = grDevices::tiff, width = 20, height = 6.6, units = 'cm')
+ggsave(plot=ag_fig,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig5_angam_fst.tiff', device = grDevices::tiff, width = 20, height = 6.6, units = 'cm')
+```
+```{r selscan}
+hstats = grep(pattern = 'X', (list.files(pattern = 'tsv', path = '/Users/tristanpwdennis/Projects/MOVE/phased_gls_beagle4/', full.names = TRUE)), value = TRUE)
+#read dfs and add filename as col
+hstatdfs = lapply(hstats, function(i){data.frame(fread(i), name = i)})
+#make species specific dfs and extract statname from file name
+mform_hstats = do.call(rbind,hstatdfs[1:5])
+sform_hstats = do.call(rbind, hstatdfs[6:10])
+mform_hstats$stat = gsub(".tsv", "", gsub("mform_X_b4phasedgls_","",basename(mform_hstats$name)))
+sform_hstats$stat = gsub(".tsv", "", gsub("sform_X_b4phasedgls_","",basename(sform_hstats$name)))
+mform_hstats = ggplot(mform_hstats, aes(x=midpoint, y=H2_H1))+
+  geom_line(color = '#1b9e77')+
+  facet_wrap(~stat, ncol = 1)+
+  theme_classic()+
+  labs(x = 'Position', y= 'H-statistic')+
+    theme(plot.margin = unit(c(1,0.5,0.5,0.5), "cm")) 
+
+sform_hstats = ggplot(sform_hstats, aes(x=midpoint, y=H2_H1))+
+  geom_line(color = '#d95f02')+
+  facet_wrap(~stat, ncol = 1)+
+  theme_classic()+
+  labs(x = 'Position')+
+  theme(plot.margin = unit(c(1,0.5,0.5,0.5), "cm"))+
+  theme(axis.title.y = element_blank(),axis.text.y=element_blank(), axis.ticks.y=element_blank())
+
+hstatgrid = plot_grid(mform_hstats, sform_hstats, labels = c('A. coluzzi', 'A. gambiae'))
+ggsave(plot=hstatgrid,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig4_hstat.tiff', device = grDevices::tiff, width = 25, height = 15, units = 'cm')
+
 ```
 
