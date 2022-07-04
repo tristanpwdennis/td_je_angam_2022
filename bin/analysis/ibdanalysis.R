@@ -217,9 +217,9 @@ setwd('/Users/tristanpwdennis/Projects/MOVE/data/anopheles_03_21_DW/angsd-output
 nefiles = list.files(pattern='*.ne')
 bootfiles = list.files(pattern='*.boot')
 nefiles
-nefile = fread(nefiles[[1]])
+nefile = fread(nefiles[[39]])
 nefile %>% ggplot(aes(x=GEN,y=NE))+geom_line()+theme_minimal()+xlim(0,100)
-nefiles
+nefile
 
 
 

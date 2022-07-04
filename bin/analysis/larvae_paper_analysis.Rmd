@@ -4,7 +4,22 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-pkg = c("tidyverse", "rnaturalearth", "rnaturalearthdata", "sf", "cowplot", "parallel", "gridExtra", "grid", "data.table")
+pkg = c("tidyverse", 
+        "rnaturalearth", 
+        "rnaturalearthdata", 
+        "sf", 
+        "cowplot", 
+        "parallel", 
+        "gridExtra", 
+        "grid", 
+        "data.table",
+        'phangorn', 
+        'phytools', 
+        'pegas',
+        'vcfR', 
+        'RColorBrewer', 
+        'rehh')
+
 #install.packages(pkg) #install packages if you need them and load
 new.packages <- pkg[!(pkg %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
@@ -285,32 +300,122 @@ ag_fig <- grid.arrange(arrangeGrob(ag_fig, left = y.grob, bottom = x.grob))
 #ac_fig = egg::ggarrange(ac_df_mh, ac_rf_mh, ac_cs_mh, ncol = 1, nrow = 3, labels=c('A', 'B', 'C'))
 ggsave(plot=ag_fig,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig5_angam_fst.tiff', device = grDevices::tiff, width = 20, height = 6.6, units = 'cm')
 ```
+
+```{r cyp9ksleuthing}
+#TREE make meta
+#create haplotype specific metadata (duplicate ind rows and add hap1/hap2 designation)
+meta_h1 = metadata
+meta_h2 = metadata
+meta_h1$hapid = 'h1'
+meta_h2$hapid = 'h2'
+hapmeta = rbind(meta_h1, meta_h2)
+hapmeta$indid = paste0(hapmeta$seq_id, '_', hapmeta$hapid)
+
+#load alignment, clean, add clean names
+cypfas = read.FASTA('~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/cyp9k_hap_alignment/from_samtools/af_001.grouped.rn.fasta')
+acefas = read.FASTA('~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/ace1_alignment/ace1_af_001.grouped.fasta')
+
+names = gsub(pattern = "af_001/" , '',names(cypfas))
+names = gsub(pattern = "geneonly" , '',names)
+names(cypfas) = names
+cypfas
+
+#load phylogenies and make tip data
+cyptreefile = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/cyp9k_hap_alignment/from_samtools/af_001.grouped.rn.fasta.treefile'
+acetreefile = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/ace1_alignment/ace1_af_001.grouped.fasta.treefile'
+treedata = dplyr::select(hapmeta, indid, hapid, habitat, Form, Site) #make tree data
+
+plot_phy <- function(treefile) {
+  phy = ape::read.tree(treefile)
+  phy$tip.label <- gsub(pattern = 'geneonly', replacement = '', phy$tip.label)
+  #read tree, root
+  phy_p = midpoint.root(phy)
+  #create ordered treedata
+  treedata = treedata[match(phy$tip.label, treedata$indid), ] 
+  #configure tip labels and set lengths and colours
+  phy_p$species = treedata$Form 
+  phy_p$site  =treedata$Site
+  phy_p$habitat = treedata$habitat
+  phy_p$tip.colors = c('#D95F02', "#1B9E77")
+  phy_p$edge.length[phy_p$edge.length >  0.005] = 0.005
+  phy_p$edge.length[phy_p$edge.length == 0]    = 5e-5
+  spec <- factor(phy_p$species)
+  mycol <- c('#D95F02', "#1B9E77")[spec]
+  spec
+  #pliot tree and tiplabs
+  par(mar=c(0.5,0.5,0.5,0.5))
+  plot.phylo(phy_p, type = 'unr',
+             use.edge.length = T, 
+             show.tip.label = F,
+             lab4ut = "axial",
+             edge.color = "slategray3", font=0.5, edge.width = 0.5, node.depth = 1)
+  tiplabels(pch=16,col=mycol)
+  add.scale.bar(cex=0.7, "topleft")
+}
+
+#make final phylogeny plot object
+tiff(filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/cyp9k1_phy.tiff')
+plot_phy(cyptreefile)
+title("cyp9k1                                                           ")
+legend("bottomleft", legend = c("An. gambiae", "An. coluzzi"), pch = 22,
+       pt.bg = c('#D95F02', "#1B9E77"), pt.cex = 2.5, bty="n", box.lty=1)
+dev.off()
+
+
+
+
+
+```
+
+
 ```{r selscan}
-hstats = grep(pattern = 'X', (list.files(pattern = 'tsv', path = '/Users/tristanpwdennis/Projects/MOVE/phased_gls_beagle4/', full.names = TRUE)), value = TRUE)
+hstats = grep(pattern = 'X', (list.files(pattern = 'tsv', path = '/Users/tristanpwdennis/Projects/MOVE/bulky_larvae_paper_data/phased_gls_beagle4/', full.names = TRUE)), value = TRUE)
 #read dfs and add filename as col
 hstatdfs = lapply(hstats, function(i){data.frame(fread(i), name = i)})
-#make species specific dfs and extract statname from file name
-mform_hstats = do.call(rbind,hstatdfs[1:5])
-sform_hstats = do.call(rbind, hstatdfs[6:10])
-mform_hstats$stat = gsub(".tsv", "", gsub("mform_X_b4phasedgls_","",basename(mform_hstats$name)))
-sform_hstats$stat = gsub(".tsv", "", gsub("sform_X_b4phasedgls_","",basename(sform_hstats$name)))
-mform_hstats = ggplot(mform_hstats, aes(x=midpoint, y=H2_H1))+
-  geom_line(color = '#1b9e77')+
-  facet_wrap(~stat, ncol = 1)+
-  theme_classic()+
-  labs(x = 'Position', y= 'H-statistic')+
-    theme(plot.margin = unit(c(1,0.5,0.5,0.5), "cm")) 
+hstatdf = do.call(rbind,hstatdfs)
+hstatdf$stat = gsub(".tsv", "", gsub("mform_X_b4phasedgls_","",basename(hstatdf$name)))
+hstatdf$stat =  gsub("sform_X_b4phasedgls_", "", hstatdf$stat)
+hstatdf$form = gsub("\\_.*","",basename(hstatdf$name))
 
-sform_hstats = ggplot(sform_hstats, aes(x=midpoint, y=H2_H1))+
-  geom_line(color = '#d95f02')+
-  facet_wrap(~stat, ncol = 1)+
+x = c(unique(hstatdf$stat))
+doplot <- function(filterstat) {
+  plotdf = filter(hstatdf, stat == filterstat)
+  ggplot(plotdf, aes(x=midpoint/1000000, y=H2_H1, color=form))+
+  geom_line()+
+  scale_color_brewer(palette = 'Dark2')+
+  facet_wrap(~form)+
+  labs(y=filterstat)+
   theme_classic()+
-  labs(x = 'Position')+
-  theme(plot.margin = unit(c(1,0.5,0.5,0.5), "cm"))+
-  theme(axis.title.y = element_blank(),axis.text.y=element_blank(), axis.ticks.y=element_blank())
+  theme(strip.text.x = element_blank(), axis.title.x = element_blank(),legend.position = 'none', axis.text = element_text(size=7))
+}
 
-hstatgrid = plot_grid(mform_hstats, sform_hstats, labels = c('A. coluzzi', 'A. gambiae'))
-ggsave(plot=hstatgrid,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig4_hstat.tiff', device = grDevices::tiff, width = 25, height = 15, units = 'cm')
+hstatplotlist = lapply(x, doplot)
+
+
+mhapdiv = data.frame(t(fread('/Users/tristanpwdennis/Projects/MOVE/bulky_larvae_paper_data/phased_gls_beagle4/mform_X_hapdiv.txt')))
+shapdiv = data.frame(t(fread('/Users/tristanpwdennis/Projects/MOVE/bulky_larvae_paper_data/phased_gls_beagle4/sform_X_hapdiv.txt')))
+
+
+mhapdiv = cbind(mhapdiv, 'A. coluzzi','Haplotype Diversity')
+shapdiv = cbind(shapdiv, 'A. gambiae','Haplotype Diversity')
+
+colnames(mhapdiv) <- c('div', 'pos', 'spec', 'stat')
+colnames(shapdiv) <- c('div', 'pos', 'spec', 'stat')
+stathapdiv = rbind(mhapdiv, shapdiv)
+
+divgrid = ggplot(stathapdiv, aes(x=pos/1000000, y=div,color= spec))+
+  geom_line()+
+  scale_color_brewer(palette = 'Dark2')+
+  theme_classic()+
+  facet_wrap(~spec)+
+  theme(strip.text.x = element_blank(), axis.title.x = element_blank(),legend.position = 'none', axis.text = element_text(size=7))+
+  labs(y='Hap Diversity')
+
+
+v = plot_grid(divgrid, plotlist = hstatplotlist, ncol=1, align='hv')
+
+
+ggsave(plot=v ,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig5_hstat.tiff', device = grDevices::tiff, width = 15, height = 20, units = 'cm')
 
 ```
 
