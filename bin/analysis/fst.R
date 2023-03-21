@@ -9,43 +9,45 @@ flist
 window5 = fread('/Users/dennistpw/Projects/td_je_angam_2022/data/fst_by_ecotype_species/m_mangrove_decid_forest_AgamP4_Xwindow5step1.txt')
 colnames(window5) <- c('gubs','chrom', 'pos','nSites','Fst')
 
-par(mfrow = c(6, 5), mar = c(0.1, 0, 0.1, 0), oma=c(2,2,2,2))
+par(mfrow = c(6, 5), mar = c(0.1, 0, 0.5, 0), oma=c(4,3,2,2))
 #m mangrove decid forest
-plot(x=fstlist[[1]]$chr, y=fstlist[[1]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n",col='#8dd3c7',frame.plot=FALSE) #2L
+plot(x=fstlist[[1]]$chr, y=fstlist[[1]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n",col='#8dd3c7',frame.plot=FALSE, las=2) #2L
 plot(x=fstlist[[2]]$chr, y=fstlist[[2]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col = '#8dd3c7') #2R
 plot(x=fstlist[[3]]$chr, y=fstlist[[3]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#8dd3c7') #3L
 plot(x=fstlist[[4]]$chr, y=fstlist[[4]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#8dd3c7') #3R
 plot(x=fstlist[[5]]$chr, y=fstlist[[5]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#8dd3c7') #X
 #m mangrove rainforest
-plot(x=fstlist[[6]]$chr, y=fstlist[[6]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n", ann=TRUE, col='#feeea6',frame.plot=FALSE) #2L
+plot(x=fstlist[[6]]$chr, y=fstlist[[6]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n", ann=TRUE, col='#feeea6',frame.plot=FALSE,las = 2) #2L
 plot(x=fstlist[[7]]$chr, y=fstlist[[7]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col = '#feeea6') #2R) #2R
 plot(x=fstlist[[8]]$chr, y=fstlist[[8]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#feeea6') #3L) #3L
 plot(x=fstlist[[9]]$chr, y=fstlist[[9]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#feeea6') #3R) #3R
 plot(x=fstlist[[10]]$chr, y=fstlist[[10]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#feeea6') #XSE) #X
 #m mangrove savannah
-plot(x=fstlist[[11]]$chr, y=fstlist[[11]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n", ann=TRUE, col='#80b1d3',frame.plot=FALSE) #2L
+plot(x=fstlist[[11]]$chr, y=fstlist[[11]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n", ann=TRUE, col='#80b1d3',frame.plot=FALSE,las = 2) #2L
 plot(x=fstlist[[12]]$chr, y=fstlist[[12]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col = '#80b1d3') #2R) #2R
 plot(x=fstlist[[13]]$chr, y=fstlist[[13]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#80b1d3') #3L) #3L
 plot(x=fstlist[[14]]$chr, y=fstlist[[14]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#80b1d3') #3R) #3R
 plot(x=fstlist[[15]]$chr, y=fstlist[[15]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#80b1d3') #XSE) #X
 #m_rainforest_decid_forest
-plot(x=fstlist[[11]]$chr, y=fstlist[[11]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n", ann=TRUE, col='#fb8072',frame.plot=FALSE) #2L
+plot(x=fstlist[[11]]$chr, y=fstlist[[11]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n", ann=TRUE, col='#fb8072',frame.plot=FALSE,las = 2) #2L
 plot(x=fstlist[[17]]$chr, y=fstlist[[17]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col = '#fb8072') #2R) #2R
 plot(x=fstlist[[18]]$chr, y=fstlist[[18]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#fb8072') #3L) #3L
 plot(x=fstlist[[19]]$chr, y=fstlist[[19]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#fb8072') #3R) #3R
 plot(x=fstlist[[20]]$chr, y=fstlist[[20]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#fb8072') #XSE) #X
 #m_savannah_decid_forest
-plot(x=fstlist[[11]]$chr, y=fstlist[[11]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n", ann=TRUE, col='#bebaea',frame.plot=FALSE) #2L
+plot(x=fstlist[[11]]$chr, y=fstlist[[11]]$Nsites,type='l', ylim=c(0,0.5), xaxt="n", ann=TRUE, col='#bebaea',frame.plot=FALSE, las = 2) #2L
 plot(x=fstlist[[22]]$chr, y=fstlist[[22]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col = '#bebaea') #2R) #2R
 plot(x=fstlist[[23]]$chr, y=fstlist[[23]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#bebaea') #3L) #3L
 plot(x=fstlist[[24]]$chr, y=fstlist[[24]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#bebaea') #3R) #3R
 plot(x=fstlist[[25]]$chr, y=fstlist[[25]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#bebaea') #XSE) #X
 #m_savannah_rainforest
-plot(x=fstlist[[26]]$chr, y=fstlist[[26]]$Nsites,type='l', ylim=c(0,0.5), axes= T, ann=TRUE, col='#fdb462',frame.plot=FALSE) #2L
-plot(x=fstlist[[27]]$chr, y=fstlist[[27]]$Nsites,type='l', ylim=c(0,0.5), yaxt="n", ann=TRUE, col = '#fdb462',frame.plot=FALSE) #2R) #2R
-plot(x=fstlist[[28]]$chr, y=fstlist[[28]]$Nsites,type='l', ylim=c(0,0.5), yaxt="n", ann=TRUE, col='#fdb462',frame.plot=FALSE) #3L) #3L
-plot(x=fstlist[[29]]$chr, y=fstlist[[29]]$Nsites,type='l', ylim=c(0,0.5), yaxt="n", ann=TRUE, col='#fdb462',frame.plot=FALSE) #3R) #3R
-plot(x=fstlist[[30]]$chr, y=fstlist[[30]]$Nsites,type='l', ylim=c(0,0.5), yaxt="n", ann=TRUE, col='#fdb462',frame.plot=FALSE) #XSE) #X
+plot(x=fstlist[[26]]$chr, y=fstlist[[26]]$Nsites,type='l', ylim=c(0,0.5), axes= T, ann=TRUE, col='#fdb462',frame.plot=FALSE,las = 2) #2L
+plot(x=fstlist[[27]]$chr, y=fstlist[[27]]$Nsites,type='l', ylim=c(0,0.5), yaxt="n", ann=TRUE, col = '#fdb462',frame.plot=FALSE,las = 2) #2R) #2R
+plot(x=fstlist[[28]]$chr, y=fstlist[[28]]$Nsites,type='l', ylim=c(0,0.5), yaxt="n", ann=TRUE, col='#fdb462',frame.plot=FALSE, las=2) #3L) #3L
+plot(x=fstlist[[29]]$chr, y=fstlist[[29]]$Nsites,type='l', ylim=c(0,0.5), yaxt="n", ann=TRUE, col='#fdb462',frame.plot=FALSE, las=2) #3R) #3R
+plot(x=fstlist[[30]]$chr, y=fstlist[[30]]$Nsites,type='l', ylim=c(0,0.5), yaxt="n", ann=TRUE, col='#fdb462',frame.plot=FALSE, las=2) #XSE) #X
+
+
 
 par(mfrow = c(3, 5), mar = c(0.05, 0.05, 0.05, 0.05))
 #s_rainforest_decid_forest
@@ -66,6 +68,7 @@ plot(x=fstlist[[42]]$chr, y=fstlist[[42]]$Nsites,type='l', ylim=c(0,0.5), axes =
 plot(x=fstlist[[43]]$chr, y=fstlist[[43]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#80b1d3') #3L) #3L
 plot(x=fstlist[[44]]$chr, y=fstlist[[44]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#80b1d3') #3R) #3R
 plot(x=fstlist[[45]]$chr, y=fstlist[[45]]$Nsites,type='l', ylim=c(0,0.5), axes = F, ann=FALSE, col='#80b1d3') #XSE) #X
+
 
 
 
