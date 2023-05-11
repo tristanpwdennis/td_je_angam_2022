@@ -25,7 +25,7 @@ new.packages <- pkg[!(pkg %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(pkg, require, character.only = TRUE)#
 knitr::opts_chunk$set(echo = TRUE)
-metadata=fread('~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/metadata/metadata_full_sequencedonly_062022.csv')
+metadata=fread('~/Projects/td_je_angam_2022/metadata/metadata_with_insecticide_info.csv')
 metadata$Species = ifelse(metadata$Form=='M', 'A. coluzzi', 'A. gambiae')
 ```
 
@@ -58,7 +58,7 @@ maps = ggplot()+
   theme_classic()+
   facet_wrap(~Species)
 #
-ggsave(plot=maps,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig1_maps.tiff', device = grDevices::tiff, width = 30, height = 15, units = 'cm', dpi = 1000)
+ggsave(plot=maps,filename = '~/Projects/td_je_angam_2022/figures/fig1_maps.tiff', device = grDevices::tiff, width = 30, height = 15, units = 'cm', dpi = 1000)
 ```
 
 ```{r fig2}
@@ -67,7 +67,7 @@ ggsave(plot=maps,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts
 #--------------------------------------------------#
 
 #read decay file
-decay = read.csv('~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/structure/ld_decay_data_bychr.csv')
+decay = read.csv('~/Projects/td_je_angam_2022/data/structure/ld_decay_data_bychr.csv')
 #sub chrnames for more readable versions
 decay$Scaffold = str_replace(decay$File,'_glf2_minorfilts_angsd_samtools_ngsLD', '')
 decay$Scaffold = str_replace(decay$Scaffold,'AgamP4_', '')
@@ -88,7 +88,7 @@ ld_decay = decay %>%
 #pca                                               #
 #--------------------------------------------------#
 
-x = fread('~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/structure/3_euch_pruned.cov')
+x = fread('~/Projects/td_je_angam_2022/data/structure/3_euch_pruned.cov')
 s = eigen(x)
 f = cbind(s$vectors[,1:2], seq(0, length(s$vectors[,1])-1))
 t= as.data.frame(f) %>% left_join(., metadata, by = c('V3' = 'bamorder'))
@@ -134,10 +134,10 @@ pcaplot = t %>%
 #admixture                                         #
 #--------------------------------------------------#
 #load pcangsd admixture output
-q = fread('~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/structure/3_euch_pruned.Q')
+q = fread('~/Projects/td_je_angam_2022/data/structure/3_euch_pruned.Q')
 
 #make a df of population assignment proportion for each individual (needs to join to metadata by bam order)
-admixture_plot_data = q %>% mutate(id = row_number()) %>% pivot_longer(cols=c(V1, V2, V3, V4, V5), names_to = 'pop', values_to = 'prob') %>% left_join(., metadata, by = c('id' = 'bamorder')) %>% select(pop, prob, id, species) %>% 
+admixture_plot_data = q %>% mutate(id = row_number()) %>% pivot_longer(cols=c(V1, V2, V3, V4, V5), names_to = 'pop', values_to = 'prob') %>% left_join(., metadata, by = c('id' = 'bamorder')) %>% dplyr::select(pop, prob, id, species) %>% 
   group_by(id) %>% 
   mutate(main_proportion = pop[which.max(prob)], assignment_prob = max(prob)) %>% 
   arrange(main_proportion, desc(assignment_prob)) %>%  
@@ -164,8 +164,9 @@ admixchah = ggplot(admixture_plot_data, aes(id, prob, fill = pop)) +
 
 grid1 = cowplot::plot_grid(ld_decay, pcaplot,labels = c('A', 'B'), align = "h", axis = 'l', label_size = 15)
 fig2grid = plot_grid(grid1, admixchah, ncol=1, labels = c('','C'), label_size = 15)
-ggsave(plot=fig2grid,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig2grid.tiff', device = grDevices::tiff, width = 25, height = 15, units = 'cm', dpi = 1000)
+ggsave(plot=fig2grid,filename = '~/Projects/td_je_angam_2022/figures/fig2grid.tiff', device = grDevices::tiff, width = 25, height = 15, units = 'cm', dpi = 1000)
 ```
+
 ```{r fig3}
 #make chr colour palette
 colpal = c('AgamP4_2L', 'AgamP4_2R', 'AgamP4_3L', 'AgamP4_3R', 'AgamP4_X')
@@ -312,8 +313,8 @@ hapmeta = rbind(meta_h1, meta_h2)
 hapmeta$indid = paste0(hapmeta$seq_id, '_', hapmeta$hapid)
 
 #load alignment, clean, add clean names
-cypfas = read.FASTA('~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/cyp9k_hap_alignment/from_samtools/af_001.grouped.rn.fasta')
-acefas = read.FASTA('~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/ace1_alignment/ace1_af_001.grouped.fasta')
+cypfas = read.FASTA('~/Projects/td_je_angam_2022/data/cyp9k_hap_alignment/from_samtools/af_001.grouped.rn.fasta')
+acefas = read.FASTA('~/Projects/td_je_angam_2022/data/ace1_alignment/ace1_af_001.grouped.fasta')
 
 names = gsub(pattern = "af_001/" , '',names(cypfas))
 names = gsub(pattern = "geneonly" , '',names)
@@ -321,8 +322,8 @@ names(cypfas) = names
 cypfas
 
 #load phylogenies and make tip data
-cyptreefile = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/cyp9k_hap_alignment/from_samtools/af_001.grouped.rn.fasta.treefile'
-acetreefile = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/ace1_alignment/ace1_af_001.grouped.fasta.treefile'
+cyptreefile = '~/Projects/td_je_angam_2022/data/cyp9k_hap_alignment/from_samtools/af_001.grouped.rn.fasta.treefile'
+acetreefile = '~/Projects/td_je_angam_2022/data/ace1_alignment/ace1_af_001.grouped.fasta.treefile'
 treedata = dplyr::select(hapmeta, indid, hapid, habitat, Form, Site) #make tree data
 
 plot_phy <- function(treefile) {
@@ -360,11 +361,6 @@ title("cyp9k1                                                           ")
 legend("bottomleft", legend = c("An. gambiae", "An. coluzzi"), pch = 22,
        pt.bg = c('#D95F02', "#1B9E77"), pt.cex = 2.5, bty="n", box.lty=1)
 dev.off()
-
-
-
-
-
 ```
 
 
