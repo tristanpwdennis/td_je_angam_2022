@@ -1,13 +1,51 @@
 library(tidyverse)
 library(data.table)
 
-
+#wrangle
 flist = list.files(path = '/Users/dennistpw/Projects/td_je_angam_2022/data/fst_by_ecotype_species/', pattern = 'window5step1.txt', full.names = T)
-fstlist = lapply(flist, fread)
+flistnam<-  str_remove(basename(flist), "_AgamP4.*")
+flistnam<-  str_remove(basename(flistnam), "_forest")
+names(flist) <- flistnam
+fstlist <- map_dfr(flist, fread, .id = 'ID')
+fstlist$species = gsub('_.*','',fstlist$ID)
+fstlist$ecoregionb <- gsub('.*_','',fstlist$ID)
+fstlist$ecoregiona <- gsub('_.*','',gsub('[sm]_','',fstlist$ID))
 
-flist
-window5 = fread('/Users/dennistpw/Projects/td_je_angam_2022/data/fst_by_ecotype_species/m_mangrove_decid_forest_AgamP4_Xwindow5step1.txt')
-colnames(window5) <- c('gubs','chrom', 'pos','nSites','Fst')
+unique(fstlist$ID)
+
+fstlist<-fstlist %>%
+  mutate(comp = case_when( 
+    ID == 'm_mangrove_decid' ~ "M:DF", 
+    ID == 'm_mangrove_rainforest' ~ "M:RF", 
+    ID == 'm_mangrove_savannah' ~ "M:CS", 
+    ID == 'm_rainforest_decid' ~ "RF:DF", 
+    ID == 'm_savannah_decid' ~ "CS:DF", 
+    ID == 'm_savannah_rainforest' ~ "CS:RF", 
+    ID == 's_rainforest_decid' ~ "RF:DF", 
+    ID == 's_savannah_decid' ~ "CS:DF", 
+    ID == 's_savannah_rainforest' ~ "CS:RF", 
+    TRUE ~ NA
+  ))
+
+
+
+#fstlist = fstlist[,-2:-1]
+
+fstlist %>% case_when(
+  ecoregiona == 'decid' & ecoregionb == 'decid' ~ "M:DF")
+
+
+
+
+write.csv(fstlist, '~/Projects/td_je_angam_2022/data/fst_by_ecotype_species/fst_window5step1_allecoregions_species.csv')
+
+data = '~/Projects/td_je_angam_2022/data/fst_by_ecotype_species/fst_window5step1_allecoregions_species.txt'
+fst = readr::read_delim(data)
+ggplot(fst, aes(x=chr,))
+
+
+
+
 
 par(mfrow = c(6, 5), mar = c(0.1, 0, 1.2, 0), oma=c(4,3,2,2))
 #m mangrove decid forest

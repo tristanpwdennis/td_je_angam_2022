@@ -25,7 +25,7 @@ new.packages <- pkg[!(pkg %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(pkg, require, character.only = TRUE)#
 knitr::opts_chunk$set(echo = TRUE)
-metadata=fread('~/Projects/td_je_angam_2022/metadata/metadata_with_insecticide_info.csv')
+metadata<- fread('/Users/dennistpw/Library/Mobile Documents/com~apple~CloudDocs/Projects/td_je_angam/td_je_angam_2022/metadata/metadata_full_sequencedonly_062022.csv', header=T)
 metadata$Species = ifelse(metadata$Form=='M', 'A. coluzzi', 'A. gambiae')
 ```
 
@@ -38,7 +38,7 @@ lakes <- ne_download(scale = 'large', type = 'lakes', category = 'physical', ret
 rivers <- ne_download(scale = 'large', type = 'rivers_lake_centerlines', category = 'physical', returnclass = "sf")
 ocean <- ne_download(scale = 'large', type = 'ocean', category = 'physical', returnclass = "sf")
 #get site only data and coilour by habitat (darken for border)
-sites = metadata %>% select(Site, Lat, Long, habitat) %>% unique() #%>% full_join(colesites)
+sites = metadata %>% select(Site, Long, Lat, habitat) %>% unique() #%>% full_join(colesites)
 habitatocolours = c('#e41a1c','#377eb8','#4daf4a','#984ea3')
 darkerhabitatcolours3 = colorspace::darken(habitatocolours, amount=0.3)
 #plot sites coloured by isec and eco, and species 
@@ -47,10 +47,9 @@ maps = ggplot()+
   geom_sf(data = rivers, colour = '#4575b4', fill = '#a6bddb')+
   geom_sf(data = lakes, colour = '#4575b4', fill = '#a6bddb')+
   geom_sf(data = ocean, colour = '#4575b4', fill = '#a6bddb')+
-  geom_point(data=metadata, aes(y=Lat,x=Long, color=habitat, fill=habitat, shape=INSECTICIDE_USE), size = 6)+
-  scale_color_manual(values=darkerhabitatcolours3,guide='none')+
+  geom_point(data=metadata, aes(y=Lat,x=Long, color=habitat, fill=habitat), size = 4, alpha=0.7)+
+  scale_color_manual(values=habitatocolours,guide='none')+
   scale_fill_manual(values=habitatocolours)+
-  scale_shape_manual(values=c(21, 22, 23, 24))+
   ggspatial::annotation_scale(location = "br", width_hint = 0.4) +
   coord_sf(xlim = c(-3.6, 1.5), ylim = c(4.5, 11.5), expand = FALSE)+
   labs(x='Longitude', y='Latitude', color='Ecozone',fill = 'Ecozone', shape='Insecticide Usage Pattern')+
@@ -168,138 +167,29 @@ ggsave(plot=fig2grid,filename = '~/Projects/td_je_angam_2022/figures/fig2grid.ti
 ```
 
 ```{r fig3}
-#make chr colour palette
-colpal = c('AgamP4_2L', 'AgamP4_2R', 'AgamP4_3L', 'AgamP4_3R', 'AgamP4_X')
-colpal = RColorBrewer::brewer.pal(5, "Set2")
+data = '~/Projects/td_je_angam_2022/data/fst_by_ecotype_species/fst_window5step1_allecoregions_species.csv'
+fst = readr::read_delim(data)
 
-#function to turn angsd genome scan output into something plottable
-make_pbs_df <- function(pbsdffile) {
-  pbs_df = fread(pbsdffile)
-  colnames(pbs_df) <- c('Angsd_gubbins', 'chr', 'pos', 'nsites', 'fst01', 'fst02', 'fst12', 'PBS0', 'PBS1', 'PBS2')
-  pbs_df = pbs_df[grep("Agam", chr)]
-  pbs_df = pbs_df[!grep("UNK", chr)]
-  pbs_df = pbs_df[!grep("unplaced", chr)]
-  chrlens = aggregate(pbs_df$pos, by = list(pbs_df$chr), max) #get chromosome lengths (mx bp)
-  colnames(chrlens) = c('chr', 'chrlen') #rename
-  chrlens$cumsum = cumsum(chrlens$chrlen) - chrlens$chrlen #calculate cumulative positions of each chr start
-  pbs_df = pbs_df[chrlens, on = .(chr)] #join to thetas data
-  pbs_df$BPcum = pbs_df$pos + pbs_df$cumsum #get cumulative position in genome
-  #pbs_df <- sample_n(pbs_df, size = nrow(pbs_df) * 0.5)
-  return(pbs_df)
-}
-
-#an col (fig 3)
-mform_mh <- list.files('/Users/tristanpwdennis/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/genome_scans/insecticide_usage/by_ecotype_and_high_isecusage_mangrove/', full.names = T)
-#make list of dfs
-hilist <- mclapply(mform_mh, make_pbs_df, mc.cores = 6)
-#chr color palette
-pal = c('#d73027', '#fc8d59', '#91bfdb', '#4575b4', '#fee090')
-
-#df: mangrove high
-ac_df_mh = ggplot(hilist[[1]], aes(x=BPcum, y=fst02, colour = chr))+
+mfst = ggplot(fstlist[fstlist$Species == 'm'], aes(x=Position,y=Fst, colour=Comparison))+
   geom_line()+
-  ylim(0, 1)+
+  facet_grid(rows = vars(Comparison), cols=vars(chrom),scales = "free_x")+
   theme_classic()+
-  scale_color_manual(values = pal)+
-  theme(legend.position = "none", axis.title.x=element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank(), axis.title.y=element_blank(),
-        plot.margin = margin(0,0,0,1, "cm"))+  labs(x='Position', y='Fst')+
-      ggtitle('Deciduous Forest: Mangrove, High IS usage')
+  theme(legend.position = 'none',
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  scale_color_brewer(palette = "Set2")
 
-#rf: mangrove high
-ac_rf_mh = ggplot(hilist[[1]], aes(x=BPcum, y=fst12, colour = chr))+
+sfst = ggplot(fstlist[fstlist$Species == 's'], aes(x=Position,y=Fst, colour=Comparison))+
   geom_line()+
-  ylim(0, 1)+
+  facet_grid(rows = vars(Comparison), cols=vars(chrom),scales = "free_x")+
   theme_classic()+
-  scale_color_manual(values = pal)+
-  theme(legend.position = "none", axis.title.x=element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank(), axis.title.y=element_blank(),
-        plot.margin = margin(0,0,0,1, "cm"))+
-  labs(y='Fst')+
-    ggtitle('Rainforest: Mangrove, High IS usage')
+  theme(legend.position = 'none',
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+
+  scale_color_brewer(palette = "Set2")
 
-#rf: mangrove high
-ac_cs_mh = ggplot(hilist[[2]], aes(x=BPcum, y=fst12, colour = chr))+
-  geom_line()+
-  ylim(0, 1)+
-  theme_classic()+
-  scale_color_manual(values = pal)+
-  labs(y='Position')+
-  theme(legend.position = "none", axis.title.x=element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank(), axis.title.y=element_blank(),
-        plot.margin = margin(0,0,0,1, "cm"))+  labs(x='Position', y='Fst')+
-  ggtitle('Coastal Savannah: Mangrove, High IS usage')
-
-#common x and y labs
-#common x and y labs
-y.grob <- textGrob("Fst", 
-                   gp=gpar(fontface="bold", col="black", fontsize=10), rot=90, vjust = 1.8)
-
-x.grob <- textGrob("Position", 
-                   gp=gpar(fontface="bold", col="black", fontsize=10))
-
-ac_fig <- plot_grid(ac_df_mh, ac_rf_mh, ac_cs_mh, ncol =1, align = 'vh')
-ac_fig <- grid.arrange(arrangeGrob(ac_fig, left = y.grob, bottom = x.grob))
 
 #ac_fig = egg::ggarrange(ac_df_mh, ac_rf_mh, ac_cs_mh, ncol = 1, nrow = 3, labels=c('A', 'B', 'C'))
-ggsave(plot=ac_fig,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig3_ancol_fst.tiff', device = grDevices::tiff, width = 20, height = 10, units = 'cm')
-```
-```{r fig4}
-#make chr colour palette
-colpal = c('AgamP4_2L', 'AgamP4_2R', 'AgamP4_3L', 'AgamP4_3R', 'AgamP4_X')
-colpal = RColorBrewer::brewer.pal(5, "Set2")
-
-#function to turn angsd genome scan output into something plottable
-make_pbs_df <- function(pbsdffile) {
-  pbs_df = fread(pbsdffile)
-  colnames(pbs_df) <- c('Angsd_gubbins', 'chr', 'pos', 'nsites', 'fst01', 'fst02', 'fst12', 'PBS0', 'PBS1', 'PBS2')
-  pbs_df = pbs_df[grep("Agam", chr)]
-  pbs_df = pbs_df[!grep("UNK", chr)]
-  pbs_df = pbs_df[!grep("unplaced", chr)]
-  chrlens = aggregate(pbs_df$pos, by = list(pbs_df$chr), max) #get chromosome lengths (mx bp)
-  colnames(chrlens) = c('chr', 'chrlen') #rename
-  chrlens$cumsum = cumsum(chrlens$chrlen) - chrlens$chrlen #calculate cumulative positions of each chr start
-  pbs_df = pbs_df[chrlens, on = .(chr)] #join to thetas data
-  pbs_df$BPcum = pbs_df$pos + pbs_df$cumsum #get cumulative position in genome
-  #pbs_df <- sample_n(pbs_df, size = nrow(pbs_df) * 0.5)
-  return(pbs_df)
-}
-
-#angam (figure)
-mform_mh <- list.files('/Users/tristanpwdennis/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/data/genome_scans/insecticide_usage/by_ecotype_and_low_isecusage_mangrove/', full.names = T)
-hilist <- mclapply(mform_mh[[7]], make_pbs_df, mc.cores = 6)
-
-#df: rf and dfl
-ag_rf_dfl = ggplot(hilist[[1]], aes(x=BPcum, y=fst02, colour = chr))+
-  geom_line()+
-  ylim(0, 1)+
-  theme_classic()+
-  scale_color_manual(values = pal)+
-  theme(legend.position = "none", axis.title.x=element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank(), axis.title.y=element_blank(),
-        plot.margin = margin(0,0,0,1, "cm"))+  labs(x='Position', y='Fst')+
-    ggtitle('Rainforest: Deciduous Forest, Low IS usage')
-
-#rf: cs and dfl
-ag_cs_dfl = ggplot(hilist[[1]], aes(x=BPcum, y=fst12, colour = chr))+
-  geom_line()+
-  ylim(0, 1)+
-  theme_classic()+
-  scale_color_manual(values = pal)+
-  theme(legend.position = "none", axis.title.x=element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank(), axis.title.y=element_blank(),
-        plot.margin = margin(0,0,0,1, "cm"))+
-  labs(x='Position', y='Fst')+
-      ggtitle('Coastal Savannah: Deciduous Forest, Low IS usage')
-#common x and y labs
-y.grob <- textGrob("Fst", 
-                   gp=gpar(fontface="bold", col="black", fontsize=10), rot=90, vjust = 1.8)
-
-x.grob <- textGrob("Position", 
-                   gp=gpar(fontface="bold", col="black", fontsize=10))
-
-
-ag_fig <- plot_grid(ag_rf_dfl, ag_cs_dfl, ncol =1, align = 'hv')
-
-ag_fig <- grid.arrange(arrangeGrob(ag_fig, left = y.grob, bottom = x.grob))
-
-#ac_fig = egg::ggarrange(ac_df_mh, ac_rf_mh, ac_cs_mh, ncol = 1, nrow = 3, labels=c('A', 'B', 'C'))
-ggsave(plot=ag_fig,filename = '~/OneDrive - University of Glasgow/MOVE/manuscripts/td_je_angam_2022/figures/fig5_angam_fst.tiff', device = grDevices::tiff, width = 20, height = 6.6, units = 'cm')
+ggsave(plot=mfst,filename = '~/Projects/td_je_angam_2022/figures/fig3_angam_fst.tiff', device = grDevices::tiff, width = 20, height = 6.6, units = 'cm')
+ggsave(plot=sfst,filename = '~/Projects/td_je_angam_2022/figures/fig4_angam_fst.tiff', device = grDevices::tiff, width = 20, height = 6.6, units = 'cm')
 ```
 
 ```{r cyp9ksleuthing}
