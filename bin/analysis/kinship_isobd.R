@@ -19,88 +19,6 @@ gamrelatedness = fread('data/relatedness/s_form.res')
 
 #fst first
 
-#metadata subset to latlong
-lalo = metadata[c('Site', 'long', 'Lat')]
-
-#double join here (joins metadata to both sides of fst data (site a and site b))
-fst_loc = merge(
-  x = merge(x=fst_by_site, 
-            y=lalo, 
-            by.x="site_a", 
-            by.y="Site")[],
-  y=lalo, 
-  by.x="site_b", 
-  by.y = 'Site'
-)[]
-
-fst_loc = unique(fst_loc)
-
-#make point dist between coords
-fst_loc$pointdist = distVincentyEllipsoid(fst_loc[,c('Lat.x','long.x')], fst_loc[,c('Lat.y','long.y')])
-
-#there's probably quite a bit of noise here (lots of small sample sizes etc), so let's filter our data down a bit
-
-fst_loc$Form = fst_loc$form_a
-
-#create a vector of sites/form that have N >= 8 (arbitrarily chosen)
-filtsites = data.table(metadata)[, .N, by=.(Form, Site)][ N >= 5 ]
-#create id list for filtering
-site_filt_vec = paste0(filtsites$Site, '_', filtsites$Form)
-fst_loc$ida = paste0(fst_loc$site_a, '_', fst_loc$Form)
-fst_loc$idb = paste0(fst_loc$site_b, '_', fst_loc$Form)
-
-#filter based on above
-x = subset(fst_loc, idb %in% site_filt_vec)
-y = subset(x, ida %in% site_filt_vec)
-y = y[complete.cases(y), ]
-
-formspec = y#[y$Form == c('M'),]
-
-formspec$newfst = formspec$weighted_fst / (1-formspec$weighted_fst)
-formspec$newdist = log10(formspec$pointdist)
-plotly::plot_ly(data=formspec, x=~pointdist, y=~newfst, color=~Form)
-
-filter(formspec) %>% group_by(Form) %>% summarise(min = min(newfst), max=max(newfst), mean = mean(newfst))
-
-formspec %>% ggplot(aes(x=pointdist, y=newfst, colour=Form))+
-  geom_point()+
-  theme_classic()+
-  scale_color_brewer(palette = 'Dark2')+
-  facet_wrap(~Form)+
-  labs(y='Fst / (1-Fst)', x='Geographic Distance (m)')+
-#  geom_smooth(method = 'lm')+
-  theme(legend.position = "none")
-
-m = formspec[formspec$Form == "M", ]
-s = formspec[formspec$Form == "S", ]
-
-ibd_mod_m = glm(newdist ~ newfst, family = gaussian, data = s)
-ibd_mod_s = glm(newdist ~ newfst, family = gaussian, data = m)
-
-summary(ibd_mod_m)
-summary(ibd_mod_s)
-
-#insignificant, now try mantel test (also sites could be pseudoreplicates?)
-#for coluzzi
-m_fstmat =  xtabs(m$weighted_fst ~ m$site_b + m$site_a)
-m_dstmat =  xtabs(m$pointdist ~ m$site_b + m$site_a)
-
-#for gambiae
-s_fstmat = as.dist(xtabs(s$weighted_fst ~ s$site_b + s$site_a))
-s_dstmat = as.dist(xtabs(s$pointdist ~ s$site_b + s$site_a))
-
-m_mantel_fst = vegan::mantel(m_fstmat,m_dstmat, )
-s_mantel_fst = vegan::mantel(s_fstmat,s_dstmat)
-
-m_mantel_fst
-s_mantel_fst
-
-
-unique(m$site_a)
-
-#now for relatedness
-
-
 
 #read coluzzi data
 m_res = fread('~/Dropbox (LSTM)//td_je_angam_2022/data/relatedness/m_form.res')
@@ -189,4 +107,4 @@ s_dismat = s_dismat[,-1]
 s_dismat[s_dismat==0] <- NA
 s_mantel_res = vegan::mantel(s_rabmat,s_dismat, na.rm = TRUE)
 
-
+####make some nice tables

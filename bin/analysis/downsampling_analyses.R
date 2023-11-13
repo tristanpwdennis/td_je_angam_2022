@@ -112,10 +112,11 @@ resf$doc <- factor(resf$doc, levels = c("10", "7.5", "5", "2.5", "1", "0.5"))
 
 resf  = left_join(resf, metadata, by=c('a' = 'bamno')) %>% left_join(., metadata, by=c('b' = 'bamno'))
 #filtresf = resf[resf$Site.x == resf$Site.y]
-filtresf = filtresf[filtresf$Form.x != filtresf$Form.y]
+filtresf = resf[resf$Form.x != resf$Form.y]
 
+colres <- resf[resf$Form.x == 'M' & resf$Form.y == 'M']
 
-rab <- ggplot(filtresf, aes(x=doc, y=rab, colour=as.factor(doc)))+
+rab <- ggplot(colres, aes(x=doc, y=rab, colour=as.factor(doc)))+
   geom_jitter(alpha=0.7)+
   geom_boxplot(alpha=0.5, outlier.shape = NA)+
   theme_classic()+
@@ -123,7 +124,7 @@ rab <- ggplot(filtresf, aes(x=doc, y=rab, colour=as.factor(doc)))+
   scale_color_manual(values=pal)+
   theme(legend.position = "none")
 
-KING <- ggplot(filtresf, aes(x=doc, y=KING, colour=as.factor(doc)))+
+KING <- ggplot(colres, aes(x=doc, y=KING, colour=as.factor(doc)))+
   geom_jitter(alpha=0.7)+
   geom_boxplot(alpha=0.5, outlier.shape = NA)+
   theme_classic()+
@@ -152,10 +153,14 @@ pcad = ggplot(pcadown[!is.na(pcadown$species)], aes(x=as.numeric(V2),y=as.numeri
   scale_color_manual(values=pal)+
   theme_classic()+
   labs(x='PC1',y='PC2')+
-  theme(legend.position = "none")
+  theme(legend.position = "none",
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank())
 
-plot_grid(rab, pcad, fst, labels = c('A','B','C'), ncol=2)
+prowa <- cowplot::plot_grid(rab, pcad, labels = c('A','B'),ncol = 2)
+prowb <- cowplot::plot_grid(prowa, fst, labels = c('','C'), nrow = 2, rel_heights = c(0.6, 1))
 
+prowb
 
 
 ##pca
