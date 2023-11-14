@@ -1,0 +1,10 @@
+PCAngsd v.1.10
+Time: 04/10/2023 16:26:05
+Directory: /move_bioinfo/anopheles_03_21/angsd_output/larvae_paper_analyses/pca
+Options:
+	-beagle /move_bioinfo/anopheles_03_21/angsd_output/by_form_by_chr/s_form.fullset.pop.AgamP4_3L.beagle.gz
+	-threads 10
+	-out angam.3L.pcangsd
+	-inbreedSamples
+	-admix
+	-tree
