@@ -1,1 +1,5 @@
-genome_scans/*
+downsampling.tar.gz
+thetas
+annotation
+fst_by_ecotype_species
+
